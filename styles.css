@@ -759,3 +759,84 @@ h4 {
   text-align: center;
   margin-top: 8px;
 }
+
+.modules {
+  background: #f2f3f4;
+  color: #111;
+}
+.modules-head {
+  background: #121212;
+  padding: 32px 24px;
+  text-align: center;
+}
+.modules-head h2 {
+  color: #ffffff;
+  font-size: clamp(22px, 2.6vw, 30px);
+  margin-bottom: 8px;
+}
+.modules-head p {
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+.modules .wrap {
+  padding: 90px 5%;
+}
+.module-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.module-row:last-child {
+  margin-bottom: 0;
+}
+.module-row-reverse .module-img {
+  order: 2;
+}
+.module-img img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+.module-eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
+.module-text h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.module-text p {
+  color: #595959;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.module-text ul {
+  list-style: none;
+}
+.module-text li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: #595959;
+}
+.module-text li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  .module-row,
+  .module-row-reverse {
+    grid-template-columns: 1fr;
+  }
+  .module-row-reverse .module-img {
+    order: 0;
+  }
+}
