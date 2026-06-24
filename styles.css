@@ -74,13 +74,15 @@ h4 {
   background-color: #ffd700;
   color: #000000;
   border: 2px solid #ffd700;
-  border-radius: 4px;
+  border-radius: 10px;
   font-weight: 700;
   letter-spacing: 0.25px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .btn-yellow:hover {
   background: #ffd633;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 199, 0, 0.25);
 }
 
 /* ---------- nav ---------- */
@@ -250,22 +252,23 @@ h4 {
 .trust-strip {
   background: var(--bg-light);
   color: #111;
-  padding: 48px 0;
+  padding: 56px 0;
 }
-.trust-strip .wrap {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-.trust-score {
+.trust-header {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  min-width: 180px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  text-align: center;
 }
-.trust-score .excellent {
-  font-size: 24px;
+.trustpilot-logo-img {
+  height: 56px;
+  width: auto;
+  margin-bottom: 4px;
+}
+.trust-header .excellent {
+  font-size: 26px;
   font-weight: 800;
 }
 .trust-stars {
@@ -287,15 +290,34 @@ h4 {
   color: #555;
   text-decoration: underline;
 }
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 .trust-review {
-  flex: 1;
-  min-width: 200px;
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
   font-size: 13px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.trust-review:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #00b67a;
 }
 .trust-review .stars {
   display: flex;
   gap: 2px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 .trust-review .stars span {
   width: 18px;
@@ -307,44 +329,72 @@ h4 {
   color: #fff;
   font-size: 10px;
 }
+.trust-review .name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
 .trust-review .name {
   font-weight: 700;
-  margin-bottom: 2px;
+  font-size: 14px;
+  color: #636363;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.trust-review .date {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
 }
 .trust-review .title {
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .trust-review .body {
   color: #555;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- problem section ---------- */
 .problem {
   background: #000;
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .problem-head {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 114px;
 }
 .problem-head h2 {
-  font-size: clamp(30px, 4vw, 46px);
-  margin-bottom: 18px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 .problem-head p {
   font-style: italic;
   color: var(--ink-soft);
   font-size: 18px;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .stuck-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: 48px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 .stuck-grid h3 {
   font-size: 30px;
@@ -360,11 +410,7 @@ h4 {
 }
 
 .chart-card {
-  background: var(--bg-card);
-  border-radius: 12px;
-  padding: 32px;
   position: relative;
-  min-height: 320px;
 }
 .chart-label-pass {
   color: var(--green);
@@ -380,7 +426,7 @@ h4 {
 /* ---------- death loop ---------- */
 .deathloop-quote {
   text-align: center;
-  font-size: clamp(22px, 2.6vw, 32px);
+  font-size: clamp(22px, 2.6vw, 24px);
   font-weight: 800;
   max-width: 920px;
   margin: 0 auto 70px;
@@ -388,10 +434,10 @@ h4 {
 }
 .deathloop-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   gap: 48px;
-  align-items: center;
-  margin-bottom: 80px;
+  align-items: start;
+  margin-bottom: 48px;
 }
 .deathloop-grid h3 {
   font-size: 32px;
@@ -405,19 +451,15 @@ h4 {
   color: var(--ink);
 }
 .loop-card {
-  background: var(--bg-card);
-  border-radius: 12px;
-  padding: 40px;
-  min-height: 360px;
 }
 
 /* ---------- human bias ---------- */
 .bias-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: 48px;
-  align-items: center;
-  margin-bottom: 80px;
+  align-items: start;
+  margin-bottom: 48px;
 }
 .bias-grid h3 {
   font-size: 32px;
@@ -436,20 +478,16 @@ h4 {
   margin-bottom: 8px;
 }
 .bias-card {
-  background: var(--bg-card);
-  border-radius: 12px;
-  padding: 40px;
-  min-height: 240px;
 }
 
 /* ---------- 4 step plan ---------- */
 .plan {
-  background: #000;
-  padding: 100px 0;
+  background: #121212;
+  padding: 70px 0;
   text-align: center;
 }
 .plan h2 {
-  font-size: clamp(28px, 3.6vw, 42px);
+  font-size: clamp(28px, 3.6vw, 36px);
   margin-bottom: 14px;
 }
 .plan-sub {
@@ -479,24 +517,25 @@ h4 {
   height: 32px;
 }
 .plan-card h4 {
-  color: var(--yellow);
-  font-size: 20px;
+  color: #ffd700;
+  font-size: 30px;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 .plan-card .lead {
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   font-size: 15px;
 }
 .plan-card ul {
   list-style: none;
 }
 .plan-card li {
-  font-size: 14px;
-  color: var(--ink-soft);
+  font-size: 16px;
+  color: #ffffff;
   display: flex;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   text-align: left;
 }
 .plan-card li::before {
@@ -508,7 +547,7 @@ h4 {
 /* ---------- now vs could be ---------- */
 .compare {
   background: #000;
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .compare-quote {
   text-align: center;
@@ -531,6 +570,7 @@ h4 {
 .compare-grid ul {
   list-style: none;
   margin-bottom: 24px;
+  margin-left: 30px;
 }
 .compare-grid li {
   color: var(--ink-soft);
@@ -553,6 +593,9 @@ h4 {
   background: var(--bg-light);
   color: #111;
   padding: 90px 0;
+}
+.curriculum .wrap {
+  max-width: 1100px;
 }
 .curriculum-head {
   text-align: center;
@@ -627,4 +670,92 @@ h4 {
   .plan-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.diagram-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 50px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid #1e1e1e;
+}
+
+.outcomes {
+  background: #000;
+  padding: 90px 0;
+}
+.outcomes h2 {
+  font-size: clamp(28px, 3.4vw, 38px);
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.outcomes-list {
+  list-style: none;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+.outcomes-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.outcomes-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+.outcomes-list strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.outcome-card {
+  background: #121212;
+  border: 3px solid #1e1e1e;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.outcome-label {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.curriculum > .wrap > .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.plan > .wrap > .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
 }
