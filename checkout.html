@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esprit Trading — Paiement OTE 705</title>
     <link rel="stylesheet" href="checkout.css" />
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
     <div class="checkout-wrap">
@@ -93,6 +94,43 @@
           <hr class="card-divider" />
 
           <div class="checkout-card-pad">
+            <h4 class="section-title">Contact</h4>
+
+            <label class="field-label">Email</label>
+            <input type="email" class="field-input" placeholder="Email" />
+
+            <label class="checkbox-row">
+              <input type="checkbox" />
+              <span>S'inscrire à la liste email</span>
+            </label>
+
+            <label class="field-label">Nom complet</label>
+            <input type="text" class="field-input" placeholder="Prénom et nom" />
+
+            <label class="field-label">Adresse</label>
+            <select class="field-input">
+              <option>Thaïlande</option>
+              <option>France</option>
+              <option>Maroc</option>
+              <option>Tunisie</option>
+              <option>Polynésie française</option>
+              <option>Belgique</option>
+              <option>Suisse</option>
+              <option>Canada</option>
+            </select>
+            <input type="text" class="field-input" placeholder="Adresse" />
+
+            <div class="field-row">
+              <input type="text" class="field-input" placeholder="Ville" />
+              <input type="text" class="field-input" placeholder="Code postal" />
+            </div>
+
+            <input type="text" class="field-input" placeholder="Département" />
+          </div>
+
+          <hr class="card-divider" />
+
+          <div class="checkout-card-pad">
             <h4 class="section-title">Choisis ton offre</h4>
             <div class="plan-options">
               <label class="plan-option plan-option-selected" data-plan="full">
@@ -120,79 +158,11 @@
           <hr class="card-divider" />
 
           <div class="checkout-card-pad">
-            <h4 class="section-title">Contact</h4>
-
-            <label class="field-label">Email</label>
-            <input type="email" class="field-input" placeholder="Email" />
-
-            <label class="checkbox-row">
-              <input type="checkbox" />
-              <span>S'inscrire à la liste email</span>
-            </label>
-
-            <label class="field-label">Nom complet</label>
-            <input type="text" class="field-input" placeholder="Prénom et nom" />
-
-            <label class="field-label">Adresse</label>
-            <select class="field-input">
-              <option>Thaïlande</option>
-              <option>France</option>
-              <option>Maroc</option>
-              <option>Tunisie</option>
-              <option>Polynésie française</option>
-              <option>Belgique</option>
-              <option>Suisse</option>
-              <option>Canada</option>
-            </select>
-            <input type="text" class="field-input" placeholder="Adresse" />
-            <input type="text" class="field-input" placeholder="Appt, Suite" />
-
-            <div class="field-row">
-              <input type="text" class="field-input" placeholder="Ville" />
-              <input type="text" class="field-input" placeholder="Code postal" />
-            </div>
-
-            <select class="field-input">
-              <option>État/Province/Région</option>
-            </select>
-          </div>
-
-          <hr class="card-divider" />
-
-          <div class="checkout-card-pad">
             <h4 class="section-title">Paiement</h4>
-
-            <div class="payment-methods">
-              <label class="payment-option payment-option-selected">
-                <input type="radio" name="paymethod" checked />
-                <div class="plan-radio"></div>
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" y2="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                <span>Carte</span>
-              </label>
-              <label class="payment-option">
-                <input type="radio" name="paymethod" />
-                <div class="plan-radio"></div>
-                <span class="apple-pay-icon">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16.5 7.7c-.7.9-1.8 1.5-2.9 1.4-.1-1.1.4-2.2 1-2.9.7-.8 1.9-1.5 2.9-1.5.1 1.2-.3 2.2-1 3zM17.6 9.4c-1.6-.1-3 .9-3.7.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.9 2.6 3.2 2.5 1.3-.1 1.8-.8 3.4-.8 1.6 0 2 .8 3.4.8 1.3 0 2.3-1.2 3.1-2.5.6-.9 1-1.7 1.3-2.6-3.3-1.3-3.8-6.2-.5-7.9-.6-1-1.6-1.9-3-2.3z"/></svg>
-                </span>
-                <span>Apple Pay</span>
-              </label>
-              <label class="payment-option">
-                <input type="radio" name="paymethod" />
-                <div class="plan-radio"></div>
-                <span class="paypal-icon">PayPal</span>
-              </label>
-            </div>
-
-            <div id="card-element-placeholder" class="stripe-element-placeholder">
-              <div class="field-row">
-                <input type="text" class="field-input" placeholder="1234 1234 1234 1234" />
-              </div>
-              <div class="field-row">
-                <input type="text" class="field-input" placeholder="MM / AA" />
-                <input type="text" class="field-input" placeholder="CVC" />
-              </div>
-            </div>
+            <div id="express-checkout-element"></div>
+            <div class="pay-divider-small"><span>ou par carte</span></div>
+            <div id="payment-element" class="stripe-element-placeholder"></div>
+            <div id="payment-message" class="pay-error"></div>
 
             <label class="checkbox-row">
               <input type="checkbox" />
@@ -237,6 +207,65 @@
     </div>
 
     <script>
+
+      const stripe = Stripe('pk_test_51SlAA2FeDnhdh12wa6zCyUFh4TBlS3PTl46jNBhUx11jC5p7S2RfNS1szosMcI7Hd9Yk7Dek2NL4LNjXwvzRAxfd002vMaa9in');
+      let elements;
+      let currentPlanForStripe = 'full';
+
+      async function initStripeElements(plan) {
+        currentPlanForStripe = plan;
+        try {
+          const response = await fetch('https://app.esprittrading.fr/api/create-payment-intent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ plan })
+          });
+          if (!response.ok) throw new Error('Backend indisponible');
+          const data = await response.json();
+
+          elements = stripe.elements({
+            clientSecret: data.clientSecret,
+            appearance: {
+              theme: 'stripe',
+              variables: {
+                colorPrimary: '#ffd700',
+                borderRadius: '8px',
+              }
+            }
+          });
+
+          const paymentElement = elements.create('payment');
+          paymentElement.mount('#payment-element');
+
+          const expressCheckoutElement = elements.create('expressCheckout');
+          expressCheckoutElement.mount('#express-checkout-element');
+
+          document.getElementById('payment-message').textContent = '';
+        } catch (err) {
+          document.getElementById('payment-message').textContent =
+            'Le système de paiement est en cours de configuration. Reviens bientôt !';
+        }
+      }
+
+      document.getElementById('payBtn').addEventListener('click', async () => {
+        if (!elements) return;
+        const payBtn = document.getElementById('payBtn');
+        payBtn.disabled = true;
+
+        const { error } = await stripe.confirmPayment({
+          elements,
+          confirmParams: {
+            return_url: window.location.origin + '/merci.html',
+          },
+        });
+
+        if (error) {
+          document.getElementById('payment-message').textContent = error.message;
+          payBtn.disabled = false;
+        }
+      });
+
+      initStripeElements('full');
       const plans = {
         full: { label: "990,00 €", due: "990,00 €", btn: "Payer 990,00 € EUR" },
         split: { label: "2 × 450,00 €", due: "450,00 €", btn: "Payer 450,00 € EUR" },
@@ -255,6 +284,9 @@
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;
+        if (typeof initStripeElements === 'function') {
+          initStripeElements(value);
+        }
       }
 
       radios.forEach((radio) => {

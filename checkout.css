@@ -563,3 +563,28 @@ select.field-input {
   color: var(--muted);
   margin-top: 14px;
 }
+
+.pay-divider-small {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 14px 0;
+}
+.pay-divider-small::before,
+.pay-divider-small::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--card-line);
+}
+.pay-divider-small span {
+  padding: 0 12px;
+}
+.pay-error {
+  color: #d4380d;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
