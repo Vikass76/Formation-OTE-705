@@ -511,6 +511,13 @@ h4 {
 .plan-icon {
   color: var(--yellow);
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.plan-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 .plan-icon svg {
   width: 32px;
