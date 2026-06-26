@@ -221,6 +221,7 @@
       const stripe = Stripe('pk_test_51SlAA2FeDnhdh12wa6zCyUFh4TBlS3PTl46jNBhUx11jC5p7S2RfNS1szosMcI7Hd9Yk7Dek2NL4LNjXwvzRAxfd002vMaa9in');
       let elements;
       let currentPlanForStripe = 'full';
+      let currentPaymentIntentId = null;
 
       const urlParams = new URLSearchParams(window.location.search);
       const retryPaymentId = urlParams.get('retry');
@@ -249,6 +250,7 @@
           }
           if (!response.ok) throw new Error('Backend indisponible');
           const data = await response.json();
+          currentPaymentIntentId = data.clientSecret.split('_secret_')[0];
 
           elements = stripe.elements({
             clientSecret: data.clientSecret,
@@ -327,6 +329,23 @@
         if (!elements) return;
         const payBtn = document.getElementById('payBtn');
         payBtn.disabled = true;
+
+        if (!retryPaymentId && currentPaymentIntentId) {
+          try {
+            await fetch('https://app.esprittrading.fr/api/payment/update-intent-metadata', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                paymentIntentId: currentPaymentIntentId,
+                email: document.getElementById('field-email').value,
+                firstname: document.getElementById('field-name').value.split(' ')[0] || '',
+                lastname: document.getElementById('field-name').value.split(' ').slice(1).join(' ') || ''
+              })
+            });
+          } catch (e) {
+            console.error('Erreur mise a jour metadata:', e);
+          }
+        }
 
         const { error } = await stripe.confirmPayment({
           elements,
