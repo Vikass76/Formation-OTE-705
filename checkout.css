@@ -588,3 +588,21 @@ select.field-input {
   margin-top: 10px;
   text-align: center;
 }
+
+.field-input.field-invalid {
+  border-color: #d4380d;
+  background: #fff3f0;
+}
+.field-input.field-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(212, 56, 13, 0.12);
+}
+.field-error {
+  display: none;
+  color: #d4380d;
+  font-size: 12px;
+  margin-top: -6px;
+  margin-bottom: 8px;
+}
+.field-error.visible {
+  display: block;
+}
