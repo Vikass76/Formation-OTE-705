@@ -176,7 +176,6 @@ h4 {
 .hero-video {
   position: relative;
   border-radius: 14px;
-  border: 2px solid var(--yellow);
   overflow: hidden;
   aspect-ratio: 16/9;
   background: #111;
@@ -735,7 +734,7 @@ h4 {
 }
 .outcome-card {
   background: #121212;
-  border: 3px solid grey;
+  border: 3px solid rgb(88, 88, 88);
   border-radius: 16px;
   padding: 32px 24px;
   display: flex;
@@ -1076,7 +1075,7 @@ h4 {
   display: none;
 }
 .faq-item summary::after {
-  content: '+';
+  content: "+";
   color: var(--yellow);
   font-size: 18px;
   font-weight: 400;
@@ -1090,10 +1089,11 @@ h4 {
   border-radius: 50%;
   border: 1.5px solid #2a2a2a;
   background: #161616;
-  transition: transform 0.3s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  transition: transform 0.3s ease, background 0.25s ease,
+    border-color 0.25s ease, color 0.25s ease;
 }
 .faq-item[open] summary::after {
-  content: '+';
+  content: "+";
   transform: rotate(45deg);
   background: var(--yellow);
   border-color: var(--yellow);
@@ -1138,4 +1138,67 @@ h4 {
 }
 .faq-link:hover {
   color: var(--yellow-bright, #ffd633);
+}
+
+.vid-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+  border: 3px solid #f5c518;
+  box-shadow: 0 0 0 1px rgba(245, 197, 24, 0.25);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.vid-wrap {
+  cursor: default;
+}
+.vid-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.vid-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #111;
+}
+.vid-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(245, 197, 24, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.vid-play-overlay:hover {
+  background: #f5c518;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.vid-wrap.is-playing .vid-poster {
+  opacity: 0;
+  pointer-events: none;
+}
+.vid-iframe-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.vid-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }

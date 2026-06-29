@@ -35,8 +35,16 @@
 
         <div class="hero-grid">
           <div class="hero-video">
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            <div class="vid-wrap" id="vidWrap" data-youtube-id="TPKa7TtSey8">
+              <div class="vid-poster" id="vidPoster">
+                <img class="vid-poster-img" id="vidPosterImg" alt="Apercu video" />
+                <button class="vid-play-overlay" id="vidPlayOverlay" aria-label="Lire la video">
+                  <svg viewBox="0 0 24 24" width="34" height="34" fill="#000">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="vid-iframe-container" id="vidIframeContainer"></div>
             </div>
           </div>
 
@@ -873,5 +881,29 @@
         </div>
       </div>
     </section>
+<script>
+  (function () {
+    const wrap = document.getElementById("vidWrap");
+    if (!wrap) return;
+    const youtubeId = wrap.dataset.youtubeId;
+    const posterImg = document.getElementById("vidPosterImg");
+    const overlay = document.getElementById("vidPlayOverlay");
+    const iframeContainer = document.getElementById("vidIframeContainer");
+    posterImg.src = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+    posterImg.onerror = () => {
+      posterImg.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+    };
+    function loadVideo() {
+      wrap.classList.add("is-playing");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+      iframe.title = "Video";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframeContainer.appendChild(iframe);
+    }
+    overlay.addEventListener("click", loadVideo);
+  })();
+</script>
   </body>
 </html>
