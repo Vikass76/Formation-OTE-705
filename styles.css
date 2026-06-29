@@ -849,19 +849,20 @@ h4 {
 }
 
 .stories {
-  background: #000;
+  background: var(--bg-light);
   padding: 90px 0;
 }
 .stories-head {
   text-align: center;
   margin-bottom: 56px;
+  color: black;
 }
 .stories-head h2 {
   font-size: clamp(28px, 3.6vw, 40px);
   margin-bottom: 14px;
 }
 .stories-head p {
-  color: var(--ink-soft);
+  color: #555;
   font-size: 17px;
   max-width: 600px;
   margin: 0 auto;
@@ -872,7 +873,7 @@ h4 {
   gap: 32px;
 }
 .story-card {
-  background: #121212;
+  background: #222323;
   border: 3px solid #1e1e1e;
   border-radius: 18px;
   overflow: hidden;
@@ -1150,7 +1151,8 @@ h4 {
   background: #000;
   border: 3px solid #f5c518;
   box-shadow: 0 0 0 1px rgba(245, 197, 24, 0.25);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 .vid-wrap {
   cursor: default;

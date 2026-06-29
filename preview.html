@@ -794,50 +794,292 @@
       </div>
     </section>
 
-    <section class="offer">
-      <div class="wrap">
-        <div class="offer-head">
-          <h2>Chaque jour passé sans cadre est un compte cramé</h2>
-          <p>Tu as le contenu, le suivi et la communauté. Il ne manque plus que ta décision.</p>
+<section class="offer">
+  <div class="wrap">
+    <div class="offer-head">
+      <h2>Chaque jour passé sans cadre est un compte cramé</h2>
+      <p>Tu as le contenu, le suivi et la communauté. Il ne manque plus que ta décision.</p>
+    </div>
+    <div class="offer-single">
+      <div class="offer-card-pro">
+
+        <div class="offer-pro-badge">⚡ Accès direct garanti — places limitées</div>
+
+        <h2 class="offer-pro-title">Formation complète OTE 705</h2>
+        <p class="offer-pro-tagline">10 phases, méthode complète, de A à Z.</p>
+
+        <div class="offer-pro-priceblock">
+          <div class="offer-pro-price-old">Accès complet : 1 800€</div>
+          <div class="offer-pro-price-row">
+            <span class="offer-pro-price-new" id="offerPrice">990€</span>
+            <span class="offer-pro-or">ou</span>
+            <span class="offer-pro-price-split">2&nbsp;&times;&nbsp;495€</span>
+          </div>
+          <div class="offer-pro-sub" id="offerPriceSub">Sans frais</div>
         </div>
 
-        <div class="offer-grid">
+        <hr class="offer-pro-divider" />
 
-          <div class="offer-card">
-            <div class="offer-tag">Paiement comptant</div>
-            <div class="offer-price">990€</div>
-            <div class="offer-sub">en une fois</div>
-            <ul class="offer-list">
-              <li>Méthode OTE 705 complète (10 phases)</li>
-              <li>Coaching live 2x/semaine</li>
-              <li>Support privé 24/7</li>
-              <li>Plateforme de journal de trading</li>
-              <li>Signaux &amp; analyses quotidiennes</li>
-              <li>Accès Trading Room à vie</li>
-              <li>Rentable ou remboursé en 6 mois</li>
-            </ul>
-            <a href="#" class="btn btn-yellow offer-btn">Rejoindre OTE 705</a>
+        <div class="offer-pro-highlights">
+          <div class="offer-highlight-row offer-highlight-featured">
+            <span class="offer-highlight-icon">⭐</span>
+            <span>Une communauté de trading privée, réservée aux membres OTE 705</span>
           </div>
-
-          <div class="offer-card offer-card-highlight">
-            <div class="offer-tag">Paiement en 2 fois</div>
-            <div class="offer-price">2 &times; 450€</div>
-            <div class="offer-sub">450€ aujourd'hui, 450€ dans 30 jours</div>
-            <ul class="offer-list">
-              <li>Méthode OTE 705 complète (10 phases)</li>
-              <li>Coaching live 2x/semaine</li>
-              <li>Support privé 24/7</li>
-              <li>Plateforme de journal de trading</li>
-              <li>Signaux &amp; analyses quotidiennes</li>
-              <li>Accès Trading Room à vie</li>
-              <li>Rentable ou remboursé en 6 mois</li>
-            </ul>
-            <a href="#" class="btn btn-yellow offer-btn">Rejoindre OTE 705</a>
+          <div class="offer-highlight-row">
+            <span class="offer-highlight-icon">🔒</span>
+            <span>Accès à vie — mises à jour et nouveaux modules compris</span>
           </div>
-
+          <div class="offer-highlight-row">
+            <span class="offer-highlight-icon">💬</span>
+            <span>Support privé avec réponse garantie sous 24h, 7j/7</span>
+          </div>
         </div>
+
+        <hr class="offer-pro-divider" />
+
+        <ul class="offer-pro-list">
+          <li>Méthode OTE 705 complète — 10 phases, de zéro à un système rentable</li>
+          <li>Coaching live toutes les 2 semaines en petit groupe</li>
+          <li>Support privé avec réponse garantie sous 24h, 7j/7</li>
+          <li>Analyses de marché quotidiennes pour voir où je me positionne et pourquoi</li>
+          <li>Communauté de trading privée, réservée aux membres OTE 705</li>
+          <li>Plateforme de journal de trading pour suivre ta progression</li>
+          <li>Accès Trading Room à vie, mises à jour incluses</li>
+          <li>Rentable ou remboursé en 6 mois</li>
+        </ul>
+
+        <div class="offer-pro-proof">
+          De nombreux membres ont rentabilisé la formation dès leurs premiers mois.
+          <strong>Un investissement une fois, un système pour toute une vie.</strong>
+        </div>
+
+        <button type="button" class="offer-pro-cta" id="offerCta">
+          Rejoindre OTE 705
+          <span class="offer-pro-cta-arrow">→</span>
+        </button>
+
+        <p class="offer-pro-secure">🔒 Paiement sécurisé · Accès immédiat après inscription</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer-single {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .offer-card-pro {
+    background: radial-gradient(circle at 20% 0%, rgba(245, 197, 24, 0.08), transparent 55%), #121212;
+    border: 1.5px solid #1e1e1e;
+    border-radius: 18px;
+    padding: 26px 24px 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .offer-pro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--yellow);
+    background: var(--yellow-soft);
+    border: 1px solid rgba(245, 197, 24, 0.35);
+    border-radius: 30px;
+    padding: 9px 18px;
+    margin-bottom: 28px;
+  }
+
+  .offer-pro-title {
+    font-size: clamp(22px, 3.4vw, 26px);
+    margin-bottom: 4px;
+  }
+
+  .offer-pro-tagline {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .offer-pro-priceblock {
+    margin-bottom: 8px;
+  }
+
+  .offer-pro-price-old {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: line-through;
+    margin-bottom: 6px;
+  }
+
+  .offer-pro-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .offer-pro-price-new {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .offer-pro-or {
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  .offer-pro-price-split {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .offer-pro-sub {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+  }
+
+  .offer-pro-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 16px 0;
+  }
+
+  .offer-pro-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .offer-highlight-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card-2);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .offer-highlight-featured {
+    border-color: rgba(245, 197, 24, 0.4);
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .offer-highlight-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  .offer-pro-list {
+    list-style: none;
+    margin-bottom: 18px;
+  }
+
+  .offer-pro-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 9px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .offer-pro-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--yellow);
+    font-weight: 700;
+  }
+
+  .offer-pro-proof {
+    background: var(--bg-card-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+
+  .offer-pro-proof strong {
+    color: var(--ink);
+  }
+
+  .offer-pro-cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 999px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 18px 28px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    margin-bottom: 14px;
+  }
+
+  .offer-pro-cta:hover {
+    background: #ffe14d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(245, 199, 0, 0.3);
+  }
+
+  .offer-pro-cta:active {
+    transform: scale(0.98);
+  }
+
+  .offer-pro-cta-arrow {
+    font-size: 18px;
+  }
+
+  .offer-pro-secure {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 700px) {
+    .offer-card-pro {
+      padding: 32px 22px 36px;
+    }
+    .offer-pro-price-new {
+      font-size: 40px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const cta = document.getElementById("offerCta");
+    cta.addEventListener("click", () => {
+      window.location.href = "checkout.html";
+    });
+  })();
+</script>
+
 
     <section class="faq">
       <div class="wrap">
