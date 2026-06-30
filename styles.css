@@ -93,12 +93,15 @@ h4 {
 .nav {
   background: #000;
   border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .nav .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 96px;
+  height: 112px;
 }
 .logo {
   position: relative;
@@ -266,7 +269,7 @@ h4 {
   text-align: center;
 }
 .trustpilot-logo-img {
-  height: 56px;
+  height: 90px;
   width: auto;
   margin-bottom: 4px;
 }
@@ -1411,4 +1414,19 @@ h4 {
 }
 .footer-legal-links a:hover {
   color: var(--yellow);
+}
+
+.logo-img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-right a {
+  font-size: 14px;
+}
+.nav-right .btn {
+  padding: 10px 18px;
+  font-size: 14px;
 }
