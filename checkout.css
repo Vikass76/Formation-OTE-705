@@ -608,33 +608,33 @@ select.field-input {
 }
 
 .left-col-v2 {
-  max-width: 480px;
+  max-width: 540px;
 }
 .left-col-v2 .product-hero {
-  max-width: 280px;
-  margin-bottom: 24px;
+  max-width: 420px;
+  margin-bottom: 28px;
 }
 .lc-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12.5px;
+  font-size: 14.5px;
   font-weight: 700;
   color: #b8860b;
   background: rgba(245, 197, 24, 0.12);
   border: 1px solid rgba(245, 197, 24, 0.3);
   border-radius: 30px;
-  padding: 7px 14px;
-  margin-bottom: 16px;
+  padding: 9px 18px;
+  margin-bottom: 20px;
 }
 .lc-title {
-  font-size: 34px;
+  font-size: 44px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 10px;
+  line-height: 1.15;
+  margin-bottom: 14px;
 }
 .lc-subtitle {
-  font-size: 15.5px;
+  font-size: 18px;
   color: var(--ink-soft, #595959);
   line-height: 1.5;
   margin-bottom: 28px;
@@ -653,14 +653,14 @@ select.field-input {
   text-align: center;
   background: #fafafa;
   border: 1px solid #ececec;
-  border-radius: 12px;
-  padding: 14px 8px;
-  font-size: 12.5px;
+  border-radius: 14px;
+  padding: 18px 10px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--ink, #111);
 }
 .lc-trust-icon {
-  font-size: 18px;
+  font-size: 24px;
 }
 .lc-divider {
   border: none;
@@ -674,9 +674,9 @@ select.field-input {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--ink, #111);
-  margin-bottom: 14px;
+  margin-bottom: 17px;
   line-height: 1.4;
 }
 .lc-list-icon {
@@ -685,7 +685,7 @@ select.field-input {
   font-weight: 700;
 }
 .lc-proof {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--ink-soft, #595959);
   font-style: italic;
   line-height: 1.5;
@@ -694,4 +694,21 @@ select.field-input {
   .lc-trust-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.lc-payout-img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  margin: 32px 0;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.28);
+}
+
+.price-old-red {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d4380d;
+  text-decoration: line-through;
+  margin-right: 4px;
 }
