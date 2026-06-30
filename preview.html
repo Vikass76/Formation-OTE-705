@@ -677,8 +677,8 @@
             <ul>
               <li>Salon privé réservé aux membres OTE 705</li>
               <li>Réponses à tes questions sous 24h</li>
-              <li>Entraide entre traders de la communauté</li>
-              <li>Coaching live pour débloquer tes points faibles</li>
+              <li>Entraide entre traders confirmés de la communauté</li>
+              <li>Coaching 1v1 chaque mois pour débloquer tes points faibles</li>
             </ul>
           </div>
         </div>
@@ -716,16 +716,16 @@
           </div>
           <div class="module-text">
             <div class="module-eyebrow">BONUS INCLUS</div>
-            <h3>Signaux &amp; Analyses Quotidiennes</h3>
+            <h3>Analyses Quotidiennes</h3>
             <p>
-              Reçois mes analyses et signaux directement, pour confronter ta
+              Reçois mes analyses en direct, pour confronter ta
               propre lecture du marché à la mienne et accélérer ta courbe
               d'apprentissage.
             </p>
             <ul>
               <li>Analyses quotidiennes des paires majeures</li>
               <li>Setups en temps réel partagés avec la communauté</li>
-              <li>Explication du raisonnement derrière chaque signal</li>
+              <li>Explication du raisonnement derrière chaque trade</li>
               <li>Accès direct pendant les sessions de marché</li>
             </ul>
           </div>
@@ -804,16 +804,14 @@
         <div class="offer-pro-badge">⚡ Accès direct garanti — places limitées</div>
 
         <h2 class="offer-pro-title">Formation complète OTE 705</h2>
-        <p class="offer-pro-tagline">10 phases, méthode complète, de A à Z.</p>
+        <p class="offer-pro-tagline">Une méthode, un cadre, un accompagnement.</p>
 
         <div class="offer-pro-priceblock">
           <div class="offer-pro-price-old">1 800€</div>
           <div class="offer-pro-price-row">
             <span class="offer-pro-price-new" id="offerPrice">990€</span>
-            <span class="offer-pro-or">ou</span>
-            <span class="offer-pro-price-split">2&nbsp;&times;&nbsp;495€</span>
           </div>
-          <div class="offer-pro-sub" id="offerPriceSub">Sans frais</div>
+          <div class="offer-pro-sub" id="offerPriceSub"><span class="offer-pro-sub-light">ou</span> 2&nbsp;&times;&nbsp;495€ seulement</div>
         </div>
 
         <hr class="offer-pro-divider" />
@@ -837,12 +835,11 @@
 
         <ul class="offer-pro-list">
           <li>Méthode OTE 705 complète — 10 phases, de zéro à un système rentable</li>
-          <li>Coaching live toutes les 2 semaines en petit groupe</li>
+          <li>Session live 1v1 avec Nathan 1/mois (1H)</li>
           <li>Support privé avec réponse garantie sous 24h, 7j/7</li>
           <li>Analyses de marché quotidiennes pour voir où je me positionne et pourquoi</li>
           <li>Communauté de trading privée, réservée aux membres OTE 705</li>
           <li>Plateforme de journal de trading pour suivre ta progression</li>
-          <li>Accès Trading Room à vie, mises à jour incluses</li>
           <li>Rentable ou remboursé en 6 mois</li>
         </ul>
 
@@ -877,25 +874,29 @@
   }
 
   .offer-pro-badge {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 28px;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--yellow);
     background: var(--yellow-soft);
     border: 1px solid rgba(245, 197, 24, 0.35);
     border-radius: 30px;
-    padding: 9px 18px;
-    margin-bottom: 28px;
+    padding: 6px 14px;
   }
 
   .offer-pro-title {
+    text-align: center;
     font-size: clamp(22px, 3.4vw, 26px);
     margin-bottom: 4px;
   }
 
   .offer-pro-tagline {
+    text-align: center;
     color: var(--ink-soft);
     font-size: 14px;
     margin-bottom: 16px;
@@ -903,11 +904,12 @@
 
   .offer-pro-priceblock {
     margin-bottom: 8px;
+    text-align: center;
   }
 
   .offer-pro-price-old {
-    font-size: 18px;
-    color: #d0d0d0;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
     text-decoration: line-through;
     margin-bottom: 6px;
   }
@@ -915,12 +917,13 @@
   .offer-pro-price-row {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     gap: 14px;
     flex-wrap: wrap;
   }
 
   .offer-pro-price-new {
-    font-size: 36px;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--ink);
     line-height: 1;
@@ -938,13 +941,16 @@
   }
 
   .offer-pro-sub {
-    color: var(--yellow);
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.88);
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    font-size: 1.1rem;
     margin-top: 6px;
   }
+  .offer-pro-sub-light {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
 
   .offer-pro-divider {
     border: none;
