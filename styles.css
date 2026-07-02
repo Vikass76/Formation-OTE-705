@@ -2099,3 +2099,27 @@ h4 {
     left: -55px;
   }
 }
+
+.rdv-back {
+  transform: rotate(2deg);
+}
+
+.rdv-back {
+  transform: rotate(4deg);
+}
+
+.rdv-back {
+  bottom: 5%;
+}
+
+.rdv-back {
+  bottom: 2%;
+}
+
+.rdv-back {
+  transform: rotate(2deg);
+}
+
+.rdv-back {
+  right: 5%;
+}
