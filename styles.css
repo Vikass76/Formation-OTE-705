@@ -1768,3 +1768,249 @@ h4 {
     font-size: 14px;
   }
 }
+
+/* === Stack images Plateforme === */
+.stack-imgs {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+.stack-imgs img {
+  position: absolute;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+.stack-back-left {
+  top: 0;
+  left: 0;
+  transform: rotate(-4deg) translateY(10px);
+  opacity: 0.85;
+  z-index: 1;
+}
+.stack-back-right {
+  top: 20px;
+  right: 0;
+  transform: rotate(3deg) translateY(5px);
+  opacity: 0.85;
+  z-index: 2;
+}
+.stack-front {
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  z-index: 3;
+  opacity: 1;
+}
+
+
+
+/* === Stack images Plateforme — OVERRIDE FINAL === */
+.stack-imgs {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+.stack-imgs img {
+  position: absolute;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  border: 2px solid rgba(255,255,255,0.06);
+}
+.stack-back-left {
+  width: 72%;
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
+  opacity: 0.9;
+  z-index: 1;
+}
+.stack-back-right {
+  width: 72%;
+  top: 30px;
+  right: 0;
+  transform: rotate(4deg);
+  opacity: 0.9;
+  z-index: 2;
+}
+.stack-front {
+  width: 82%;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* === Stack images — DESKTOP FIX === */
+.stack-imgs {
+  position: relative;
+  width: 100%;
+  height: 560px;
+}
+.stack-imgs img {
+  position: absolute;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.06);
+}
+.stack-back-left {
+  width: 78%;
+  top: 0;
+  left: -40px;
+  transform: rotate(-6deg);
+  opacity: 1;
+  z-index: 1;
+}
+.stack-back-right {
+  width: 78%;
+  top: 40px;
+  right: -40px;
+  transform: rotate(5deg);
+  opacity: 1;
+  z-index: 2;
+}
+.stack-front {
+  width: 88%;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* === Stack images — AJUSTEMENT POSITION === */
+.stack-imgs {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.stack-back-left {
+  width: 78%;
+  top: 60px;
+  left: -40px;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+.stack-back-right {
+  width: 78%;
+  top: 60px;
+  right: -40px;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+.stack-front {
+  width: 88%;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* === Stack images — TOUT DESCENDRE === */
+.stack-back-left {
+  top: 120px;
+}
+.stack-back-right {
+  top: 120px;
+}
+.stack-front {
+  top: 220px;
+}
+
+/* === Stack images RDV Accompagnement === */
+.rdv-stack {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+.rdv-stack img {
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+.rdv-back {
+  width: 75%;
+  top: 20px;
+  right: -10px;
+  transform: rotate(4deg);
+  opacity: 0.9;
+  z-index: 1;
+}
+.rdv-front {
+  width: 80%;
+  top: 60px;
+  left: 0;
+  transform: rotate(-2deg);
+  z-index: 2;
+}
+
+@media (min-width: 1px) {
+  .rdv-back {
+    width: 85%;
+    top: auto;
+    bottom: -30px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+    z-index: 1;
+  }
+  .rdv-front {
+    width: 85%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1deg);
+    z-index: 2;
+  }
+  .rdv-stack {
+    height: 520px;
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-back {
+    z-index: 2;
+  }
+  .rdv-front {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-back {
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-stack img {
+    border: 1px solid rgba(244, 199, 15, 0.2);
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-back {
+    left: 40% !important;
+    transform: translateX(-60%) rotate(2deg) !important;
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-back {
+    left: 48% !important;
+    transform: translateX(-52%) rotate(2deg) !important;
+  }
+}
+
+@media (min-width: 1px) {
+  .rdv-front {
+    transform: translateX(-50%) rotate(0deg) !important;
+  }
+}
+
+@media (min-width: 1px) {
+  .stack-imgs img {
+    border: 1px solid rgba(244, 199, 15, 0.2);
+  }
+}
