@@ -178,10 +178,10 @@
                 <div class="plan-info">
                   <div class="plan-name">Paiement en 2 fois</div>
                   <div class="plan-sub">
-                    450€ aujourd'hui, 450€ dans 30 jours
+                    495€ aujourd'hui, 495€ dans 30 jours
                   </div>
                 </div>
-                <div class="plan-price">2 &times; 450,00 €</div>
+                <div class="plan-price">2 &times; 495,00 €</div>
               </label>
             </div>
           </div>
@@ -450,9 +450,9 @@
       const plans = {
         full: { label: "990,00 €", due: "990,00 €", btn: "Payer 990,00 € EUR" },
         split: {
-          label: "2 × 450,00 €",
-          due: "450,00 €",
-          btn: "Payer 450,00 € EUR",
+          label: "2 × 495,00 €",
+          due: "495,00 €",
+          btn: "Payer 495,00 € EUR",
         },
       };
 
@@ -468,7 +468,7 @@
         });
         const p = plans[value];
         document.getElementById("headerPrice").textContent =
-          value === "split" ? "450,00 € / 450,00 €" : p.label;
+          value === "split" ? "495,00 € / 495,00 €" : p.label;
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;

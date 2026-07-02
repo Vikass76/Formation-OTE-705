@@ -721,3 +721,46 @@ select.field-input {
   align-self: flex-start;
   width: 100%;
 }
+
+/* ===== FIX RESPONSIVE MOBILE ===== */
+@media (max-width: 980px) {
+  .right-col {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .checkout-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .checkout-card-pad {
+    padding: 18px 16px;
+  }
+  .summary-block {
+    padding: 18px 16px 22px;
+  }
+  .summary-top {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .price-tag {
+    flex-wrap: wrap;
+  }
+  .price-old-red,
+  .price-value {
+    white-space: nowrap;
+  }
+}
+
+/* ===== TRUST GRID MOBILE 2+1 ===== */
+@media (max-width: 980px) {
+  .lc-trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lc-trust-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
