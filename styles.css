@@ -2188,3 +2188,49 @@ h4 {
 .rdv-back {
   transform: rotate(3deg);
 }
+
+@media (min-width: 801px) {
+  .stack-front {
+    top: 180px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-front {
+    top: 140px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-left {
+    left: -30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 100px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 120px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 180px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 260px;
+  }
+}
+
+.stack-back-right {
+  z-index: 4;
+}
