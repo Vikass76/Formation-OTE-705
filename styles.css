@@ -1835,13 +1835,3 @@ h4 {
   z-index: 2;
   transform: rotate(3deg);
 }
-
-/* === RDV2 REMONTER === */
-.rdv-back {
-  bottom: 8%;
-}
-
-/* === RDV2 GAUCHE === */
-.rdv-back {
-  right: 2%;
-}
