@@ -2234,3 +2234,21 @@ h4 {
 .stack-back-right {
   z-index: 4;
 }
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 350px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-back-right {
+    top: 300px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stack-front {
+    left: 55%;
+  }
+}
