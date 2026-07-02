@@ -1861,3 +1861,241 @@ h4 {
 .rdv-back {
   right: 2%;
 }
+
+@media (max-width: 800px) {
+  .module-row {
+    margin-bottom: 40px;
+  }
+}
+
+/* === Stack Plateforme — IMAGES DERRIERE DESKTOP === */
+.stack-back-left {
+  top: 80px;
+}
+.stack-back-right {
+  top: 80px;
+}
+.stack-front {
+  top: 180px;
+}
+
+/* === Stack Plateforme — IMAGES DERRIERE VISIBLE === */
+.stack-back-left {
+  top: 40px;
+  left: -60px;
+  width: 82%;
+}
+.stack-back-right {
+  top: 40px;
+  right: -60px;
+  width: 82%;
+}
+.stack-front {
+  top: 140px;
+}
+
+/* === Stack Plateforme — RETOUR BONNE VERSION === */
+.stack-back-left {
+  top: 120px;
+  left: -20px;
+  width: 78%;
+}
+.stack-back-right {
+  top: 120px;
+  right: -20px;
+  width: 78%;
+}
+.stack-front {
+  top: 220px;
+  width: 88%;
+}
+
+/* === Stack Plateforme — AJUST === */
+.stack-back-left {
+  left: -40px;
+}
+.stack-back-right {
+  right: -40px;
+}
+
+/* === Stack Journal — REMONTER === */
+.stack-back-right {
+  top: 80px;
+}
+
+/* === Stack Dashboard — REMONTER === */
+.stack-back-left {
+  top: 105px;
+}
+
+/* === Stack — DESKTOP ONLY === */
+@media (min-width: 801px) {
+  .stack-back-left {
+    top: 105px;
+    left: -40px;
+    width: 78%;
+  }
+  .stack-back-right {
+    top: 80px;
+    right: -40px;
+    width: 78%;
+  }
+  .stack-front {
+    top: 220px;
+    width: 88%;
+  }
+}
+
+/* === Stack — MOBILE COTES === */
+@media (max-width: 800px) {
+  .stack-back-left {
+    left: 0;
+    width: 65%;
+  }
+  .stack-back-right {
+    right: 0;
+    width: 65%;
+  }
+  .stack-front {
+    width: 80%;
+  }
+}
+
+/* === Stack — MOBILE COMPLET === */
+@media (max-width: 800px) {
+  .stack-back-left {
+    left: 0;
+    width: 65%;
+    top: 60px;
+  }
+  .stack-back-right {
+    right: 0;
+    width: 65%;
+    top: 60px;
+  }
+  .stack-front {
+    width: 80%;
+    top: 130px;
+  }
+}
+
+/* === Stack Journal mobile — DROITE === */
+@media (max-width: 800px) {
+  .stack-back-right {
+    transform: rotate(4deg);
+  }
+}
+
+/* === Stack Journal mobile — DECALE DROITE === */
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -15px;
+  }
+}
+
+/* === Stack Journal mobile — PENCHE GAUCHE === */
+@media (max-width: 800px) {
+  .stack-back-right {
+    transform: rotate(-4deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    transform: rotate(6deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    transform: rotate(9deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 55px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 65px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -55px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    right: -10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    top: 72px;
+  }
+}
+
+@media (max-width: 800px) {
+  .stack-back-right {
+    transform: rotate(7deg);
+  }
+}
+
+.stack-imgs img {
+  border: 1px solid rgba(244, 199, 15, 0.2);
+}
+
+@media (min-width: 801px) {
+  .stack-back-left {
+    left: -55px;
+  }
+}
