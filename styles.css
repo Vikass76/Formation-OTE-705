@@ -2123,3 +2123,51 @@ h4 {
 .rdv-back {
   right: 5%;
 }
+
+
+
+@media (max-width: 480px) {
+  .stack-back-left {
+    transform: rotate(3deg);
+  }
+  .stack-back-right {
+    transform: rotate(-3deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-back-left {
+    transform: rotate(2deg);
+  }
+  .stack-back-right {
+    transform: rotate(-2deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-back-right {
+    top: 55px;
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .stack-back-left {
+    top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-back-left {
+    top: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-back-left {
+    top: 0px !important;
+  }
+}
