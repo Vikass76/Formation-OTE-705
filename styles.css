@@ -1835,3 +1835,29 @@ h4 {
   z-index: 2;
   transform: rotate(3deg);
 }
+
+/* === Stack Plateforme — MOBILE FIX sans toucher desktop === */
+@media (max-width: 800px) {
+  .stack-imgs {
+    height: 420px;
+  }
+  .stack-back-left {
+    top: 80px;
+  }
+  .stack-back-right {
+    top: 80px;
+  }
+  .stack-front {
+    top: 160px;
+  }
+}
+
+/* === RDV2 REMONTER === */
+.rdv-back {
+  bottom: 8%;
+}
+
+/* === RDV2 GAUCHE === */
+.rdv-back {
+  right: 2%;
+}
