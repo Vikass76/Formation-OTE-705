@@ -93,12 +93,6 @@
               placeholder="Email"
             />
             <div class="field-error" id="error-email"></div>
-
-            <label class="checkbox-row">
-              <input type="checkbox" />
-              <span>S'inscrire à la liste email</span>
-            </label>
-
             <label class="field-label">Nom complet</label>
             <input
               type="text"
@@ -195,10 +189,6 @@
             <div id="payment-element" class="stripe-element-placeholder"></div>
             <div id="payment-message" class="pay-error"></div>
 
-            <label class="checkbox-row">
-              <input type="checkbox" />
-              <span>Enregistrer cette carte pour mes prochains paiements</span>
-            </label>
           </div>
 
           <div class="summary-block">
@@ -208,16 +198,6 @@
               <span class="summary-item-price" id="summaryPrice">990,00 €</span>
             </div>
 
-            <div class="coupon-row">
-              <input
-                type="text"
-                class="field-input coupon-input"
-                placeholder="Code promo"
-              />
-              <button type="button" class="apply-btn" disabled>
-                Appliquer
-              </button>
-            </div>
 
             <div class="due-row">
               <span class="due-label">À payer aujourd'hui</span>
@@ -226,25 +206,6 @@
               </div>
             </div>
 
-            <label class="checkbox-row terms-row">
-              <input type="checkbox" />
-              <span
-                >J'accepte les
-                <a
-                  href="conditions.html"
-                  target="_blank"
-                  style="color: var(--yellow)"
-                  >Conditions Générales</a
-                >
-                et la
-                <a
-                  href="confidentialite.html"
-                  target="_blank"
-                  style="color: var(--yellow)"
-                  >Politique de Confidentialité</a
-                ></span
-              >
-            </label>
 
             <button type="button" class="pay-btn" id="payBtn">
               Payer 990,00 € EUR
@@ -468,7 +429,7 @@
         });
         const p = plans[value];
         document.getElementById("headerPrice").textContent =
-          value === "split" ? "495,00 € / 495,00 €" : p.label;
+          value === "split" ? "2 × 495,00 €" : p.label;
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;
