@@ -764,3 +764,84 @@ select.field-input {
     margin: 0 auto;
   }
 }
+
+/* ===== SUMMARY BLOCK REDESIGN ===== */
+.summary-block {
+  background: #f9f9f9;
+  border-top: 1px solid var(--card-line);
+  padding: 24px 24px 28px;
+}
+
+.summary-block .section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.summary-line-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--card-line);
+  margin-bottom: 0;
+  gap: 12px;
+}
+
+.summary-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.summary-item-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.coupon-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--card-line);
+  margin-bottom: 0;
+}
+
+.due-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid var(--card-line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 18px 0 16px;
+}
+
+.due-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.due-price span {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.pay-btn {
+  border-radius: 14px;
+  font-size: 17px;
+  padding: 18px;
+  letter-spacing: 0.01em;
+}
+
+.secure-note {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 12px;
+}
