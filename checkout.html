@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="checkout.css" />
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
   </head>
   <body>
     <div class="checkout-wrap">
@@ -19,15 +20,15 @@
         </p>
         <div class="lc-trust-grid">
           <div class="lc-trust-item">
-            <span class="lc-trust-icon">🔒</span>
+            <span class="lc-trust-icon"><i class="ti ti-lock"></i></span>
             <span>Accès à vie</span>
           </div>
           <div class="lc-trust-item">
-            <span class="lc-trust-icon">💬</span>
+            <span class="lc-trust-icon"><i class="ti ti-message-circle"></i></span>
             <span>100% de taux de réponse sous 24h</span>
           </div>
           <div class="lc-trust-item">
-            <span class="lc-trust-icon">✅</span>
+            <span class="lc-trust-icon"><i class="ti ti-shield-check"></i></span>
             <span>Rentable ou remboursé en 6 mois</span>
           </div>
         </div>
@@ -56,6 +57,21 @@
             <span class="lc-list-icon">✓</span> Journal de trading personnel
           </li>
         </ul>
+        <hr class="lc-divider" />
+        <div class="lc-reviews">
+          <a class="trust-review" href="https://fr.trustpilot.com/reviews/69ea63eb9fedbc387183be44" target="_blank" rel="noopener">
+            <div class="stars"><img src="assets/stars-5.svg" alt="5 etoiles" style="height:16px; width:auto;"></div>
+            <div class="name-row"><span class="name">Selou Moefana</span><span class="date">24 avr. 2026</span></div>
+            <div class="title">Pour ma part je trouve que cette...</div>
+            <div class="body">Cette entreprise est très investie envers les personnes qui se lancent. Il n'hésite pas à revenir vers nous pour des appels pour de l'aide. Un très bon coach.</div>
+          </a>
+          <a class="trust-review" href="https://fr.trustpilot.com/reviews/69eb649dab4c8feb1941f684" target="_blank" rel="noopener">
+            <div class="stars"><img src="assets/stars-5.svg" alt="5 etoiles" style="height:16px; width:auto;"></div>
+            <div class="name-row"><span class="name">Bastien Deluze</span><span class="date">24 avr. 2026</span></div>
+            <div class="title">Le point fort c'est vraiment...</div>
+            <div class="body">Le point fort c'est vraiment l'accompagnement. Nathan répond toujours à nos demandes et nos questions. Il n'hésite pas à faire un appel au besoin. Merci à toi !</div>
+          </a>
+        </div>
         <hr class="lc-divider" />
         <div class="lc-proof">
           De nombreux membres ont rentabilisé l'accompagnement dès leurs
@@ -205,6 +221,8 @@
             <button type="button" class="pay-btn" id="payBtn">
               Payer 990,00 € EUR
             </button>
+            <div class="pay-secure">🔒 Paiement sécurisé et chiffré</div>
+            <div class="pay-terms">En cliquant sur le bouton "Payer", vous acceptez nos <strong>termes et conditions générales de vente.</strong></div>
           </div>
         </div>
       </div>

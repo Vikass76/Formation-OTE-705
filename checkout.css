@@ -574,7 +574,7 @@ select.field-input {
 }
 .pay-divider-small::before,
 .pay-divider-small::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: var(--card-line);
@@ -705,7 +705,7 @@ select.field-input {
   width: 100%;
   max-width: 420px;
   border-radius: 14px;
-  margin: 32px 0;
+  margin: 2px 0 80px 0;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.28);
 }
 
@@ -861,10 +861,124 @@ select.field-input {
   color: var(--ink);
 }
 
-
-
 @media (max-width: 768px) {
   .footer-links {
     display: none;
   }
+}
+
+.lc-trust-icon i {
+  color: #b8860b;
+  font-size: 20px;
+}
+
+.lc-trust-icon i {
+  font-size: 28px !important;
+}
+
+.lc-list li {
+  margin-bottom: 26px !important;
+}
+
+.lc-reviews {
+  display: flex;
+  gap: 12px;
+}
+.lc-reviews .trust-review {
+  flex: 1;
+  background: #f9f9f9;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.lc-reviews .name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0 4px;
+}
+.lc-reviews .name {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111;
+}
+.lc-reviews .date {
+  font-size: 11px;
+  color: #999;
+}
+.lc-reviews .title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+.lc-reviews .body {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .lc-reviews {
+    flex-direction: column;
+  }
+}
+
+.lc-reviews .trust-review {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.lc-reviews .trust-review:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.lc-reviews .trust-review {
+  border: 1px solid #00b67a !important;
+}
+.lc-reviews {
+  justify-content: center;
+}
+
+.lc-reviews {
+  justify-content: center;
+}
+
+.pay-secure {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.pay-terms {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.pay-terms a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.pay-terms a {
+  color: var(--ink) !important;
+  text-decoration: underline !important;
+}
+.pay-terms a:hover {
+  color: var(--yellow) !important;
+}
+OKcat
+
+.pay-terms a {
+  color: var(--ink) !important;
+  text-decoration: underline !important;
+}
+.pay-terms a:hover {
+  color: var(--yellow) !important;
 }
