@@ -707,7 +707,7 @@ h4 {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  color: black;
+  color: var(--ink-soft);
 }
 .outcomes-list {
   list-style: none;
@@ -865,7 +865,7 @@ h4 {
 .stories-head {
   text-align: center;
   margin-bottom: 56px;
-  color: black;
+  color: var(--ink-soft);
 }
 .stories-head h2 {
   font-size: clamp(28px, 3.6vw, 40px);
