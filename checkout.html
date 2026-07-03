@@ -372,7 +372,9 @@
         if (!validateRequiredFields()) return;
         if (!elements) return;
         const payBtn = document.getElementById("payBtn");
+        const originalText = payBtn.textContent;
         payBtn.disabled = true;
+        payBtn.innerHTML = '<span class="pay-spinner"></span> Traitement en cours...';
 
         if (!retryPaymentId && currentPaymentIntentId) {
           try {
@@ -409,9 +411,13 @@
         });
 
         if (error) {
-          document.getElementById("payment-message").textContent =
-            error.message;
+          const msgEl = document.getElementById("payment-message");
+          msgEl.textContent = error.message;
+          msgEl.style.color = '#d32f2f';
+          msgEl.style.fontWeight = '600';
+          msgEl.style.marginTop = '8px';
           payBtn.disabled = false;
+          payBtn.innerHTML = originalText;
         }
       });
 
