@@ -302,6 +302,11 @@
           expressCheckoutElement.mount("#express-checkout-element");
           
           expressCheckoutElement.on('confirm', async (event) => {
+            // Valider les champs obligatoires comme pour le bouton Payer
+            if (!validateRequiredFields()) {
+              event.paymentFailed({ reason: 'fail' });
+              return;
+            }
             // Mettre a jour les metadonnees avant confirmation Apple Pay / Google Pay
             if (currentPaymentIntentId) {
               try {
