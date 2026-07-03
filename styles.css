@@ -2297,3 +2297,37 @@ h4 {
   font-size: 14px !important;
   padding: 9px 20px !important;
 }
+
+@media (max-width: 480px) {
+  .membership-card {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 16px;
+  }
+  .membership-card h3 {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-pro-badge {
+    white-space: nowrap;
+    font-size: 10px !important;
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-pro-badge {
+    white-space: nowrap;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-pro-title {
+    font-size: 30px !important;
+  }
+}
