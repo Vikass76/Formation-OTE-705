@@ -296,7 +296,7 @@
           });
 
           const paymentElement = elements.create("payment", {
-            terms: { card: 'never' }
+            terms: { card: 'never', applePay: 'never', googlePay: 'never', paypal: 'never' }
           });
           paymentElement.mount("#payment-element");
 
