@@ -295,7 +295,9 @@
             },
           });
 
-          const paymentElement = elements.create("payment");
+          const paymentElement = elements.create("payment", {
+            terms: { card: 'never' }
+          });
           paymentElement.mount("#payment-element");
 
           const expressCheckoutElement = elements.create("expressCheckout");
