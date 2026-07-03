@@ -306,8 +306,8 @@
           
           expressCheckoutElement.on('click', (event) => {
             const expressMsg = document.getElementById('express-checkout-message');
-            if (!validateRequiredFields()) {
-              expressMsg.textContent = 'Veuillez remplir tous les champs obligatoires avant de payer.';
+            if (event.expressPaymentType === 'apple_pay' && !validateRequiredFields()) {
+              expressMsg.textContent = 'Veuillez remplir tous les champs obligatoires avant de payer avec Apple Pay.';
               expressMsg.style.display = 'block';
               return;
             }
