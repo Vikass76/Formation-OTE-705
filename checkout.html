@@ -309,7 +309,6 @@
             if (!validateRequiredFields()) {
               expressMsg.textContent = 'Veuillez remplir tous les champs obligatoires avant de payer.';
               expressMsg.style.display = 'block';
-              event.resolve({ applePay: { recurringPaymentRequest: undefined } });
               return;
             }
             expressMsg.style.display = 'none';
