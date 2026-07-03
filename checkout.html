@@ -416,10 +416,9 @@
 
       document.getElementById("payBtn").addEventListener("click", async () => {
         if (!validateRequiredFields()) {
-          const msgEl = document.getElementById('payment-message');
-          msgEl.textContent = 'Veuillez remplir tous les champs obligatoires.';
-          msgEl.style.color = '#d32f2f';
-          msgEl.style.fontWeight = '600';
+          const firstError = document.querySelector('.field-input[style*="border-color: rgb(220"]');
+          const firstField = document.getElementById('field-email');
+          (firstError || firstField).scrollIntoView({ behavior: 'smooth', block: 'center' });
           return;
         }
         if (!elements) return;
