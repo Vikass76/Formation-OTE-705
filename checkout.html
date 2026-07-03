@@ -300,6 +300,33 @@
 
           const expressCheckoutElement = elements.create("expressCheckout");
           expressCheckoutElement.mount("#express-checkout-element");
+          
+          expressCheckoutElement.on('confirm', async (event) => {
+            // Mettre a jour les metadonnees avant confirmation Apple Pay / Google Pay
+            if (currentPaymentIntentId) {
+              try {
+                await fetch("https://app.esprittrading.fr/api/payment/update-intent-metadata", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    paymentIntentId: currentPaymentIntentId,
+                    email: document.getElementById("field-email").value || event.billingDetails?.email || '',
+                    firstname: document.getElementById("field-name").value.split(" ")[0] || '',
+                    lastname: document.getElementById("field-name").value.split(" ").slice(1).join(" ") || '',
+                  }),
+                });
+              } catch(e) {
+                console.error("Erreur metadata Apple Pay:", e);
+              }
+            }
+            const { error } = await stripe.confirmPayment({
+              elements,
+              confirmParams: { return_url: window.location.origin + "/merci.html" },
+            });
+            if (error) {
+              document.getElementById("payment-message").textContent = error.message;
+            }
+          });
 
           document.getElementById("payment-message").textContent = "";
         } catch (err) {
@@ -376,7 +403,8 @@
         payBtn.disabled = true;
         payBtn.innerHTML = '<span class="pay-spinner"></span> Traitement en cours...';
 
-        if (!retryPaymentId && currentPaymentIntentId) {
+        const emailVal = document.getElementById("field-email").value.trim();
+        if (!retryPaymentId && currentPaymentIntentId && emailVal) {
           try {
             await fetch(
               "https://app.esprittrading.fr/api/payment/update-intent-metadata",
