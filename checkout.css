@@ -845,3 +845,26 @@ select.field-input {
   color: var(--muted);
   margin-top: 12px;
 }
+
+.checkout-footer-legal {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 16px 30px;
+  font-size: 13px;
+}
+.checkout-footer-legal a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.checkout-footer-legal a:hover {
+  color: var(--ink);
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-links {
+    display: none;
+  }
+}
