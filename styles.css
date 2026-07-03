@@ -733,7 +733,7 @@ h4 {
   background: var(--yellow);
 }
 .outcomes-list strong {
-  color: black;
+  color: var(--yellow);
   font-weight: 700;
 }
 .outcomes-grid {
