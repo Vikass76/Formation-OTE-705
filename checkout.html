@@ -581,14 +581,7 @@
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;
-        if (currentPaymentIntentId) {
-          // Mettre a jour le montant sans recréer un Payment Intent
-          fetch("https://app.esprittrading.fr/api/payment/update-intent-amount", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ paymentIntentId: currentPaymentIntentId, plan: value })
-          }).catch(e => console.error("Erreur update montant:", e));
-        } else if (typeof initStripeElements === "function") {
+        if (typeof initStripeElements === "function") {
           initStripeElements(value);
         }
       }
