@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="checkout.css" />
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css"
+    />
   </head>
   <body>
     <div class="checkout-wrap">
@@ -24,12 +27,16 @@
             <span>Accès à vie</span>
           </div>
           <div class="lc-trust-item">
-            <span class="lc-trust-icon"><i class="ti ti-message-circle"></i></span>
+            <span class="lc-trust-icon"
+              ><i class="ti ti-message-circle"></i
+            ></span>
             <span>100% de taux de réponse sous 24h</span>
           </div>
           <div class="lc-trust-item">
-            <span class="lc-trust-icon"><i class="ti ti-shield-check"></i></span>
-            <span>Rentable ou remboursé en 6 mois</span>
+            <span class="lc-trust-icon"
+              ><i class="ti ti-shield-check"></i
+            ></span>
+            <span>Rentable ou remboursé</span>
           </div>
         </div>
         <hr class="lc-divider" />
@@ -39,37 +46,62 @@
           class="lc-payout-img"
         />
         <ul class="lc-list">
-          <li>
-            <span class="lc-list-icon">✓</span> Méthode OTE 705 complète — 10
-            phases
-          </li>
-          <li>
-            <span class="lc-list-icon">✓</span> Coaching live 1v1 tous les mois
-            (1H)
-          </li>
-          <li>
-            <span class="lc-list-icon">✓</span> Analyses de marché quotidiennes
-          </li>
-          <li>
-            <span class="lc-list-icon">✓</span> Communauté de trading privée
-          </li>
+          <li><span class="lc-list-icon">✓</span> Méthode OTE 705 complète</li>
+          <li><span class="lc-list-icon">✓</span> Coaching live 1v1</li>
+          <li><span class="lc-list-icon">✓</span> Communauté de trading</li>
           <li>
             <span class="lc-list-icon">✓</span> Journal de trading personnel
           </li>
         </ul>
         <hr class="lc-divider" />
         <div class="lc-reviews">
-          <a class="trust-review" href="https://fr.trustpilot.com/reviews/69ea63eb9fedbc387183be44" target="_blank" rel="noopener">
-            <div class="stars"><img src="assets/stars-5.svg" alt="5 etoiles" style="height:16px; width:auto;"></div>
-            <div class="name-row"><span class="name">Selou Moefana</span><span class="date">24 avr. 2026</span></div>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/69ea63eb9fedbc387183be44"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <img
+                src="assets/stars-5.svg"
+                alt="5 etoiles"
+                style="height: 16px; width: auto"
+              />
+            </div>
+            <div class="name-row">
+              <span class="name">Selou Moefana</span
+              ><span class="date">24 avr. 2026</span>
+            </div>
             <div class="title">Pour ma part je trouve que cette...</div>
-            <div class="body">Cette entreprise est très investie envers les personnes qui se lancent. Il n'hésite pas à revenir vers nous pour des appels pour de l'aide. Un très bon coach.</div>
+            <div class="body">
+              Cette entreprise est très investie envers les personnes qui se
+              lancent. Il n'hésite pas à revenir vers nous pour des appels pour
+              de l'aide. Un très bon coach.
+            </div>
           </a>
-          <a class="trust-review" href="https://fr.trustpilot.com/reviews/69eb649dab4c8feb1941f684" target="_blank" rel="noopener">
-            <div class="stars"><img src="assets/stars-5.svg" alt="5 etoiles" style="height:16px; width:auto;"></div>
-            <div class="name-row"><span class="name">Bastien Deluze</span><span class="date">24 avr. 2026</span></div>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/69eb649dab4c8feb1941f684"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <img
+                src="assets/stars-5.svg"
+                alt="5 etoiles"
+                style="height: 16px; width: auto"
+              />
+            </div>
+            <div class="name-row">
+              <span class="name">Bastien Deluze</span
+              ><span class="date">24 avr. 2026</span>
+            </div>
             <div class="title">Le point fort c'est vraiment...</div>
-            <div class="body">Le point fort c'est vraiment l'accompagnement. Nathan répond toujours à nos demandes et nos questions. Il n'hésite pas à faire un appel au besoin. Merci à toi !</div>
+            <div class="body">
+              Le point fort c'est vraiment l'accompagnement. Nathan répond
+              toujours à nos demandes et nos questions. Il n'hésite pas à faire
+              un appel au besoin. Merci à toi !
+            </div>
           </a>
         </div>
         <hr class="lc-divider" />
@@ -196,10 +228,13 @@
           <div class="checkout-card-pad">
             <h4 class="section-title">Paiement</h4>
             <div id="express-checkout-element"></div>
-            <div id="express-checkout-message" class="pay-error" style="margin-top:6px; display:none;"></div>
+            <div
+              id="express-checkout-message"
+              class="pay-error"
+              style="margin-top: 6px; display: none"
+            ></div>
             <div class="pay-divider-small"><span>ou par carte</span></div>
             <div id="payment-element" class="stripe-element-placeholder"></div>
-
           </div>
 
           <div class="summary-block">
@@ -209,7 +244,6 @@
               <span class="summary-item-price" id="summaryPrice">990,00 €</span>
             </div>
 
-
             <div class="due-row">
               <span class="due-label">À payer aujourd'hui</span>
               <div class="due-price">
@@ -217,13 +251,19 @@
               </div>
             </div>
 
-
             <button type="button" class="pay-btn" id="payBtn">
               Payer 990,00 € EUR
             </button>
-            <div id="payment-message" class="pay-error" style="margin-top:8px;"></div>
+            <div
+              id="payment-message"
+              class="pay-error"
+              style="margin-top: 8px"
+            ></div>
             <div class="pay-secure">🔒 Paiement sécurisé et chiffré</div>
-            <div class="pay-terms">En cliquant sur le bouton "Payer", vous acceptez nos <strong>termes et conditions générales de vente.</strong></div>
+            <div class="pay-terms">
+              En cliquant sur le bouton "Payer", vous acceptez nos
+              <strong>termes et conditions générales de vente.</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -233,7 +273,6 @@
       <a href="confidentialite.html" target="_blank">Confidentialite</a>
       <a href="mentions-legales.html" target="_blank">Mentions legales</a>
     </div>
-    
 
     <script>
       const stripe = Stripe(
@@ -297,53 +336,81 @@
           });
 
           const paymentElement = elements.create("payment", {
-            terms: { card: 'never', applePay: 'never', googlePay: 'never', paypal: 'never' }
+            terms: {
+              card: "never",
+              applePay: "never",
+              googlePay: "never",
+              paypal: "never",
+            },
           });
           paymentElement.mount("#payment-element");
 
           const expressCheckoutElement = elements.create("expressCheckout");
           expressCheckoutElement.mount("#express-checkout-element");
-          
-          expressCheckoutElement.on('click', (event) => {
-            const expressMsg = document.getElementById('express-checkout-message');
-            if (event.expressPaymentType === 'apple_pay' && !validateRequiredFields()) {
-              expressMsg.textContent = 'Veuillez remplir tous les champs obligatoires avant de payer avec Apple Pay.';
-              expressMsg.style.display = 'block';
+
+          expressCheckoutElement.on("click", (event) => {
+            const expressMsg = document.getElementById(
+              "express-checkout-message"
+            );
+            if (
+              event.expressPaymentType === "apple_pay" &&
+              !validateRequiredFields()
+            ) {
+              expressMsg.textContent =
+                "Veuillez remplir tous les champs obligatoires avant de payer avec Apple Pay.";
+              expressMsg.style.display = "block";
               return;
             }
-            expressMsg.style.display = 'none';
+            expressMsg.style.display = "none";
             event.resolve();
           });
 
-          expressCheckoutElement.on('confirm', async (event) => {
+          expressCheckoutElement.on("confirm", async (event) => {
             // Valider une deuxieme fois par securite
             if (!validateRequiredFields()) {
-              event.paymentFailed({ reason: 'fail' });
+              event.paymentFailed({ reason: "fail" });
               return;
             }
             // Mettre a jour les metadonnees avant confirmation Apple Pay / Google Pay
             if (currentPaymentIntentId) {
               try {
-                await fetch("https://app.esprittrading.fr/api/payment/update-intent-metadata", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({
-                    paymentIntentId: currentPaymentIntentId,
-                    email: document.getElementById("field-email").value || event.billingDetails?.email || '',
-                    firstname: document.getElementById("field-name").value.split(" ")[0] || '',
-                    lastname: document.getElementById("field-name").value.split(" ").slice(1).join(" ") || '',
-                  }),
-                });
-              } catch(e) {
+                await fetch(
+                  "https://app.esprittrading.fr/api/payment/update-intent-metadata",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      paymentIntentId: currentPaymentIntentId,
+                      email:
+                        document.getElementById("field-email").value ||
+                        event.billingDetails?.email ||
+                        "",
+                      firstname:
+                        document
+                          .getElementById("field-name")
+                          .value.split(" ")[0] || "",
+                      lastname:
+                        document
+                          .getElementById("field-name")
+                          .value.split(" ")
+                          .slice(1)
+                          .join(" ") || "",
+                    }),
+                  }
+                );
+              } catch (e) {
                 console.error("Erreur metadata Apple Pay:", e);
               }
             }
             const { error } = await stripe.confirmPayment({
               elements,
-              confirmParams: { return_url: window.location.origin + "/merci.html" },
+              confirmParams: {
+                return_url: window.location.origin + "/merci.html",
+              },
             });
             if (error) {
-              document.getElementById("payment-message").textContent = error.message;
+              document.getElementById("payment-message").textContent =
+                error.message;
             }
           });
 
@@ -416,16 +483,22 @@
 
       document.getElementById("payBtn").addEventListener("click", async () => {
         if (!validateRequiredFields()) {
-          const firstError = document.querySelector('.field-input[style*="border-color: rgb(220"]');
-          const firstField = document.getElementById('field-email');
-          (firstError || firstField).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const firstError = document.querySelector(
+            '.field-input[style*="border-color: rgb(220"]'
+          );
+          const firstField = document.getElementById("field-email");
+          (firstError || firstField).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
           return;
         }
         if (!elements) return;
         const payBtn = document.getElementById("payBtn");
         const originalText = payBtn.textContent;
         payBtn.disabled = true;
-        payBtn.innerHTML = '<span class="pay-spinner"></span> Traitement en cours...';
+        payBtn.innerHTML =
+          '<span class="pay-spinner"></span> Traitement en cours...';
 
         const emailVal = document.getElementById("field-email").value.trim();
         if (!retryPaymentId && currentPaymentIntentId && emailVal) {
@@ -465,9 +538,9 @@
         if (error) {
           const msgEl = document.getElementById("payment-message");
           msgEl.textContent = error.message;
-          msgEl.style.color = '#d32f2f';
-          msgEl.style.fontWeight = '600';
-          msgEl.style.marginTop = '8px';
+          msgEl.style.color = "#d32f2f";
+          msgEl.style.fontWeight = "600";
+          msgEl.style.marginTop = "8px";
           payBtn.disabled = false;
           payBtn.innerHTML = originalText;
         }
@@ -536,3 +609,5 @@
         });
       });
     </script>
+  </body>
+</html>
