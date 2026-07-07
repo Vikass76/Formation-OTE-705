@@ -698,7 +698,7 @@ END MODULE ANALYSES -->
         <div class="offer-pro-highlights">
           <div class="offer-highlight-row offer-highlight-featured">
             <span class="offer-highlight-icon">⭐</span>
-            <span>Bien plus qu'une formation : un véritable accompagnement</span>
+            <div style="display:flex; flex-direction:column; gap:2px;"><span style="font-size:1.1em; font-weight:700; color:#f5c518;">Compte 10K offert — Whales Capital</span><span style="font-size:0.9em; color:rgba(255,255,255,0.85);">Compte financé pour trader en réel</span></div>
           </div>
           <div class="offer-highlight-row">
             <span class="offer-highlight-icon">🔒</span>
@@ -721,15 +721,15 @@ END MODULE ANALYSES -->
         </ul>
 
         <div class="offer-pro-proof">
-          <strong>Satisfait ou remboursé :</strong> Si tu appliques sérieusement toutes les étapes de la méthode et que tu n'obtiens pas les résultats promis, <strong>je m'engage personnellement à te rembourser</strong>
+          <strong>Satisfait ou remboursé en 6 mois :</strong> Si tu appliques sérieusement toutes les étapes de la méthode et que tu n'obtiens pas les résultats promis, <strong>je m'engage personnellement à te rembourser</strong>
         </div>
 
         <button type="button" class="offer-pro-cta" id="offerCta">
-          Réserver un appel →
+          Réserver mon appel gratuit
           <span class="offer-pro-cta-arrow">→</span>
         </button>
 
-        <p class="offer-pro-secure">🔒 Paiement sécurisé · Accès immédiat après validation avec Nathan</p>
+        <p class="offer-pro-secure">🔒 Paiement après validation avec Nathan</p>
       </div>
     </div>
   </div>
@@ -784,9 +784,12 @@ END MODULE ANALYSES -->
   }
 
   .offer-pro-price-old {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.3);
+    font-size: clamp(10px, 5vw, 20px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: line-through;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
     margin-bottom: 6px;
   }
 
