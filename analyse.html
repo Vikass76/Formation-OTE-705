@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyses de trades — Esprit Trading</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .logo {
+      height: 120px;
+      width: auto;
+      display: block;
+      margin: 0 auto 24px;
+    }
+    .badge {
+      display: block;
+      text-align: center;
+      background: rgba(244,199,15,0.12);
+      border: 1px solid rgba(244,199,15,0.3);
+      color: #f4c70f;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin: 0 auto 20px;
+      width: fit-content;
+    }
+    h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    h1 span { color: #f4c70f; }
+    .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .form-card {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .field {
+      margin-bottom: 14px;
+    }
+    .field input {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: #fff;
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field input:focus {
+      border-color: rgba(244,199,15,0.5);
+    }
+    .field input::placeholder { color: rgba(255,255,255,0.3); }
+    .btn {
+      width: 100%;
+      background: #f4c70f;
+      color: #000;
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .error { color: #d32f2f; font-size: 13px; margin-top: 8px; }
+    .success { display: none; text-align: center; padding: 20px 0; }
+    .success h2 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .success p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 24px; }
+    .btn-notion {
+      display: inline-block;
+      background: #f4c70f;
+      color: #000;
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-notion:hover { opacity: 0.9; }
+    .mention {
+      margin-top: 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/Logo.png" alt="Esprit Trading" class="logo" />
+    <div class="badge">Analyses exclusives</div>
+    <h1>Accède aux <span>analyses complètes</span> de mes trades</h1>
+    <p class="subtitle">Entre ton prénom et ton email pour accéder aux analyses vidéo détaillées.</p>
+
+    <div class="form-card">
+      <div id="form-section">
+        <div class="field">
+          <input type="text" id="field-prenom" placeholder="Ton prénom" />
+        </div>
+        <div class="field">
+          <input type="email" id="field-email" placeholder="Ton adresse email" />
+        </div>
+        <div id="form-error" class="error"></div>
+        <button class="btn" id="submit-btn" onclick="submitForm()">Accéder aux analyses →</button>
+        <p class="mention">Aucun spam. Tu peux te désinscrire à tout moment.</p>
+      </div>
+
+      <div class="success" id="success-section">
+        <h2>✅ C'est bon !</h2>
+        <p>Tu peux maintenant accéder aux analyses complètes.</p>
+        <a href="https://shimmering-sail-b46.notion.site/ce712044c5a382fc94cc01af535aea00?v=4e512044c5a3834580978806bb9c0c98" class="btn-notion" id="notion-btn">Voir les analyses →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function submitForm() {
+      const prenom = document.getElementById('field-prenom').value.trim();
+      const email = document.getElementById('field-email').value.trim();
+      const errorEl = document.getElementById('form-error');
+      const btn = document.getElementById('submit-btn');
+
+      if (!prenom) { errorEl.textContent = 'Ton prénom est requis.'; return; }
+      if (!email || !email.includes('@')) { errorEl.textContent = 'Ton email est requis.'; return; }
+
+      errorEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Traitement...';
+
+      try {
+        await fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, firstname: prenom, lastname: '' })
+        });
+      } catch(e) {
+        console.error(e);
+      }
+
+      document.getElementById('form-section').style.display = 'none';
+      document.getElementById('success-section').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
