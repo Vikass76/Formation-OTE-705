@@ -1835,7 +1835,7 @@ h4 {
   border: 1px solid rgba(244, 199, 15, 0.2);
 }
 .rdv-front {
-  width: 90%;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
@@ -2332,9 +2332,10 @@ h4 {
   }
 }
 
-/* === Section Social Proof === */
+
+/* === Social Proof === */
 .social-proof {
-  background: #000;
+  background: #f2f3f4;
   padding: 90px 0;
 }
 .social-proof-head {
@@ -2344,129 +2345,47 @@ h4 {
 .social-proof-head h2 {
   font-size: clamp(28px, 3.4vw, 40px);
   margin-bottom: 14px;
+  color: #111827;
 }
 .social-proof-head p {
-  color: var(--ink-soft);
+  color: #4a4f63;
   font-size: 17px;
   max-width: 640px;
   margin: 0 auto;
 }
+.social-proof .wrap {
+  max-width: 1180px;
+}
 .sp-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  align-items: start;
+  columns: 3;
+  column-gap: 0px;
 }
 .sp-col {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.sp-img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-@media (max-width: 800px) {
-  .sp-grid { grid-template-columns: repeat(2, 1fr); }
-  .sp-col:last-child { display: none; }
-}
-@media (max-width: 480px) {
-  .sp-grid { grid-template-columns: 1fr; }
-  .sp-col:last-child { display: flex; }
-}
-/* === Social Proof — FIX FINAL === */
-.sp-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  align-items: start;
-}
-.sp-col {
-  display: flex !important;
-  flex-direction: column;
-  gap: 12px;
+  display: contents;
 }
 .sp-img {
   width: 100%;
   height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  object-position: top;
+  display: block;
+  margin: 0 0 0px;
   border-radius: 12px;
+  break-inside: avoid;
+  border: 1px solid rgba(255,255,255,0.06);
 }
-
-/* === Social Proof — FIX V2 === */
-.sp-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  align-items: start !important;
+.sp-img--sm {
+  width: 100%;
 }
-.sp-col {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-}
-.sp-img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: unset !important;
-  border-radius: 12px !important;
-}
-
-/* === Social Proof — HAUTEUR PORTRAIT === */
-.sp-img {
-  max-height: 600px;
-  object-fit: contain;
-  object-position: top;
-  background: transparent;
-}
-/* === Social Proof — MASONRY LAYOUT === */
-.sp-grid {
-  display: block !important;
-  columns: 3 !important;
-  column-gap: 16px !important;
-}
-.sp-col {
-  display: contents !important;
-}
-.sp-img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: unset !important;
-  break-inside: avoid !important;
-  margin-bottom: 16px !important;
-  display: block !important;
-  border-radius: 12px !important;
+.sp-img--lg {
+  width: 100%;
 }
 @media (max-width: 800px) {
-  .sp-grid {
-    columns: 2 !important;
-  }
+  .sp-grid { columns: 2; }
 }
 @media (max-width: 480px) {
-  .sp-grid {
-    columns: 1 !important;
+  .sp-grid { columns: 1; }
+  .sp-img,
+  .sp-img--sm {
+    width: 100%;
   }
-}
-/* === Social Proof — REDUIRE IMAGES LONGUES === */
-.sp-img[src*="tg"] {
-  max-height: 500px;
-  object-fit: cover;
-  object-position: top;
-}
-/* === Social Proof — REDUIRE IMAGES LONGUES 300px === */
-.sp-img[src*="tg"] {
-  max-height: 300px !important;
-}
-/* === Social Proof — REVERT 300px === */
-.sp-img[src*="tg"] {
-  max-height: 500px !important;
 }
 
-/* Bannière urgence - fix mobile */
-@media (max-width: 480px) {
-  .nav {
-    top: 70px !important;
-  }
-}
