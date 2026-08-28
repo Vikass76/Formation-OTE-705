@@ -2420,3 +2420,46 @@ h4 {
   object-position: top;
   background: transparent;
 }
+/* === Social Proof — MASONRY LAYOUT === */
+.sp-grid {
+  display: block !important;
+  columns: 3 !important;
+  column-gap: 16px !important;
+}
+.sp-col {
+  display: contents !important;
+}
+.sp-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: unset !important;
+  break-inside: avoid !important;
+  margin-bottom: 16px !important;
+  display: block !important;
+  border-radius: 12px !important;
+}
+@media (max-width: 800px) {
+  .sp-grid {
+    columns: 2 !important;
+  }
+}
+@media (max-width: 480px) {
+  .sp-grid {
+    columns: 1 !important;
+  }
+}
+/* === Social Proof — REDUIRE IMAGES LONGUES === */
+.sp-img[src*="tg"] {
+  max-height: 500px;
+  object-fit: cover;
+  object-position: top;
+}
+/* === Social Proof — REDUIRE IMAGES LONGUES 300px === */
+.sp-img[src*="tg"] {
+  max-height: 300px !important;
+}
+/* === Social Proof — REVERT 300px === */
+.sp-img[src*="tg"] {
+  max-height: 500px !important;
+}
