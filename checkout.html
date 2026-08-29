@@ -625,5 +625,42 @@
         });
       });
     </script>
+    <script>
+    (function() {
+      var countries = [
+        ["AF","Afghanistan"],["ZA","Afrique du Sud"],["AL","Albanie"],["DZ","Algérie"],
+        ["DE","Allemagne"],["AD","Andorre"],["AO","Angola"],["SA","Arabie Saoudite"],
+        ["AR","Argentine"],["AM","Arménie"],["AU","Australie"],["AT","Autriche"],
+        ["AZ","Azerbaïdjan"],["BE","Belgique"],["BJ","Bénin"],["BR","Brésil"],
+        ["BF","Burkina Faso"],["CM","Cameroun"],["CA","Canada"],["CV","Cap-Vert"],
+        ["CI","Côte d'Ivoire"],["HR","Croatie"],["DK","Danemark"],["EG","Égypte"],
+        ["AE","Émirats arabes unis"],["ES","Espagne"],["EE","Estonie"],["US","États-Unis"],
+        ["FI","Finlande"],["FR","France"],["GA","Gabon"],["GH","Ghana"],["GR","Grèce"],
+        ["GN","Guinée"],["HU","Hongrie"],["IN","Inde"],["ID","Indonésie"],["IQ","Irak"],
+        ["IE","Irlande"],["IS","Islande"],["IL","Israël"],["IT","Italie"],["JP","Japon"],
+        ["JO","Jordanie"],["KZ","Kazakhstan"],["KE","Kenya"],["KW","Koweït"],
+        ["LB","Liban"],["LY","Libye"],["LT","Lituanie"],["LU","Luxembourg"],
+        ["MK","Macédoine du Nord"],["MG","Madagascar"],["MY","Malaisie"],["ML","Mali"],
+        ["MT","Malte"],["MA","Maroc"],["MX","Mexique"],["MD","Moldavie"],["MC","Monaco"],
+        ["MZ","Mozambique"],["NL","Pays-Bas"],["NZ","Nouvelle-Zélande"],["NE","Niger"],
+        ["NG","Nigéria"],["NO","Norvège"],["OM","Oman"],["UG","Ouganda"],["PK","Pakistan"],
+        ["PF","Polynésie française"],["PT","Portugal"],["QA","Qatar"],["RO","Roumanie"],
+        ["GB","Royaume-Uni"],["RU","Russie"],["SN","Sénégal"],["RS","Serbie"],
+        ["SK","Slovaquie"],["SI","Slovénie"],["SO","Somalie"],["SD","Soudan"],
+        ["SE","Suède"],["CH","Suisse"],["TZ","Tanzanie"],["TD","Tchad"],
+        ["TH","Thaïlande"],["TG","Togo"],["TN","Tunisie"],["TR","Turquie"],
+        ["UA","Ukraine"],["UY","Uruguay"]
+      ];
+      var sel = document.getElementById('field-country');
+      if (!sel) return;
+      countries.forEach(function(c) {
+        var opt = document.createElement('option');
+        opt.value = c[0];
+        opt.textContent = c[1];
+        if (c[0] === 'FR') opt.selected = true;
+        sel.appendChild(opt);
+      });
+    })();
+    </script>
   </body>
 </html>
