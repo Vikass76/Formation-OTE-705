@@ -360,6 +360,13 @@
               googlePay: "never",
               paypal: "never",
             },
+            defaultValues: {
+              billingDetails: {
+                address: {
+                  country: "FR",
+                },
+              },
+            },
           });
           paymentElement.mount("#payment-element");
 
