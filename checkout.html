@@ -850,7 +850,7 @@
 
     function updatePromoDisplay() {
       if (!activePromoPercent) return;
-      const rawAmt = currentPlan === 'full' ? 129000 : 64500;
+      const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
       const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
       const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
       document.getElementById('summaryPrice').textContent = fmt;
