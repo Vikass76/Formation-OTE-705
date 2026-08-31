@@ -2390,9 +2390,3 @@ h4 {
 }
 
 
-/* Bannière urgence - fix mobile */
-@media (max-width: 480px) {
-  .nav {
-    top: 70px !important;
-  }
-}
