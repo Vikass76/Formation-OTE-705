@@ -377,6 +377,21 @@
     <script>
       let activePromoCode = null;
       let activePromoPercent = 0;
+      function togglePromoBtn() {
+        const input = document.getElementById('promo-input');
+        const btn = document.getElementById('promo-btn');
+        if (input && input.value.trim().length > 0) {
+          btn.disabled = false;
+          btn.style.background = '#f4c70f';
+          btn.style.color = '#000';
+          btn.style.cursor = 'pointer';
+        } else {
+          btn.disabled = true;
+          btn.style.background = '#ccc';
+          btn.style.color = '#fff';
+          btn.style.cursor = 'not-allowed';
+        }
+      }
       const stripe = Stripe(
         "pk_live_51SlAA2FeDnhdh12w2fjGaZ8AphRHANB3srBMFr1qvedwWIb3DWtJePLyg47UorW5mahMnTNM60LyOjWbn5KPAsFd007FdTFwE9"
       );
