@@ -329,6 +329,13 @@
               <span class="summary-item-name">OTE 705 — Accompagnement</span>
               <span class="summary-item-price" id="summaryPrice">1 290,00 €</span>
             </div>
+            <div style="margin-bottom:12px;margin-top:10px;">
+              <div style="display:flex;gap:8px;">
+                <input type="text" id="promo-input" placeholder="Code promo" style="flex:1;padding:10px 14px;border:1px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;" />
+                <button type="button" onclick="applyPromo()" style="background:#111;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;">Appliquer</button>
+              </div>
+              <div id="promo-message" style="font-size:12px;margin-top:6px;"></div>
+            </div>
 
             <div class="due-row">
               <span class="due-label">À payer aujourd'hui</span>
@@ -807,6 +814,50 @@
           sel.appendChild(opt);
         });
       })();
+    </script>
+    <script>
+    let activePromoCode = null;
+    let activePromoPercent = 0;
+
+    async function applyPromo() {
+      const code = document.getElementById('promo-input').value.trim();
+      const msgEl = document.getElementById('promo-message');
+      if (!code) { msgEl.style.color = '#d32f2f'; msgEl.textContent = 'Saisis un code promo.'; return; }
+      try {
+        const res = await fetch('https://app.esprittrading.fr/api/payment/validate-promo', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code })
+        });
+        const data = await res.json();
+        if (!data.valid) {
+          msgEl.style.color = '#d32f2f';
+          msgEl.textContent = 'Code invalide.';
+          activePromoCode = null;
+          activePromoPercent = 0;
+        } else {
+          activePromoCode = data.code;
+          activePromoPercent = data.discount_percent;
+          msgEl.style.color = '#2e7d32';
+          msgEl.textContent = '✓ Code ' + data.code + ' appliqué — ' + data.discount_percent + '% de réduction';
+          updatePromoDisplay();
+        }
+      } catch(e) {
+        msgEl.style.color = '#d32f2f';
+        msgEl.textContent = 'Erreur réseau.';
+      }
+    }
+
+    function updatePromoDisplay() {
+      if (!activePromoPercent) return;
+      const rawAmt = currentPlan === 'full' ? 129000 : 64500;
+      const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
+      const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
+      document.getElementById('summaryPrice').textContent = fmt;
+      document.getElementById('dueNow').textContent = fmt;
+      document.getElementById('headerPrice').textContent = fmt;
+      document.getElementById('payBtn').textContent = 'Payer ' + fmt + ' EUR';
+    }
     </script>
   </body>
 </html>
