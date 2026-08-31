@@ -694,6 +694,9 @@
         if (typeof initStripeElements === "function") {
           initStripeElements(value);
         }
+        if (typeof updatePromoDisplay === "function") {
+          updatePromoDisplay();
+        }
       }
 
       radios.forEach((radio) => {
