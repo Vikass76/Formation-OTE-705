@@ -331,10 +331,17 @@
             </div>
             <div style="margin-bottom:12px;margin-top:10px;">
               <div style="display:flex;gap:8px;">
-                <input type="text" id="promo-input" placeholder="Code promo" style="flex:1;padding:10px 14px;border:1px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;" />
-                <button type="button" onclick="applyPromo()" style="background:#111;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;">Appliquer</button>
+                <input type="text" id="promo-input" placeholder="Code promo" oninput="togglePromoBtn()" style="flex:1;padding:10px 14px;border:1px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;" />
+                <button type="button" id="promo-btn" onclick="applyPromo()" disabled style="background:#ccc;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;border:none;cursor:not-allowed;white-space:nowrap;transition:background 0.2s;">Appliquer</button>
               </div>
               <div id="promo-message" style="font-size:12px;margin-top:6px;"></div>
+              <div id="promo-tag" style="display:none;align-items:center;justify-content:space-between;margin-top:8px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span id="promo-tag-code" style="background:#eee;color:#333;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;display:flex;align-items:center;gap:6px;"></span>
+                  <span style="font-size:12px;color:#555;">-23% appliqué une fois</span>
+                </div>
+                <span id="promo-discount-amount" style="font-size:13px;font-weight:700;color:#2e7d32;"></span>
+              </div>
             </div>
 
             <div class="due-row">
@@ -818,6 +825,42 @@
     </script>
     <script>
     let activePromoCode = null;
+
+    function removePromo() {
+      activePromoCode = null;
+      activePromoPercent = 0;
+      document.getElementById('promo-input').style.display = '';
+      document.getElementById('promo-input').value = '';
+      document.getElementById('promo-btn').style.display = '';
+      document.getElementById('promo-btn').disabled = true;
+      document.getElementById('promo-btn').style.background = '#ccc';
+      document.getElementById('promo-btn').style.color = '#fff';
+      document.getElementById('promo-btn').style.cursor = 'not-allowed';
+      document.getElementById('promo-tag').style.display = 'none';
+      document.getElementById('promo-message').textContent = '';
+      // Remettre les prix originaux
+      const p = currentPlanForStripe === 'full' ? '1 290,00 €' : '645,00 €';
+      document.getElementById('summaryPrice').textContent = p;
+      document.getElementById('dueNow').textContent = p;
+      document.getElementById('headerPrice').textContent = p;
+      document.getElementById('payBtn').textContent = 'Payer ' + p + ' EUR';
+    }
+
+    function togglePromoBtn() {
+      const input = document.getElementById('promo-input');
+      const btn = document.getElementById('promo-btn');
+      if (input.value.trim().length > 0) {
+        btn.disabled = false;
+        btn.style.background = '#f4c70f';
+        btn.style.color = '#000';
+        btn.style.cursor = 'pointer';
+      } else {
+        btn.disabled = true;
+        btn.style.background = '#ccc';
+        btn.style.color = '#fff';
+        btn.style.cursor = 'not-allowed';
+      }
+    }
     let activePromoPercent = 0;
 
     async function applyPromo() {
@@ -839,8 +882,18 @@
         } else {
           activePromoCode = data.code;
           activePromoPercent = data.discount_percent;
-          msgEl.style.color = '#2e7d32';
-          msgEl.textContent = '✓ Code ' + data.code + ' appliqué — ' + data.discount_percent + '% de réduction';
+          msgEl.textContent = '';
+          // Masquer le champ et afficher le tag
+          document.getElementById('promo-input').style.display = 'none';
+          document.getElementById('promo-btn').style.display = 'none';
+          const tag = document.getElementById('promo-tag');
+          tag.style.display = 'flex';
+          const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
+          const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
+          const saved = rawAmt - discounted;
+          const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
+          document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">✕</span>';
+          document.getElementById('promo-discount-amount').textContent = savedFmt;
           updatePromoDisplay();
         }
       } catch(e) {
