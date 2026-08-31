@@ -935,47 +935,6 @@
         btn.style.cursor = 'not-allowed';
       }
     }
-    let activePromoPercent = 0;
-
-    async function applyPromo() {
-      const code = document.getElementById('promo-input').value.trim();
-      const msgEl = document.getElementById('promo-message');
-      if (!code) { msgEl.style.color = '#d32f2f'; msgEl.textContent = 'Saisis un code promo.'; return; }
-      try {
-        const res = await fetch('https://app.esprittrading.fr/api/payment/validate-promo', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code })
-        });
-        const data = await res.json();
-        if (!data.valid) {
-          msgEl.style.color = '#d32f2f';
-          msgEl.textContent = 'Code invalide.';
-          activePromoCode = null;
-          activePromoPercent = 0;
-        } else {
-          activePromoCode = data.code;
-          activePromoPercent = data.discount_percent;
-          msgEl.textContent = '';
-          // Masquer le champ et afficher le tag
-          document.getElementById('promo-input').style.display = 'none';
-          document.getElementById('promo-btn').style.display = 'none';
-          const tag = document.getElementById('promo-tag');
-          tag.style.display = 'flex';
-          const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
-          const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
-          const saved = rawAmt - discounted;
-          const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
-          document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">✕</span>';
-          document.getElementById('promo-discount-amount').textContent = savedFmt;
-          updatePromoDisplay();
-        }
-      } catch(e) {
-        msgEl.style.color = '#d32f2f';
-        msgEl.textContent = 'Erreur réseau.';
-      }
-    }
-
     function updatePromoDisplay() {
       if (!activePromoPercent) return;
       const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
