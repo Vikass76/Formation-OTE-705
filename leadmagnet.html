@@ -4,107 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Formation Gratuite — Esprit Trading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&family=Rubik+Condensed:wght@400;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Rubik', sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.5; }
-    a { text-decoration: none; color: inherit; }
+    body { font-family: 'Rubik', sans-serif; background: #fff; color: #111; font-size: 16px; }
+    a { text-decoration: none; }
 
-    /* NAV */
-    .nav { background: #000; height: 112px; }
-    .nav-inner { max-width: 1420px; margin: 0 auto; padding: 0 5.5%; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo img { height: 36px; display: block; }
-    .nav-cta { display: inline-flex; align-items: center; justify-content: center; background: #ffd700; color: #000; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 10px; border: 2px solid #ffd700; letter-spacing: 0.25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.15s ease, background 0.15s ease; }
-    .nav-cta:hover { background: #ffd633; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245,199,0,0.25); }
+    .nav { background: #000; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 65px; }
+    .nav-logo { font-size: 16px; font-weight: 800; color: #ffd700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .nav-cta { background: #ffd700; color: #000; font-size: 14px; font-weight: 700; padding: 9px 20px; border-radius: 6px; }
+    .nav-cta:hover { opacity: 0.88; }
 
-    /* HERO */
-    .hero { text-align: center; padding: 40px 40px 60px; }
-    .hero-label { display: block; font-size: 14px; margin-bottom: 10px; font-style: italic; color: #333; }
-    .hero-label strong { color: #0019fd; font-style: italic; font-weight: 800; text-transform: uppercase; }
-    .hero h1 { font-size: clamp(28px, 3.6vw, 46px); font-weight: 800; color: #111; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 14px; max-width: 860px; margin-left: auto; margin-right: auto; }
-    .hero p { font-size: 16px; color: #555; max-width: 500px; margin: 0 auto; }
+    .hero { text-align: center; padding: 50px 40px 100px; max-width: 1340px; margin: 0 auto; }
+    .hero-label { display: block; font-size: 14px; margin-bottom: 16px; font-style: italic; }
+    .hero-label strong { color: #0019fd; font-style: italic; font-weight: 700; text-transform: uppercase; }
+    .hero-label span { color: #666; }
+    .hero h1 { font-size: clamp(32px, 4vw, 54px); font-weight: 900; color: #111; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 12px; max-width: 820px; margin-left: auto; margin-right: auto; font-family: 'Rubik Condensed', 'Rubik', sans-serif; }
+    .hero p { font-size: 16px; color: #666; max-width: 480px; margin: 0 auto; }
 
-    /* SPLIT */
-.split-wrap { max-width: 1260px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: center; }
+    .split-wrap { max-width: 1340px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; align-items: start; }
     @media(max-width:900px){ .split-wrap { grid-template-columns: 1fr; } }
 
-    /* THUMB */
     .thumb { border: 4px solid #0019fd; border-radius: 10px; overflow: hidden; background: #1a1a2e; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 14px; }
     .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* FORM CARD */
-    .form-card { background: #f2f3f4; border-radius: 12px; padding: 28px 28px 32px; }
-    .form-card h3 { font-size: 22px; font-weight: 800; color: #111; text-align: center; margin-bottom: 24px; line-height: 1.2; }
-    .form-card .what { font-size: 15px; color: #333; margin-bottom: 10px; }
-    .form-card ul { list-style: disc; padding-left: 22px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 6px; }
-    .form-card ul li { font-size: 15px; color: #333; }
-    .form-card input { width: 100%; border: 1px solid #d0d0d0; border-radius: 6px; padding: 13px 16px; font-size: 16px; font-family: 'Rubik', sans-serif; color: #111; margin-bottom: 12px; outline: none; background: #fff; }
+    .form-card { background: #f2f3f4; border-radius: 15px; padding: 25px; }
+    .form-card h3 { font-size: 20px; font-weight: 800; color: #111; text-align: center; margin-bottom: 18px; line-height: 1.25; }
+    .form-card .what { font-size: 14px; color: #333; margin-bottom: 10px; }
+    .form-card ul { list-style: disc; padding-left: 20px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .form-card ul li { font-size: 14px; color: #333; }
+    .form-card input { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 11px 14px; font-size: 15px; font-family: 'Rubik', sans-serif; color: #111; margin-bottom: 10px; outline: none; background: #fff; }
     .form-card input::placeholder { color: #aaa; }
     .form-card input:focus { border-color: #0019fd; }
-    .form-card button { width: 100%; background: #0019fd; color: #fff; font-size: 17px; font-weight: 700; font-family: 'Rubik', sans-serif; padding: 16px; border: none; border-radius: 6px; cursor: pointer; }
+    .form-card button { width: 100%; background: #0019fd; color: #fff; font-size: 16px; font-weight: 700; font-family: 'Rubik', sans-serif; padding: 14px; border: none; border-radius: 4px; cursor: pointer; }
     .form-card button:hover { background: #0015d4; }
-    .form-card .form-sub { font-size: 14px; color: #888; text-align: center; margin-top: 16px; }
+    .form-card .form-sub { font-size: 14px; color: #888; text-align: center; margin-top: 18px; line-height: 1.5; }
 
-    /* TRUST BAND */
-    .trust-band { background: #f2f3f4; padding: 32px 48px; display: flex; align-items: center; gap: 32px; overflow: hidden; }
-    .trust-left { flex-shrink: 0; min-width: 140px; text-align: center; }
-    .trust-excellent { font-size: 20px; font-weight: 800; color: #111; margin-bottom: 4px; }
-    .trust-stars-wrap { display: flex; justify-content: center; gap: 3px; margin-bottom: 6px; }
-    .tp-star { background: #00b67a; color: #fff; font-size: 18px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
-    .trust-count { font-size: 12px; color: #555; margin-bottom: 4px; }
+    .trust-band { background: #f2f3f4; padding: 30px 40px; display: flex; align-items: center; gap: 32px; }
+    .trust-left { flex-shrink: 0; }
+    .trust-excellent { font-size: 18px; font-weight: 800; color: #111; }
+    .trust-stars { color: #00b67a; font-size: 26px; letter-spacing: 2px; line-height: 1; margin: 4px 0; }
+    .trust-count { font-size: 12px; color: #555; }
     .trust-count a { color: #555; text-decoration: underline; }
-    .trust-tp-logo { font-size: 13px; color: #00b67a; font-weight: 800; }
-    .trust-sep { width: 1px; height: 100px; background: #ccc; flex-shrink: 0; margin-top: 4px; }
-    .trust-col { flex: 1; overflow: hidden; }
-    .trust-reviews { display: flex; gap: 32px; overflow: hidden; margin-bottom: 10px; }
-    .trust-review { flex-shrink: 0; min-width: 220px; max-width: 240px; }
-    .tr-stars { color: #00b67a; font-size: 14px; margin-bottom: 4px; }
-    .tr-meta { font-size: 12px; color: #555; margin-bottom: 4px; }
-    .tr-title { font-size: 13px; font-weight: 700; color: #111; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 235px; margin-bottom: 3px; }
-    .tr-body { font-size: 12px; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 235px; }
-    .trust-showing { font-size: 11px; color: #888; }
-    .trust-arrow { flex-shrink: 0; width: 32px; height: 32px; border: 1px solid #bbb; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #555; font-size: 18px; background: #fff; margin-top: 4px; }
+    .trust-sep { width: 1px; height: 64px; background: #ccc; flex-shrink: 0; }
+    .trust-reviews { display: flex; gap: 32px; overflow: hidden; flex: 1; }
+    .trust-review { flex-shrink: 0; min-width: 180px; max-width: 200px; }
+    .tr-stars { color: #00b67a; font-size: 13px; margin-bottom: 3px; }
+    .tr-meta { font-size: 11px; color: #888; margin-bottom: 3px; }
+    .tr-title { font-size: 13px; font-weight: 700; color: #111; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tr-body { font-size: 12px; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .trust-arrow { flex-shrink: 0; width: 32px; height: 32px; border: 1px solid #bbb; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #555; font-size: 18px; background: #fff; }
 
-    /* POINTS */
-    .points { max-width: 1260px; margin: 0 auto; padding: 80px 40px 100px; }
-    .points h2 { text-align: center; font-size: clamp(18px, 2vw, 24px); font-weight: 800; text-transform: uppercase; color: #111; margin-bottom: 60px; line-height: 1.3; letter-spacing: 0.01em; }
-    .points-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px 80px; }
+    .points { max-width: 1340px; margin: 0 auto; padding: 100px 40px; }
+    .points h2 { text-align: center; font-size: clamp(18px, 2.2vw, 26px); font-weight: 900; text-transform: uppercase; color: #111; margin-bottom: 56px; line-height: 1.25; }
+    .points-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 40px 80px; }
     @media(max-width:640px){ .points-grid { grid-template-columns: 1fr; } }
-    .point h4 { font-size: 20px; font-weight: 800; color: #111; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
-    .point h4 .ck { color: #0019fd; font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-    .point p { font-size: 14px; color: #555; line-height: 1.6; padding-left: 28px; }
+    .point h4 { font-size: 18px; font-weight: 800; color: #111; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
+    .point h4::before { content: "✔"; color: #0019fd; font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+    .point p { font-size: 14px; color: #555; line-height: 1.65; padding-left: 24px; }
 
-    /* CTA MILIEU */
     .cta-mid { text-align: center; padding: 60px 40px; border-top: 1px solid #eee; }
-    .cta-mid h2 { font-size: clamp(20px, 2.6vw, 28px); font-weight: 900; text-transform: uppercase; color: #111; margin-bottom: 22px; line-height: 1.2; letter-spacing: 0.01em; }
-    .cta-mid-btn { display: block; max-width: 560px; margin: 0 auto 32px; background: #0019fd; color: #fff; font-size: 17px; font-weight: 700; padding: 17px; border-radius: 6px; transition: background 0.15s; }
+    .cta-mid h2 { font-size: clamp(20px, 2.8vw, 30px); font-weight: 900; text-transform: uppercase; color: #111; margin-bottom: 22px; line-height: 1.2; }
+    .cta-mid-btn { display: block; max-width: 520px; margin: 0 auto 32px; background: #0019fd; color: #fff; font-size: 17px; font-weight: 700; padding: 17px; border-radius: 6px; }
     .cta-mid-btn:hover { background: #0015d4; }
     .cta-community { max-width: 520px; margin: 0 auto; border-radius: 12px; overflow: hidden; background: #1a1a2e; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.25); font-size: 13px; }
     .cta-community img { width: 100%; display: block; }
 
-    /* SUCCESS STORIES */
-    .stories { padding: 70px 40px; border-top: 1px solid #eee; }
-    .stories-inner { max-width: 1260px; margin: 0 auto; }
-    .stories h2 { text-align: center; font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #111; margin-bottom: 12px; }
+    .stories { padding: 72px 40px; border-top: 1px solid #eee; max-width: 1340px; margin: 0 auto; }
+    .stories h2 { text-align: center; font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #111; margin-bottom: 10px; }
     .stories-tp { text-align: center; margin-bottom: 8px; }
     .tp-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 4px; }
     .tp-excellent { font-size: 18px; font-weight: 800; color: #111; }
     .tp-stars { color: #00b67a; font-size: 20px; }
     .tp-sub { font-size: 13px; color: #666; margin-bottom: 4px; }
     .tp-sub a { color: #666; text-decoration: underline; }
-    .tp-showing { font-size: 11px; color: #999; margin-bottom: 36px; }
-    .stories-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 16px; }
+    .tp-showing { font-size: 12px; color: #999; margin-bottom: 36px; }
+    .stories-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 16px; }
     @media(max-width:960px){ .stories-grid { grid-template-columns: repeat(2,1fr); } }
     @media(max-width:540px){ .stories-grid { grid-template-columns: 1fr; } }
-    .story-card { border: 1px solid #ddd; border-radius: 6px; padding: 16px; background: #fff; }
-    .story-card .story-stars { color: #00b67a; }
-    .story-stars { color: #00b67a; font-size: 13px; margin-bottom: 5px; }
+    .story-card { border: 1px solid #00b67a; border-radius: 6px; padding: 16px; background: #fff; }
+    .story-stars { color: #00b67a; font-size: 14px; margin-bottom: 6px; }
     .story-meta { font-size: 11px; color: #888; margin-bottom: 7px; }
-    .story-title { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 5px; }
+    .story-title { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 6px; }
     .story-body { font-size: 12px; color: #444; line-height: 1.65; }
-    .story-read { font-size: 12px; color: #0019fd; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: underline; cursor: pointer; }
+    .story-read { font-size: 12px; color: #0019fd; font-weight: 600; margin-top: 10px; display: inline-block; cursor: pointer; text-decoration: underline; }
 
-    /* FOOTER */
     footer { background: #111; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     .footer-logo { font-size: 14px; font-weight: 800; color: #ffd700; text-transform: uppercase; }
     .footer-links { display: flex; gap: 20px; list-style: none; }
@@ -115,22 +99,17 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
-    <div class="nav-inner">
-    <a href="https://esprittrading.fr"><img src="assets/Logo.png" alt="Esprit Trading" style="height:90px;width:auto;object-fit:contain;display:block;" /></a>
-    <a href="https://esprittrading.fr#offres" class="nav-cta">Rejoindre OTE 705</a>
-    </div>
+    <span class="nav-logo">Esprit Trading</span>
+    <a href="https://esprittrading.fr" class="nav-cta">Rejoindre OTE 705</a>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
-    <span class="hero-label"><strong>Formation vidéo gratuite</strong> révèle...</span>
-    <h1>Titre principal de ta formation gratuite</h1>
+    <span class="hero-label"><strong>Formation vidéo gratuite</strong> <span>révèle...</span></span>
+    <h1>Titre principal de la formation gratuite</h1>
     <p>Sous-titre — une phrase qui décrit ce que la personne va apprendre ou recevoir.</p>
   </section>
 
-  <!-- SPLIT -->
   <div class="split-wrap">
     <div class="thumb">
       <!-- <img src="assets/miniature.jpg" alt="Miniature" /> -->
@@ -140,12 +119,12 @@
       <h3>Accède à ta formation gratuite<br/>+ Cheatsheets</h3>
       <p class="what">Ce que tu vas apprendre :</p>
       <ul>
-        <li>Structure du marché</li>
-        <li>Offre et demande institutionnelle</li>
-        <li>Concepts de liquidité</li>
-        <li>Plan de trading avancé</li>
-        <li>Masterclass psychologie du trading</li>
-        <li>Processus du trader professionnel</li>
+        <li>Point clé 1</li>
+        <li>Point clé 2</li>
+        <li>Point clé 3</li>
+        <li>Point clé 4</li>
+        <li>Point clé 5</li>
+        <li>Point clé 6</li>
         <li>Comment passer les challenges de financement</li>
       </ul>
       <form action="#" method="POST">
@@ -153,93 +132,66 @@
         <input type="email" name="email" placeholder="Email" />
         <button type="submit">Commencer la formation gratuite</button>
       </form>
-      <p class="form-sub">Rejoins ceux qui accèdent à la formation</p>
+      <p class="form-sub">Rejoins les membres qui accèdent à la formation</p>
     </div>
   </div>
 
-  <!-- TRUST BAND -->
   <div class="trust-band">
     <div class="trust-left">
       <div class="trust-excellent">Excellent</div>
-      <div class="trust-stars-wrap">
-        <span class="tp-star">★</span><span class="tp-star">★</span><span class="tp-star">★</span><span class="tp-star">★</span><span class="tp-star half">★</span>
-      </div>
+      <div class="trust-stars">★★★★★</div>
       <div class="trust-count">Basé sur <a href="#">300 avis</a></div>
-      <div class="trust-tp-logo">✦ Trustpilot</div>
     </div>
     <div class="trust-sep"></div>
-    <div class="trust-col">
-      <div class="trust-reviews">
-        <div class="trust-review">
-          <div class="tr-stars">★★★★★</div>
-          <div class="tr-meta"><strong>Prénom N.</strong>, il y a 9h</div>
-          <div class="tr-title">J'ai beaucoup plus confiance...</div>
-          <div class="tr-body">J'ai beaucoup plus confiance en moi depuis que j'ai rejoint la formation...</div>
-        </div>
-        <div class="trust-review">
-          <div class="tr-stars">★★★★★</div>
-          <div class="tr-meta"><strong>Prénom N.</strong>, il y a 14h</div>
-          <div class="tr-title">6 sur 5 — sans aucun doute...</div>
-          <div class="tr-body">Meilleur éducateur trading du secteur selon moi...</div>
-        </div>
-        <div class="trust-review">
-          <div class="tr-stars">★★★★★</div>
-          <div class="tr-meta"><strong>Prénom N.</strong>, il y a 2j</div>
-          <div class="tr-title">Quand j'ai rejoint Esprit Trading</div>
-          <div class="tr-body">Les angles morts dans mon trading ont disparu...</div>
-        </div>
-      </div>
-      <div class="trust-showing">Affichage de nos avis 5 étoiles</div>
+    <div class="trust-reviews">
+      <div class="trust-review"><div class="tr-stars">★★★★★</div><div class="tr-meta">Prénom N. · il y a 9h</div><div class="tr-title">Titre de l'avis</div><div class="tr-body">Texte court de l'avis...</div></div>
+      <div class="trust-review"><div class="tr-stars">★★★★★</div><div class="tr-meta">Prénom N. · il y a 14h</div><div class="tr-title">Titre de l'avis</div><div class="tr-body">Texte court de l'avis...</div></div>
+      <div class="trust-review"><div class="tr-stars">★★★★★</div><div class="tr-meta">Prénom N. · il y a 2j</div><div class="tr-title">Titre de l'avis</div><div class="tr-body">Texte court de l'avis...</div></div>
+      <div class="trust-review"><div class="tr-stars">★★★★★</div><div class="tr-meta">Prénom N. · il y a 3j</div><div class="tr-title">Titre de l'avis</div><div class="tr-body">Texte court de l'avis...</div></div>
     </div>
     <div class="trust-arrow">›</div>
   </div>
 
-  <!-- POINTS -->
   <section class="points">
     <h2>Voici une fraction de ce que tu vas<br/>apprendre dans cette formation gratuite...</h2>
     <div class="points-grid">
-      <div class="point"><h4><span class="ck">✔</span> Structure du marché</h4><p>Utilise nos règles systématiques pour déterminer ton biais directionnel avec une précision extrême.</p></div>
-      <div class="point"><h4><span class="ck">✔</span> Offre et demande institutionnelle</h4><p>Apprends à repérer les mouvements de marché driven par les actions institutionnelles et à en profiter.</p></div>
-      <div class="point"><h4><span class="ck">✔</span> Concepts de liquidité</h4><p>Utilise les pièges de liquidité pour augmenter ton taux de réussite et attraper de plus gros trades.</p></div>
-      <div class="point"><h4><span class="ck">✔</span> Plan de trading avancé</h4><p>Accède à notre plan de trading complet qui te dit exactement quoi faire dans chaque phase de marché.</p></div>
-      <div class="point"><h4><span class="ck">✔</span> Masterclass psychologie du trading</h4><p>Comprends la psychologie derrière le trading réussi et apprends à maîtriser ton mindset pour des résultats constants.</p></div>
-      <div class="point"><h4><span class="ck">✔</span> Processus du trader professionnel</h4><p>Découvre les processus et workflows professionnels qui rationalisent tes opérations de trading et améliorent ton efficacité.</p></div>
+      <div class="point"><h4>Point 1</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
+      <div class="point"><h4>Point 2</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
+      <div class="point"><h4>Point 3</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
+      <div class="point"><h4>Point 4</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
+      <div class="point"><h4>Point 5</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
+      <div class="point"><h4>Point 6</h4><p>Description courte du point et de sa valeur pour le trader.</p></div>
     </div>
   </section>
 
-  <!-- CTA MILIEU -->
   <section class="cta-mid">
     <h2>Clique ci-dessous pour<br/>commencer :</h2>
     <a href="#" class="cta-mid-btn">Commencer la formation gratuite</a>
     <div class="cta-community">
-      <!-- <img src="assets/screenshot-communaute.jpg" alt="Témoignage communauté" /> -->
+      <!-- <img src="assets/screenshot-communaute.jpg" alt="Témoignage" /> -->
       📷 Screenshot communauté / témoignage
     </div>
   </section>
 
-  <!-- SUCCESS STORIES -->
   <section class="stories">
-    <div class="stories-inner">
-      <h2>D'innombrables histoires de réussite</h2>
-      <div class="stories-tp">
-        <div class="tp-row"><span class="tp-excellent">Excellent</span><span class="tp-stars">★★★★★</span></div>
-        <div class="tp-sub">Noté 4.7 / 5 basé sur <a href="#">300 avis</a></div>
-        <div class="tp-showing">Affichage de nos avis 5 étoiles</div>
-      </div>
-      <div class="stories-grid">
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 9h</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 14h</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 2j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 3j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 5j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 1 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 2 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-        <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 3 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
-      </div>
+    <h2>D'innombrables histoires de réussite</h2>
+    <div class="stories-tp">
+      <div class="tp-row"><span class="tp-excellent">Excellent</span><span class="tp-stars">★★★★★</span></div>
+      <div class="tp-sub">Noté 4.7 / 5 basé sur <a href="#">300 avis</a></div>
+      <div class="tp-showing">Affichage de nos avis 5 étoiles</div>
+    </div>
+    <div class="stories-grid">
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 9h</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 14h</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 2j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 3j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 5j</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 1 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 2 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
+      <div class="story-card"><div class="story-stars">★★★★★</div><div class="story-meta">Prénom N. · il y a 3 sem</div><div class="story-title">Titre de l'avis</div><div class="story-body">Texte de l'avis ici, description de l'expérience du membre avec la formation...</div><span class="story-read">Lire la suite</span></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <span class="footer-logo">Esprit Trading</span>
     <ul class="footer-links">
@@ -250,24 +202,5 @@
     <span class="footer-copy">© 2026 Esprit Trading</span>
   </footer>
 
-  <script>
-    const track = document.querySelector('.trust-reviews');
-    const arrow = document.querySelector('.trust-arrow');
-    const reviews = document.querySelectorAll('.trust-review');
-    let current = 0;
-    const visible = 3;
-
-    arrow.addEventListener('click', () => {
-      const max = reviews.length - visible;
-      if (current < max) {
-        current++;
-      } else {
-        current = 0;
-      }
-      const cardW = reviews[0].offsetWidth + 32;
-      track.style.transform = `translateX(-${current * cardW}px)`;
-      track.style.transition = 'transform 0.4s ease';
-    });
-  </script>
 </body>
 </html>
