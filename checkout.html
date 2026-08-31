@@ -777,12 +777,6 @@
             document.getElementById('promo-btn').style.display = 'none';
             const tag = document.getElementById('promo-tag');
             tag.style.display = 'flex';
-            const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
-            const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
-            const saved = rawAmt - discounted;
-            const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + '\u00a0\u20ac';
-            document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">\u2715</span>';
-            document.getElementById('promo-discount-amount').textContent = savedFmt;
             updatePromoDisplay();
           }
         } catch(e) {
@@ -948,6 +942,10 @@
       document.getElementById('payBtn').textContent = 'Payer ' + fmt + ' EUR';
       const discountEl = document.getElementById('promo-discount-amount');
       if (discountEl) discountEl.textContent = savedFmt;
+      const tagCode = document.getElementById('promo-tag-code');
+      if (tagCode && activePromoCode) tagCode.innerHTML = activePromoCode + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">✕</span>';
+      const tag = document.getElementById('promo-tag');
+      if (tag && activePromoCode) tag.style.display = 'flex';
     }
     </script>
   </body>
