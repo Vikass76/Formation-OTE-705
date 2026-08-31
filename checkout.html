@@ -735,7 +735,6 @@
           opt.querySelector('input[type="radio"]').checked = true;
         });
       });
-    document.getElementById("promo-btn").addEventListener("click", applyPromo);
     </script>
     <script>
       (function () {
@@ -936,6 +935,7 @@
       const discountEl = document.getElementById('promo-discount-amount');
       if (discountEl) discountEl.textContent = savedFmt;
     }
+    document.getElementById("promo-btn").addEventListener("click", function() { window.applyPromo(); });
     </script>
   </body>
 </html>
