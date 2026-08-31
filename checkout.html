@@ -907,11 +907,15 @@
       if (!activePromoPercent) return;
       const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
       const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
+      const saved = rawAmt - discounted;
       const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
+      const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
       document.getElementById('summaryPrice').textContent = fmt;
       document.getElementById('dueNow').textContent = fmt;
       document.getElementById('headerPrice').textContent = fmt;
       document.getElementById('payBtn').textContent = 'Payer ' + fmt + ' EUR';
+      const discountEl = document.getElementById('promo-discount-amount');
+      if (discountEl) discountEl.textContent = savedFmt;
     }
     </script>
   </body>
