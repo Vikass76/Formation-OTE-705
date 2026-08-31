@@ -155,7 +155,7 @@
             <div class="summary-top">
               <h3 class="summary-product-title">OTE 705 — Accompagnement</h3>
               <div class="price-tag">
-                <span class="price-old-red">1 800,00 €</span>
+                <span class="price-old-red">1 690,00 €</span>
                 <span class="price-value" id="headerPrice">990,00 €</span>
               </div>
             </div>
@@ -233,9 +233,9 @@
                 <div class="plan-radio"></div>
                 <div class="plan-info">
                   <div class="plan-name">Paiement comptant</div>
-                  <div class="plan-sub">990€ aujourd'hui</div>
+                  <div class="plan-sub">1 290€ aujourd'hui</div>
                 </div>
-                <div class="plan-price">990,00 €</div>
+                <div class="plan-price">1 290,00 €</div>
               </label>
 
               <label class="plan-option" data-plan="split">
@@ -244,10 +244,10 @@
                 <div class="plan-info">
                   <div class="plan-name">Paiement en 2 fois</div>
                   <div class="plan-sub">
-                    495€ aujourd'hui, 495€ dans 30 jours
+                    645€ aujourd'hui, 645€ dans 30 jours
                   </div>
                 </div>
-                <div class="plan-price">2 &times; 495,00 €</div>
+                <div class="plan-price">2 &times; 645,00 €</div>
               </label>
             </div>
           </div>
@@ -338,7 +338,7 @@
             </div>
 
             <button type="button" class="pay-btn" id="payBtn">
-              Payer 990,00 € EUR
+              Payer 1 290,00 € EUR
             </button>
             <div
               id="payment-message"
@@ -650,11 +650,11 @@
         initStripeElements("full");
       }
       const plans = {
-        full: { label: "990,00 €", due: "990,00 €", btn: "Payer 990,00 € EUR" },
+        full: { label: "1 290,00 €", due: "1 290,00 €", btn: "Payer 1 290,00 € EUR" },
         split: {
-          label: "2 × 495,00 €",
-          due: "495,00 €",
-          btn: "Payer 495,00 € EUR",
+          label: "2 × 645,00 €",
+          due: "645,00 €",
+          btn: "Payer 645,00 € EUR",
         },
       };
 
@@ -670,7 +670,7 @@
         });
         const p = plans[value];
         document.getElementById("headerPrice").textContent =
-          value === "split" ? "2 × 495,00 €" : p.label;
+          value === "split" ? "2 × 645,00 €" : p.label;
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;
