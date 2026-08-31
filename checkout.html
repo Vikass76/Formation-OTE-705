@@ -332,7 +332,7 @@
             <div style="margin-bottom:12px;margin-top:10px;">
               <div style="display:flex;gap:8px;">
                 <input type="text" id="promo-input" placeholder="Code promo" oninput="togglePromoBtn()" style="flex:1;padding:10px 14px;border:1px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;" />
-                <button type="button" id="promo-btn" onclick="applyPromo()" disabled style="background:#ccc;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;border:none;cursor:not-allowed;white-space:nowrap;transition:background 0.2s;">Appliquer</button>
+                <button type="button" id="promo-btn" id="promo-btn-apply" disabled style="background:#ccc;color:#fff;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;border:none;cursor:not-allowed;white-space:nowrap;transition:background 0.2s;">Appliquer</button>
               </div>
               <div id="promo-message" style="font-size:12px;margin-top:6px;"></div>
               <div id="promo-tag" style="display:none;align-items:center;justify-content:space-between;margin-top:8px;">
@@ -735,6 +735,7 @@
           opt.querySelector('input[type="radio"]').checked = true;
         });
       });
+    document.getElementById("promo-btn-apply").addEventListener("click", applyPromo);
     </script>
     <script>
       (function () {
