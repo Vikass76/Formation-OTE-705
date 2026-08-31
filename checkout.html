@@ -719,6 +719,77 @@
           opt.querySelector('input[type="radio"]').checked = true;
         });
       });
+
+      function togglePromoBtn() {
+        const input = document.getElementById('promo-input');
+        const btn = document.getElementById('promo-btn');
+        if (input.value.trim().length > 0) {
+          btn.disabled = false;
+          btn.style.background = '#f4c70f';
+          btn.style.color = '#000';
+          btn.style.cursor = 'pointer';
+        } else {
+          btn.disabled = true;
+          btn.style.background = '#ccc';
+          btn.style.color = '#fff';
+          btn.style.cursor = 'not-allowed';
+        }
+      }
+      function removePromo() {
+        activePromoCode = null;
+        activePromoPercent = 0;
+        document.getElementById('promo-input').style.display = '';
+        document.getElementById('promo-input').value = '';
+        document.getElementById('promo-btn').style.display = '';
+        document.getElementById('promo-btn').disabled = true;
+        document.getElementById('promo-btn').style.background = '#ccc';
+        document.getElementById('promo-btn').style.color = '#fff';
+        document.getElementById('promo-btn').style.cursor = 'not-allowed';
+        document.getElementById('promo-tag').style.display = 'none';
+        document.getElementById('promo-message').textContent = '';
+        const p = currentPlanForStripe === 'full' ? '1\u00a0290,00\u00a0\u20ac' : '645,00\u00a0\u20ac';
+        document.getElementById('summaryPrice').textContent = p;
+        document.getElementById('dueNow').textContent = p;
+        document.getElementById('headerPrice').textContent = p;
+        document.getElementById('payBtn').textContent = 'Payer ' + p + ' EUR';
+      }
+      async function applyPromo() {
+        const code = document.getElementById('promo-input').value.trim();
+        const msgEl = document.getElementById('promo-message');
+        if (!code) { msgEl.style.color = '#d32f2f'; msgEl.textContent = 'Saisis un code promo.'; return; }
+        try {
+          const res = await fetch('https://app.esprittrading.fr/api/payment/validate-promo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code })
+          });
+          const data = await res.json();
+          if (!data.valid) {
+            msgEl.style.color = '#d32f2f';
+            msgEl.textContent = 'Code invalide.';
+            activePromoCode = null;
+            activePromoPercent = 0;
+          } else {
+            activePromoCode = data.code;
+            activePromoPercent = data.discount_percent;
+            msgEl.textContent = '';
+            document.getElementById('promo-input').style.display = 'none';
+            document.getElementById('promo-btn').style.display = 'none';
+            const tag = document.getElementById('promo-tag');
+            tag.style.display = 'flex';
+            const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
+            const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
+            const saved = rawAmt - discounted;
+            const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + '\u00a0\u20ac';
+            document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">\u2715</span>';
+            document.getElementById('promo-discount-amount').textContent = savedFmt;
+            updatePromoDisplay();
+          }
+        } catch(e) {
+          msgEl.style.color = '#d32f2f';
+          msgEl.textContent = 'Erreur réseau.';
+        }
+      }
     </script>
     <script>
       (function () {
