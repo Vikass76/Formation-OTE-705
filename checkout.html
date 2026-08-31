@@ -826,7 +826,6 @@
       })();
     </script>
     <script>
-    let activePromoCode = null;
 
     function removePromo() {
       activePromoCode = null;
@@ -863,7 +862,6 @@
         btn.style.cursor = 'not-allowed';
       }
     }
-    let activePromoPercent = 0;
 
     async function applyPromo() {
       const code = document.getElementById('promo-input').value.trim();
