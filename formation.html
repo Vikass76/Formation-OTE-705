@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Leçon #1 — Structure du Marché — Esprit Trading</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        background: #fff;
+        color: #111;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* NAV */
+      .nav {
+        background: #000;
+        height: 112px;
+      }
+      .nav-inner {
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 0 5.5%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo-img {
+        height: 90px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffd700;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 18px;
+        border-radius: 10px;
+        border: 2px solid #ffd700;
+        transition: transform 0.15s ease;
+      }
+      .nav-cta:hover {
+        background: #ffd633;
+        transform: translateY(-2px);
+      }
+
+      /* HERO DARK */
+      .hero-dark {
+        background: #252525;
+        padding: 60px 40px 48px;
+        text-align: center;
+      }
+      .hero-lesson {
+        display: inline-block;
+        background: #0019fd;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 3.9px;
+        text-transform: uppercase;
+        padding: 8px 28px;
+        margin-bottom: 28px;
+        border-radius: 2px;
+      }
+      .hero-dark h1 {
+        font-size: clamp(32px, 5vw, 64px);
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 1.05;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* VIDEO SECTION */
+      .video-section {
+        background: #252525;
+        padding: 0 40px 60px;
+      }
+      .video-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .video-embed {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 6px;
+      }
+      .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* CTA BOUTON */
+      .cta-section {
+        background: #fff;
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 48px 40px;
+        text-align: center;
+      }
+      .cta-btn {
+        display: block;
+        width: 100%;
+        background: #ffd700;
+        color: #000;
+        font-size: 17px;
+        font-weight: 700;
+        padding: 12px 40px;
+        border-radius: 4px;
+        text-align: center;
+        transition: background 0.15s;
+      }
+      .cta-btn:hover {
+        background: #e6c200;
+      }
+
+      /* CONTENU */
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 40px 60px;
+      }
+      .content-intro p {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.75;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      /* BANNIÈRE PROMO */
+      .promo-banner {
+        border-radius: 12px;
+        padding: 40px 48px;
+        margin: 56px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        background: #12131a;
+      }
+      .promo-text .promo-discount {
+        font-size: 36px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+      .promo-text .promo-discount span {
+        color: #ffd700;
+      }
+      .promo-text .promo-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      .promo-text .promo-code-wrap {
+        display: inline-block;
+        background: #0019fd;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        padding: 10px 28px;
+        border-radius: 30px;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+      }
+      .promo-text .promo-note {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 8px;
+      }
+      .promo-cta {
+        background: #ffd700;
+        color: #000;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 14px 32px;
+        border-radius: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .promo-cta:hover {
+        opacity: 0.9;
+      }
+
+      /* SECTIONS LEÇON */
+      .lesson-section {
+        margin-bottom: 64px;
+      }
+      .lesson-section-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #595959;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        text-decoration: underline;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .lesson-text {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+      .lesson-text strong {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-text .hl {
+        color: #0019fd;
+        font-weight: 700;
+      }
+      .lesson-bullets {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .lesson-bullets li {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.6;
+      }
+      .lesson-bullets li strong {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-bullets li .arr {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-link {
+        font-size: 14px;
+        color: #0019fd;
+        word-break: break-all;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .lesson-chart {
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 24px 0;
+      }
+      .lesson-chart img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .lesson-chart-placeholder {
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        background: #f9f9f9;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bbb;
+        font-size: 13px;
+        margin: 24px 0;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #111;
+        padding: 22px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 60px;
+      }
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: #aaa;
+      }
+      .footer-links a:hover {
+        color: #fff;
+      }
+      .footer-copy {
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        .hero-dark {
+          padding: 48px 20px 36px;
+        }
+        .video-section {
+          padding: 0 20px 40px;
+        }
+        .content {
+          padding: 20px;
+        }
+        .cta-section {
+          padding: 24px 20px;
+        }
+        .nav {
+          height: 64px;
+        }
+        .nav-inner {
+          height: 64px;
+        }
+        .nav-logo-img {
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="https://esprittrading.fr"
+          ><img src="assets/Logo.png" alt="Esprit Trading" class="nav-logo-img"
+        /></a>
+        <a href="https://esprittrading.fr" class="nav-cta"
+          >Rejoindre OTE 705</a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero-dark">
+      <span class="hero-lesson">Leçon #1</span>
+      <h1>Structure du Marché</h1>
+    </div>
+
+    <!-- VIDÉO -->
+    <div class="video-section">
+      <div class="video-inner">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/cEl5XyuGWcA"
+            title="Structure du Marché"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <a href="https://esprittrading.fr" class="cta-btn"
+        >Rejoindre OTE 705</a
+      >
+    </div>
+
+    <!-- CONTENU -->
+    <div class="content">
+      <div class="content-intro">
+        <p style="font-style: italic; font-weight: 700; margin-bottom: 18px">
+          Fais défiler pour les notes + diagrammes 📌
+        </p>
+        <p>
+          La structure du marché illustre le flux d'ordre général du marché et
+          fournit un cadre mécanique pour lire et comprendre les prix.
+        </p>
+        <p>
+          Une fois que tu comprends et cartographies correctement la structure
+          du marché, cela augmente massivement la probabilité de comprendre
+          <em>où</em> le prix est le plus susceptible d'aller ensuite, mais
+          aussi le comportement de <em>comment</em> le prix bougera pour y
+          arriver.
+        </p>
+        <p>
+          <strong
+            >Tu dois avoir une méthode systématique pour cartographier la
+            structure du marché de manière cohérente, de la même façon à chaque
+            fois.</strong
+          >
+        </p>
+        <p>
+          Si tu peux être cohérent dans ton approche pour analyser le marché, tu
+          augmentes la probabilité d'obtenir des résultats cohérents dans un
+          environnement de marché incertain.
+        </p>
+      </div>
+
+      <!-- BANNIÈRE PROMO -->
+      <div class="promo-banner">
+        <div class="promo-text">
+          <div class="promo-discount">
+            Obtiens <span>20% de réduction</span>
+          </div>
+          <div class="promo-title">Sur ton premier abonnement OTE 705</div>
+          <div class="promo-code-wrap">CODE : OTE20</div>
+          <div class="promo-note">*non cumulable avec d'autres offres</div>
+        </div>
+        <a href="https://esprittrading.fr" class="promo-cta"
+          >Rejoindre OTE 705</a
+        >
+      </div>
+
+      <!-- SECTION 1 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">Structure de base du marché</div>
+        <ul class="lesson-bullets">
+          <li>
+            <strong
+              >Structure de Marché Haussière (Tendance Haussière) -></strong
+            >
+            hauts supérieurs (HH) et bas supérieurs (HL)
+          </li>
+          <li>
+            <strong
+              >Structure de Marché Baissière (Tendance Baissière) -></strong
+            >
+            hauts inférieurs (LH) et bas inférieurs (LL)
+          </li>
+          <li>
+            <strong
+              >Hauts et bas de swing peuvent être confirmés avec une Cassure de
+              Structure (BOS)</strong
+            >
+          </li>
+          <li>
+            <strong>Swing High -></strong> point le plus haut qui a causé le
+            swing bas
+          </li>
+          <li>
+            <strong>Swing Low -></strong> point le plus bas qui a causé le swing
+            haut
+          </li>
+          <li><strong>BOS -></strong> cassure de la structure de swing</li>
+        </ul>
+        <p class="lesson-text">
+          Après un BOS, attends un pullback sur ce timeframe.
+        </p>
+        <div class="lesson-chart">
+          <img
+            src="assets/chart-exemple.png"
+            alt="Structure de Base du Marché"
+          />
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">Hauts et bas forts / faibles</div>
+        <ul class="lesson-bullets">
+          <li>
+            <strong>Fort</strong> hauts/bas <strong>cassent</strong> la
+            structure
+          </li>
+          <li>
+            <strong>Faible</strong> hauts/bas
+            <strong>échouent à casser</strong> la structure
+          </li>
+          <li><strong>Bas Forts -></strong> bas qui causent des hauts (HLs)</li>
+          <li>
+            <strong>Hauts Forts -></strong> hauts qui causent des bas (LHs)
+          </li>
+        </ul>
+        <p class="lesson-text" style="font-style: italic">
+          Se forment généralement avec un mouvement rapide + des bougies plus
+          grandes
+        </p>
+        <p class="lesson-text">
+          Le big money a intérêt à <strong>protéger</strong> ces points de swing
+          forts.
+        </p>
+        <p class="lesson-text">
+          🎯 Objectif = attraper les HLs et LHs (continuations) et cibler les
+          HHs et LLs (structure faible) = <strong>suivre la tendance !</strong>
+        </p>
+        <div class="lesson-chart">
+          <img
+            src="assets/chart-exemple.png"
+            alt="Hauts et Bas Forts/Faibles"
+          />
+        </div>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">Changement de tendance</div>
+        <p class="lesson-text">
+          Un changement de tendance survient lorsque le flux d'ordre attendu
+          (EOF) échoue.
+        </p>
+        <p class="lesson-text">
+          Dans une tendance haussière, l'attente est que le prix continuera à
+          former des hauts supérieurs et des bas supérieurs.
+        </p>
+        <p class="lesson-text">
+          Dans une tendance baissière, l'attente est que le prix continuera à
+          former des hauts inférieurs et des bas inférieurs.
+        </p>
+        <ul class="lesson-bullets">
+          <li>
+            <strong>Changement de tendance haussier -></strong> confirmé une
+            fois que le prix casse un swing <strong>bas</strong> plus haut pour
+            former un swing <strong>haut</strong> supérieur (BOS haussier).
+          </li>
+          <li>
+            <strong>Changement de tendance baissier -></strong> confirmé une
+            fois que le prix casse un swing <strong>haut</strong> plus bas pour
+            former un swing <strong>bas</strong> inférieur (BOS baissier).
+          </li>
+        </ul>
+        <div class="lesson-chart">
+          <img src="assets/chart-exemple.png" alt="Changement de Tendance" />
+        </div>
+      </div>
+
+      <!-- SECTION 4 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">Exemple réel</div>
+        <div class="lesson-chart">
+          <img src="assets/chart-exemple.png" alt="Exemple Réel" />
+        </div>
+      </div>
+
+      <!-- SECTION 5 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">3 Types de structure</div>
+        <ul class="lesson-bullets">
+          <li><strong>Swing</strong> → BOS → clôture du corps de bougie</li>
+          <li><strong>Interne</strong> → i-BOS → clôture du corps de bougie</li>
+          <li>
+            <strong>Fractal</strong> → CHoCH (changement de tendance de
+            structure fractale) → cassure de mèche
+          </li>
+        </ul>
+        <ul class="lesson-bullets">
+          <li>
+            <strong>CHoCH</strong> → signale le début/fin d'un pullback interne
+          </li>
+          <li>
+            <strong>i-BOS</strong> → signale le début/fin d'un pullback swing
+          </li>
+        </ul>
+        <div class="lesson-chart">
+          <img src="assets/chart-exemple.png" alt="3 Types de Structure" />
+        </div>
+      </div>
+
+      <!-- SECTION 6 -->
+      <div class="lesson-section">
+        <div class="lesson-section-title">Attente de la structure interne</div>
+        <p class="lesson-text">
+          Lorsque la structure interne est alignée haussière avec la structure
+          Swing haussière, l'attente est que la tendance interne haussière
+          continuera jusqu'à ce qu'elle casse le haut Swing faible.
+        </p>
+        <p class="lesson-text">
+          Si la structure interne haussière échoue à faire cela et passe
+          baissière, alors l'attente est que la nouvelle tendance interne
+          restera baissière jusqu'à ce qu'elle casse le bas interne faible plus
+          large.
+        </p>
+      </div>
+
+      <!-- CTA BAS -->
+      <div class="cta-section" style="margin: 40px auto">
+        <a href="https://esprittrading.fr" class="cta-btn"
+          >Rejoindre OTE 705</a
+        >
+      </div>
+
+      <!-- BANNIÈRE PROMO BAS -->
+      <div class="promo-banner">
+        <div class="promo-text">
+          <div class="promo-discount">Obtiens 20% de réduction</div>
+          <div class="promo-title">Sur ton premier abonnement OTE 705</div>
+          <div class="promo-code-wrap">CODE : OTE20</div>
+        </div>
+        <a href="https://esprittrading.fr" class="promo-cta"
+          >Rejoindre OTE 705</a
+        >
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="https://esprittrading.fr"
+        ><img
+          src="assets/Logo.png"
+          alt="Esprit Trading"
+          style="
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            mix-blend-mode: lighten;
+          "
+      /></a>
+      <ul class="footer-links">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Disclaimer</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Esprit Trading</span>
+    </footer>
+  </body>
+</html>
