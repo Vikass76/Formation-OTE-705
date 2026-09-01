@@ -288,7 +288,12 @@
     const trustTrack = document.querySelector('.trust-reviews');
     const trustReviews = document.querySelectorAll('.trust-review');
     let trustCurrent = 0;
-    const trustVisible = window.innerWidth <= 480 ? 1 : window.innerWidth <= 860 ? 2 : 4;
+    function getTrustVisible() {
+      if (!trustReviews.length) return 1;
+      const colW = trustTrack.parentElement.offsetWidth;
+      const cardW = trustReviews[0].offsetWidth + 32;
+      return Math.max(1, Math.round(colW / cardW));
+    }
     function moveTrust() {
       const cardW = trustReviews[0].offsetWidth + parseInt(getComputedStyle(trustTrack).gap || 16);
       trustTrack.style.transform = 'translateX(-' + (trustCurrent * cardW) + 'px)';
@@ -297,14 +302,14 @@
     const prevBtn = document.getElementById('trust-prev');
     const nextBtn = document.getElementById('trust-next');
     function updateButtons() {
-      const max = trustReviews.length - trustVisible;
+      const max = trustReviews.length - getTrustVisible();
       prevBtn.style.opacity = trustCurrent > 0 ? '1' : '0.3';
       prevBtn.style.pointerEvents = trustCurrent > 0 ? 'auto' : 'none';
       nextBtn.style.opacity = trustCurrent < max ? '1' : '0.3';
       nextBtn.style.pointerEvents = trustCurrent < max ? 'auto' : 'none';
     }
     nextBtn.addEventListener('click', () => {
-      const max = trustReviews.length - trustVisible;
+      const max = trustReviews.length - getTrustVisible();
       if (trustCurrent < max) { trustCurrent++; moveTrust(); updateButtons(); }
     });
     prevBtn.addEventListener('click', () => {
