@@ -71,18 +71,19 @@
     .points-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px 80px; }
     @media(max-width:640px){ .points-grid { grid-template-columns: 1fr; } }
     @media(max-width:860px){
-      .trust-band { flex-direction: column; padding: 24px 20px; gap: 20px; }
+      .trust-band { flex-wrap: wrap; padding: 24px 20px; gap: 16px; }
       .trust-sep { display: none; }
-      .trust-left { text-align: center; width: 100%; min-width: unset; }
+      .trust-left { text-align: center; width: 100%; min-width: unset; order: 1; }
       .trust-stars-wrap { justify-content: center; }
-      .trust-col { width: 100%; overflow: hidden; display: flex; align-items: center; gap: 8px; }
-      .trust-reviews { gap: 16px; flex: 1; overflow: hidden; }
+      .trust-col { order: 3; flex: 1; min-width: 0; overflow: hidden; }
+      .trust-reviews { gap: 16px; }
       .trust-review { width: calc(50% - 8px); min-width: unset; }
-      .trust-arrow { flex-shrink: 0; }
+      #trust-prev { order: 2; }
+      #trust-next { order: 4; }
     }
     @media(max-width:480px){
       .trust-band { padding: 20px 16px; }
-      .trust-review { width: 100%; }
+      .trust-review { width: calc(100% - 0px); }
     }
     .point h4 { font-size: 20px; font-weight: 800; color: #111; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
     .point h4 .ck { color: #ffd700; font-size: 20px; flex-shrink: 0; margin-top: 1px; }
@@ -287,9 +288,9 @@
     const trustTrack = document.querySelector('.trust-reviews');
     const trustReviews = document.querySelectorAll('.trust-review');
     let trustCurrent = 0;
-    const trustVisible = 4;
+    const trustVisible = window.innerWidth <= 480 ? 1 : window.innerWidth <= 860 ? 2 : 4;
     function moveTrust() {
-      const cardW = 220 + 32;
+      const cardW = trustReviews[0].offsetWidth + 16;
       trustTrack.style.transform = 'translateX(-' + (trustCurrent * cardW) + 'px)';
       trustTrack.style.transition = 'transform 0.4s ease';
     }
