@@ -168,7 +168,7 @@
         <li>Processus du trader professionnel</li>
         <li>Comment passer les challenges de financement</li>
       </ul>
-      <form action="#" method="POST">
+      <form id="lead-form" action="#" method="POST">
         <input type="text" name="name" placeholder="Prénom" />
         <input type="email" name="email" placeholder="Email" />
         <button type="submit">Commencer la formation gratuite</button>
@@ -249,7 +249,7 @@
   <!-- CTA MILIEU -->
   <section class="cta-mid">
     <h2>Clique ci-dessous pour<br/>commencer :</h2>
-    <a href="#" class="cta-mid-btn">Commencer la formation gratuite</a>
+    <a href="#lead-form" class="cta-mid-btn" onclick="event.preventDefault();document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">Commencer la formation gratuite</a>
     <div class="cta-community">
       <!-- <img src="assets/screenshot-communaute.jpg" alt="Témoignage communauté" /> -->
       📷 Screenshot communauté / témoignage
