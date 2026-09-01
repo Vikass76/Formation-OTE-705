@@ -75,10 +75,10 @@
       .trust-sep { display: none; }
       .trust-left { text-align: center; width: 100%; min-width: unset; }
       .trust-stars-wrap { justify-content: center; }
-      .trust-col { width: 100%; overflow: hidden; }
-      .trust-reviews { gap: 16px; }
+      .trust-col { width: 100%; overflow: hidden; display: flex; align-items: center; gap: 8px; }
+      .trust-reviews { gap: 16px; flex: 1; overflow: hidden; }
       .trust-review { width: calc(50% - 8px); min-width: unset; }
-      .trust-arrow { align-self: center; }
+      .trust-arrow { flex-shrink: 0; }
     }
     @media(max-width:480px){
       .trust-band { padding: 20px 16px; }
