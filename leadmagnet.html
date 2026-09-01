@@ -209,7 +209,6 @@
       </div>
       <div class="trust-showing">Affichage de nos avis 5 étoiles</div>
     </div>
-    <div class="trust-arrow" id="trust-prev">‹</div>
     <div class="trust-arrow" id="trust-next">›</div>
   </div>
 
@@ -279,13 +278,24 @@
       trustTrack.style.transform = 'translateX(-' + (trustCurrent * cardW) + 'px)';
       trustTrack.style.transition = 'transform 0.4s ease';
     }
-    document.getElementById('trust-next').addEventListener('click', () => {
+    const prevBtn = document.getElementById('trust-prev');
+    const nextBtn = document.getElementById('trust-next');
+    function updateButtons() {
       const max = trustReviews.length - trustVisible;
-      if (trustCurrent < max) { trustCurrent++; moveTrust(); }
+      prevBtn.style.display = trustCurrent > 0 ? 'flex' : 'none';
+      nextBtn.style.display = trustCurrent < max ? 'flex' : 'none';
+    }
+    nextBtn.addEventListener('click', () => {
+      const max = trustReviews.length - trustVisible;
+      if (trustCurrent < max) { trustCurrent++; moveTrust(); updateButtons(); }
     });
-    document.getElementById('trust-prev').addEventListener('click', () => {
-      if (trustCurrent > 0) { trustCurrent--; moveTrust(); }
+    prevBtn.addEventListener('click', () => {
+      if (trustCurrent > 0) { trustCurrent--; moveTrust(); updateButtons(); }
     });
+    // Insérer le bouton prev avant les avis
+    const trustCol = document.querySelector('.trust-col');
+    trustCol.insertBefore(prevBtn, trustCol.firstChild);
+    updateButtons();
   </script>
     });
   </script>
