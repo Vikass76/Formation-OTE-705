@@ -293,9 +293,6 @@
     prevBtn.addEventListener('click', () => {
       if (trustCurrent > 0) { trustCurrent--; moveTrust(); updateButtons(); }
     });
-    // Insérer le bouton prev avant les avis
-    const trustCol = document.querySelector('.trust-col');
-    trustCol.insertBefore(prevBtn, trustCol.firstChild);
     updateButtons();
   </script>
     });
