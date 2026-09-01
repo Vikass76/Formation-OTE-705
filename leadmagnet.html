@@ -168,7 +168,7 @@
       <img src="assets/trustpilot-1.svg" alt="Trustpilot" style="height:24px;width:auto;margin-top:6px;display:block;margin-left:auto;margin-right:auto;" />
     </div>
     <div class="trust-sep"></div>
-    <div class="trust-arrow" id="trust-prev" style="display:none;">‹</div>
+    <div class="trust-arrow" id="trust-prev">‹</div>
     <div class="trust-col">
       <div class="trust-reviews">
         <div class="trust-review">
@@ -283,8 +283,10 @@
     const nextBtn = document.getElementById('trust-next');
     function updateButtons() {
       const max = trustReviews.length - trustVisible;
-      prevBtn.style.display = trustCurrent > 0 ? 'flex' : 'none';
-      nextBtn.style.display = trustCurrent < max ? 'flex' : 'none';
+      prevBtn.style.opacity = trustCurrent > 0 ? '1' : '0.3';
+      prevBtn.style.pointerEvents = trustCurrent > 0 ? 'auto' : 'none';
+      nextBtn.style.opacity = trustCurrent < max ? '1' : '0.3';
+      nextBtn.style.pointerEvents = trustCurrent < max ? 'auto' : 'none';
     }
     nextBtn.addEventListener('click', () => {
       const max = trustReviews.length - trustVisible;
