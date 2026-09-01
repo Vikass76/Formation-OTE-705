@@ -290,7 +290,7 @@
     let trustCurrent = 0;
     const trustVisible = window.innerWidth <= 480 ? 1 : window.innerWidth <= 860 ? 2 : 4;
     function moveTrust() {
-      const cardW = trustReviews[0].offsetWidth + 16;
+      const cardW = trustReviews[0].offsetWidth + parseInt(getComputedStyle(trustTrack).gap || 16);
       trustTrack.style.transform = 'translateX(-' + (trustCurrent * cardW) + 'px)';
       trustTrack.style.transition = 'transform 0.4s ease';
     }
