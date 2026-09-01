@@ -71,17 +71,18 @@
     .points-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px 80px; }
     @media(max-width:640px){ .points-grid { grid-template-columns: 1fr; } }
     @media(max-width:860px){
-      .trust-band { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 16px; }
+      .trust-band { flex-direction: column; padding: 24px 20px; gap: 20px; }
       .trust-sep { display: none; }
-      .trust-left { text-align: left; min-width: unset; width: 100%; }
-      .trust-stars-wrap { justify-content: flex-start; }
+      .trust-left { text-align: center; width: 100%; min-width: unset; }
+      .trust-stars-wrap { justify-content: center; }
       .trust-col { width: 100%; overflow: hidden; }
       .trust-reviews { gap: 16px; }
-      .trust-review { width: 260px; }
+      .trust-review { width: calc(50% - 8px); min-width: unset; }
+      .trust-arrow { align-self: center; }
     }
     @media(max-width:480px){
       .trust-band { padding: 20px 16px; }
-      .trust-review { width: 240px; }
+      .trust-review { width: 100%; }
     }
     .point h4 { font-size: 20px; font-weight: 800; color: #111; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
     .point h4 .ck { color: #ffd700; font-size: 20px; flex-shrink: 0; margin-top: 1px; }
