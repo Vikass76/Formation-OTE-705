@@ -71,13 +71,13 @@
     .points-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px 80px; }
     @media(max-width:640px){ .points-grid { grid-template-columns: 1fr; } }
     @media(max-width:860px){
-      .trust-band { flex-wrap: wrap; padding: 24px 20px; gap: 16px; }
+      .trust-band { flex-wrap: wrap; padding: 24px 20px; gap: 8px; }
       .trust-sep { display: none; }
       .trust-left { text-align: center; width: 100%; min-width: unset; order: 1; }
       .trust-stars-wrap { justify-content: center; }
-      .trust-col { order: 3; flex: 1; min-width: 0; overflow: hidden; }
+      .trust-col { order: 3; flex: 1; min-width: 0; overflow: hidden; margin-top: 16px; }
       .trust-reviews { gap: 16px; }
-      .trust-review { width: calc(50% - 8px); min-width: unset; }
+      .trust-review { width: calc(50% - 8px); flex-shrink: 0; min-width: unset; }
       #trust-prev { order: 2; }
       #trust-next { order: 4; }
     }
