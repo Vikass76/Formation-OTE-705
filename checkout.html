@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esprit Trading — Paiement OTE 705</title>
-    <link rel="stylesheet" href="checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css" />
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link
@@ -229,7 +232,7 @@
                   <div class="plan-name">Paiement comptant</div>
                   <div class="plan-sub">1 290€ aujourd'hui</div>
                 </div>
-                <div class="plan-price">1 290,00 €</div>
+                <div class="plan-price">1 290 €</div>
               </label>
 
               <label class="plan-option" data-plan="split">
@@ -241,7 +244,7 @@
                     645€ aujourd'hui, 645€ dans 30 jours
                   </div>
                 </div>
-                <div class="plan-price">2 &times; 645,00 €</div>
+                <div class="plan-price">2 &times; 645 €</div>
               </label>
             </div>
           </div>
@@ -321,7 +324,7 @@
             </div>
             <div class="summary-line-item">
               <span class="summary-item-name">OTE 705 — Accompagnement</span>
-              <span class="summary-item-price" id="summaryPrice">1 290,00 €</span>
+              <span class="summary-item-price" id="summaryPrice">1 290 €</span>
             </div>
             <div style="margin-bottom:12px;margin-top:10px;">
               <div style="display:flex;gap:8px;">
@@ -341,12 +344,12 @@
             <div class="due-row">
               <span class="due-label">À payer aujourd'hui</span>
               <div class="due-price">
-                <span id="dueNow">1 290,00 €</span>
+                <span id="dueNow">1 290 €</span>
               </div>
             </div>
 
             <button type="button" class="pay-btn" id="payBtn">
-              Payer 1 290,00 € EUR
+              Payer 1 290 € EUR
             </button>
             <div
               id="payment-message"
@@ -657,11 +660,11 @@
         initStripeElements("full");
       }
       const plans = {
-        full: { label: "1 290,00 €", due: "1 290,00 €", btn: "Payer 1 290,00 € EUR" },
+        full: { label: "1 290 €", due: "1 290 €", btn: "Payer 1 290 € EUR" },
         split: {
-          label: "2 × 645,00 €",
-          due: "645,00 €",
-          btn: "Payer 645,00 € EUR",
+          label: "2 × 645 €",
+          due: "645 €",
+          btn: "Payer 645 € EUR",
         },
       };
 
@@ -677,7 +680,7 @@
         });
         const p = plans[value];
         document.getElementById("headerPrice").textContent =
-          value === "split" ? "2 × 645,00 €" : p.label;
+          value === "split" ? "2 × 645 €" : p.label;
         document.getElementById("summaryPrice").textContent = p.label;
         document.getElementById("dueNow").textContent = p.due;
         document.getElementById("payBtn").textContent = p.btn;

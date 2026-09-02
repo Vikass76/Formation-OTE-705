@@ -997,3 +997,10 @@ OKcat
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* === Typo Inter formulaire === */
+.section-title { font-family: 'Inter', sans-serif; font-weight: 700; }
+.field-label { font-family: 'Inter', sans-serif; font-weight: 600; }
+.field-input { font-family: 'Inter', sans-serif; font-weight: 400; }
+.pay-btn { font-family: 'Inter', sans-serif; font-weight: 700; }
+.summary-product-title { font-family: 'Inter', sans-serif; font-weight: 700; }
