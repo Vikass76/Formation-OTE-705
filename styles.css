@@ -961,6 +961,20 @@ h4 {
 .story-card-wide .story-img {
   width: 320px !important;
 }
+@media (max-width: 1190px) {
+  .story-card {
+    grid-template-columns: 180px 1fr;
+  }
+  .story-img {
+    width: 180px;
+  }
+  .story-card-wide {
+    grid-template-columns: 200px 1fr !important;
+  }
+  .story-card-wide .story-img {
+    width: 200px !important;
+  }
+}
 
 .offer {
   background: #000;
