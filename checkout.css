@@ -1014,3 +1014,8 @@ OKcat
 .checkout-footer-legal { font-family: 'Inter', sans-serif; }
 .due-label { font-family: 'Inter', sans-serif; font-weight: 600; }
 #dueNow { font-family: 'Inter', sans-serif; font-weight: 700; }
+
+.summary-item-name { font-family: 'Inter', sans-serif; }
+.summary-item-price { font-family: 'Inter', sans-serif; font-weight: 700; }
+
+#promo-input, #promo-btn, #promo-tag, #promo-message, #promo-tag-code, #promo-discount-amount { font-family: 'Inter', sans-serif; }
