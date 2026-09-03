@@ -1233,5 +1233,84 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
   }
 })();
 </script>
+
+  <!-- ========== POPUP LEAD MAGNET ========== -->
+  <!-- Pour activer le popup lundi : changer POPUP_ENABLED = false en true -->
+  <div id="lm-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+    <div id="lm-popup" style="background:#fff;border-radius:16px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+      <button onclick="closeLmPopup()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;z-index:1;">✕</button>
+      <div style="padding:32px 28px 28px;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <img src="assets/Logo.png" alt="Esprit Trading" style="height:48px;width:auto;margin:0 auto 16px;display:block;">
+          <p style="font-size:12px;font-weight:700;color:#ffd700;text-transform:uppercase;letter-spacing:3px;margin-bottom:10px;">Formation vidéo gratuite révèle...</p>
+          <h2 style="font-size:22px;font-weight:900;color:#111;line-height:1.2;margin-bottom:8px;">Titre principal de ta formation gratuite</h2>
+          <p style="font-size:14px;color:#555;line-height:1.5;">Sous-titre — une phrase qui décrit ce que la personne va apprendre ou recevoir.</p>
+        </div>
+        <div style="margin-bottom:20px;">
+          <p style="font-size:13px;font-weight:700;color:#111;margin-bottom:10px;">Ce que tu vas apprendre :</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;">
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Structure du marché</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Offre et demande institutionnelle</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Concepts de liquidité</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Plan de trading avancé</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Masterclass psychologie du trading</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Processus du trader professionnel</li>
+            <li style="font-size:13px;color:#333;display:flex;align-items:center;gap:8px;"><span style="color:#ffd700;font-weight:700;">✔</span> Comment passer les challenges de financement</li>
+          </ul>
+        </div>
+        <form id="lm-form" style="display:flex;flex-direction:column;gap:10px;">
+          <input type="text" id="lm-prenom" placeholder="Prénom" required style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:14px;font-family:'Rubik',sans-serif;outline:none;"/>
+          <input type="email" id="lm-email" placeholder="Email" required style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:14px;font-family:'Rubik',sans-serif;outline:none;"/>
+          <button type="submit" style="background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:14px;border:none;border-radius:8px;cursor:pointer;font-family:'Rubik',sans-serif;">Accéder à la formation gratuite</button>
+        </form>
+        <p style="text-align:center;font-size:12px;color:#aaa;margin-top:10px;">Rejoins ceux qui accèdent à la formation</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const POPUP_ENABLED = false; // Changer en true lundi pour activer
+
+    function showLmPopup() {
+      if (!POPUP_ENABLED) return;
+      if (sessionStorage.getItem('lm_closed')) return;
+      const overlay = document.getElementById('lm-overlay');
+      overlay.style.display = 'flex';
+    }
+
+    function closeLmPopup() {
+      document.getElementById('lm-overlay').style.display = 'none';
+      sessionStorage.setItem('lm_closed', '1');
+    }
+
+    if (POPUP_ENABLED) {
+      // Déclencheur 1 : scroll 40%
+      window.addEventListener('scroll', function onScroll() {
+        const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        if (scrolled >= 0.4) {
+          showLmPopup();
+          window.removeEventListener('scroll', onScroll);
+        }
+      });
+
+      // Déclencheur 2 : 30 secondes
+      setTimeout(showLmPopup, 30000);
+    }
+
+    document.getElementById('lm-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const prenom = document.getElementById('lm-prenom').value.trim();
+      const email = document.getElementById('lm-email').value.trim();
+      try {
+        await fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstname: prenom, email })
+        });
+      } catch(e) {}
+      window.location.href = 'leadmagnet.html';
+    });
+  </script>
+  <!-- ========== FIN POPUP LEAD MAGNET ========== -->
   </body>
 </html>
