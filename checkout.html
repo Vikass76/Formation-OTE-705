@@ -450,10 +450,10 @@
               },
             },
           });
-          paymentElement.mount("#payment-element");
+          paymentElement.mount("#payment-element", { scroll: false });
 
           const expressCheckoutElement = elements.create("expressCheckout");
-          expressCheckoutElement.mount("#express-checkout-element");
+          expressCheckoutElement.mount("#express-checkout-element", { scroll: false });
 
           expressCheckoutElement.on("click", (event) => {
             const expressMsg = document.getElementById(
