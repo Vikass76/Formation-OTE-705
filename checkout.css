@@ -1004,3 +1004,13 @@ OKcat
 .field-input { font-family: 'Inter', sans-serif; font-weight: 400; }
 .pay-btn { font-family: 'Inter', sans-serif; font-weight: 700; }
 .summary-product-title { font-family: 'Inter', sans-serif; font-weight: 700; }
+
+.plan-title { font-family: 'Inter', sans-serif; font-weight: 700; }
+.plan-price { font-family: 'Inter', sans-serif; font-weight: 800; }
+.plan-sub { font-family: 'Inter', sans-serif; font-weight: 400; }
+.bonus-title { font-family: 'Inter', sans-serif; font-weight: 700; }
+.bonus-desc { font-family: 'Inter', sans-serif; font-weight: 400; }
+.secure-note { font-family: 'Inter', sans-serif; }
+.checkout-footer-legal { font-family: 'Inter', sans-serif; }
+.due-label { font-family: 'Inter', sans-serif; font-weight: 600; }
+#dueNow { font-family: 'Inter', sans-serif; font-weight: 700; }
