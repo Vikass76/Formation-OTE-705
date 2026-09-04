@@ -162,8 +162,13 @@
 
   <!-- SPLIT -->
   <div class="split-wrap" id="lead-form">
-    <div class="thumb">
+    <div class="thumb" style="position:relative;cursor:pointer;" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
       <img src="assets/miniature.jpg" alt="Miniature" />
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+        <div style="width:60px;height:60px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);opacity:0.75;">
+          <span style="font-size:22px;margin-left:4px;color:#000;line-height:1;">▶</span>
+        </div>
+      </div>
     </div>
     <div class="form-card">
       <h3 style="font-size:24px;font-weight:700;line-height:1.2;margin-top:0;margin-bottom:2.5rem;">Accède à la vidéo complète</h3>
