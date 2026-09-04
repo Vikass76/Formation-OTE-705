@@ -528,7 +528,7 @@
             const { error } = await stripe.confirmPayment({
               elements,
               confirmParams: {
-                return_url: window.location.origin + "/merci.html",
+                return_url: window.location.origin + "/merci.html?amount=" + Math.round(currentAmount),
               },
             });
             if (error) {
@@ -650,7 +650,7 @@
         const { error } = await stripe.confirmPayment({
           elements,
           confirmParams: {
-            return_url: window.location.origin + "/merci.html",
+            return_url: window.location.origin + "/merci.html?amount=" + Math.round(currentAmount),
           },
         });
 

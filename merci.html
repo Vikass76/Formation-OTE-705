@@ -25,7 +25,7 @@
     const params = new URLSearchParams(window.location.search);
     const paymentIntentId = params.get('payment_intent');
     const plan = params.get('plan') || 'full';
-    const amount = 1290; // Valeur totale de la commande
+    const amount = parseInt(params.get('amount')) || 1290; // Montant réel après remise
     // Éviter les doublons - envoyer seulement si payment_intent présent
     if (paymentIntentId && !sessionStorage.getItem('purchase_sent_' + paymentIntentId)) {
       sessionStorage.setItem('purchase_sent_' + paymentIntentId, '1');
