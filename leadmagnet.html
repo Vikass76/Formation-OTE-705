@@ -355,6 +355,7 @@
           body: JSON.stringify({ firstname: prenom, email })
         });
       } catch(e) {}
+      if(typeof gtag !== 'undefined') gtag('event', 'leadmagnet_soumis', {event_category: 'formulaire'});
       window.location.href = 'https://esprittrading.fr';
     });
   </script>
