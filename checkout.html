@@ -528,7 +528,7 @@
             const { error } = await stripe.confirmPayment({
               elements,
               confirmParams: {
-                return_url: window.location.origin + "/merci.html?amount=" + Math.round(currentAmount),
+                return_url: window.location.origin + "/merci.html?amount=" + (currentPlanForStripe === "split" ? 1290 : (activePromoPercent ? Math.round(129000 * (1 - activePromoPercent/100)) / 100 : 1290)),
               },
             });
             if (error) {
@@ -650,7 +650,7 @@
         const { error } = await stripe.confirmPayment({
           elements,
           confirmParams: {
-            return_url: window.location.origin + "/merci.html?amount=" + Math.round(currentAmount),
+            return_url: window.location.origin + "/merci.html?amount=" + (currentPlanForStripe === "split" ? 1290 : (activePromoPercent ? Math.round(129000 * (1 - activePromoPercent/100)) / 100 : 1290)),
           },
         });
 
