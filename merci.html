@@ -15,7 +15,24 @@
     </style>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTFVRVJYFL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TTFVRVJYFL');
+    // Événement purchase avec données e-commerce
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan') || 'full';
+    const amount = plan === 'split' ? 645 : 1290;
+    gtag('event', 'purchase', {
+      transaction_id: Date.now().toString(),
+      value: amount,
+      currency: 'EUR',
+      items: [{ item_name: 'OTE 705 Accompagnement', price: amount, quantity: 1 }]
+    });
+  </script>
+</head>
   <body>
     <div class="merci-box">
       <div class="check">
