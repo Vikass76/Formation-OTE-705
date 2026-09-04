@@ -30,6 +30,15 @@
     gtag('config', 'G-TTFVRVJYFL');
     gtag('event', 'begin_checkout', {currency: 'EUR', value: 1290});
   </script>
+  <script>
+    // Nettoyer les UTM de l'URL après que GA4 les a captés
+    window.addEventListener('load', function() {
+      if (window.location.search.includes('utm_')) {
+        var cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        history.replaceState(null, '', cleanUrl);
+      }
+    });
+  </script>
 </head>
   <body>
     <div class="checkout-wrap">

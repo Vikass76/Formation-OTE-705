@@ -156,6 +156,15 @@
     gtag('js', new Date());
     gtag('config', 'G-TTFVRVJYFL');
   </script>
+  <script>
+    // Nettoyer les UTM de l'URL après que GA4 les a captés
+    window.addEventListener('load', function() {
+      if (window.location.search.includes('utm_')) {
+        var cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        history.replaceState(null, '', cleanUrl);
+      }
+    });
+  </script>
 </head>
 <body>
 
