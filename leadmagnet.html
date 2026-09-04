@@ -348,9 +348,13 @@
       const prenom = document.querySelector('#lead-form input[name="name"]').value.trim();
       const email = document.querySelector('#lead-form input[type="email"]').value.trim();
       if (!email) return;
-      // Redirection immédiate, appel Brevo en arrière-plan
-      if(typeof gtag !== 'undefined') gtag('event', 'leadmagnet_soumis');
-      window.location.href = 'https://esprittrading.fr';
+      // Redirection après court délai pour laisser GA4 envoyer l'événement
+      if(typeof gtag !== 'undefined') {
+        gtag('event', 'leadmagnet_soumis');
+        setTimeout(function(){ window.location.href = 'https://esprittrading.fr'; }, 500);
+      } else {
+        window.location.href = 'https://esprittrading.fr';
+      }
       fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
