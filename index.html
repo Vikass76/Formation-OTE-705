@@ -1320,15 +1320,14 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
       e.preventDefault();
       const prenom = document.getElementById('lm-prenom').value.trim();
       const email = document.getElementById('lm-email').value.trim();
-      try {
-        await fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firstname: prenom, email })
-        });
-      } catch(e) {}
+      // Redirection immédiate, appel Brevo en arrière-plan
       if(typeof gtag !== 'undefined') gtag('event', 'popup_soumis');
       window.location.href = 'confirmation.html';
+      fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstname: prenom, email })
+      }).catch(()=>{});
     });
   </script>
   <!-- ========== FIN POPUP LEAD MAGNET ========== -->

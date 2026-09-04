@@ -348,15 +348,14 @@
       const prenom = document.querySelector('#lead-form input[name="name"]').value.trim();
       const email = document.querySelector('#lead-form input[type="email"]').value.trim();
       if (!email) return;
-      try {
-        await fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firstname: prenom, email })
-        });
-      } catch(e) {}
-      if(typeof gtag !== 'undefined') gtag('event', 'leadmagnet_soumis', {event_category: 'formulaire'});
+      // Redirection immédiate, appel Brevo en arrière-plan
+      if(typeof gtag !== 'undefined') gtag('event', 'leadmagnet_soumis');
       window.location.href = 'https://esprittrading.fr';
+      fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstname: prenom, email })
+      }).catch(()=>{});
     });
   </script>
 </body>
