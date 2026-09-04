@@ -23,14 +23,19 @@
     gtag('config', 'G-TTFVRVJYFL');
     // Événement purchase avec données e-commerce
     const params = new URLSearchParams(window.location.search);
+    const paymentIntentId = params.get('payment_intent');
     const plan = params.get('plan') || 'full';
-    const amount = plan === 'split' ? 645 : 1290;
-    gtag('event', 'purchase', {
-      transaction_id: Date.now().toString(),
-      value: amount,
-      currency: 'EUR',
-      items: [{ item_name: 'OTE 705 Accompagnement', price: amount, quantity: 1 }]
-    });
+    const amount = 1290; // Valeur totale de la commande
+    // Éviter les doublons - envoyer seulement si payment_intent présent
+    if (paymentIntentId && !sessionStorage.getItem('purchase_sent_' + paymentIntentId)) {
+      sessionStorage.setItem('purchase_sent_' + paymentIntentId, '1');
+      gtag('event', 'purchase', {
+        transaction_id: paymentIntentId,
+        value: amount,
+        currency: 'EUR',
+        items: [{ item_name: 'OTE 705 Accompagnement', price: amount, quantity: 1 }]
+      });
+    }
   </script>
 </head>
   <body>
