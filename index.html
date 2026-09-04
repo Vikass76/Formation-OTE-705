@@ -1294,7 +1294,7 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
       overlay.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       document.documentElement.style.overflow = 'hidden';
-      if(typeof gtag !== 'undefined') gtag('event', 'popup_affiche', {event_category: 'popup'});
+      if(typeof gtag !== 'undefined') gtag('event', 'popup_affiche');
     }
     function closeLmPopup() {
       document.getElementById('lm-overlay').style.display = 'none';
@@ -1327,7 +1327,7 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
           body: JSON.stringify({ firstname: prenom, email })
         });
       } catch(e) {}
-      if(typeof gtag !== 'undefined') gtag('event', 'popup_soumis', {event_category: 'popup'});
+      if(typeof gtag !== 'undefined') gtag('event', 'popup_soumis');
       window.location.href = 'confirmation.html';
     });
   </script>
