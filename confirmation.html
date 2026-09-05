@@ -156,74 +156,11 @@
 
 
   <!-- CONFIRMATION -->
-  <div style="background:#e8e8e8;min-height:60vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;">
-    <div style="background:#fff;border-radius:8px;max-width:640px;width:100%;padding:60px 56px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-      <span style="font-size:48px;margin-bottom:10px;display:block;">📩</span>
-      <h1 style="font-size:36px;font-weight:700;font-family:'Fira Sans',sans-serif;color:#111;line-height:1.2;margin-top:0;margin-bottom:3.5rem;white-space:nowrap;">C'est bon, tu as accès à la vidéo !</h1>
-      <p style="font-size:18px;color:#444;font-weight:400;line-height:1.6;margin-bottom:2.5rem;">Vérifie ta boîte mail, je viens de t'envoyer le lien pour accéder à la vidéo.</p>
-      <p style="font-size:18px;color:#888;font-weight:400;line-height:1.6;margin-bottom:2.5rem;">Pense à vérifier tes spams ou l'onglet Promotions si tu ne la trouves pas.</p>
-      <p style="font-size:14px;color:#888;margin-bottom:12px;">Tu n'as pas reçu l'email ?</p>
-      <a href="leadmagnet.html" style="display:inline-block;background:#ffd700;color:#000;font-size:18px;font-weight:700;line-height:1.5;padding:9.5px 30px;border-radius:30px;text-decoration:none;">Renvoyer le lien</a>
-    </div>
-  </div>
-
-
-  <script>
-    const trustTrack = document.querySelector('.trust-reviews');
-    const trustReviews = document.querySelectorAll('.trust-review');
-    let trustCurrent = 0;
-    function getTrustVisible() {
-      if (!trustReviews.length) return 1;
-      const colW = trustTrack.parentElement.offsetWidth;
-      const cardW = trustReviews[0].offsetWidth + 32;
-      return Math.max(1, Math.round(colW / cardW));
-    }
-    function moveTrust() {
-      const cardW = trustReviews[0].offsetWidth + parseInt(getComputedStyle(trustTrack).gap || 16);
-      trustTrack.style.transform = 'translateX(-' + (trustCurrent * cardW) + 'px)';
-      trustTrack.style.transition = 'transform 0.4s ease';
-    }
-    const prevBtn = document.getElementById('trust-prev');
-    const nextBtn = document.getElementById('trust-next');
-    function updateButtons() {
-      const max = trustReviews.length - getTrustVisible();
-      prevBtn.style.opacity = trustCurrent > 0 ? '1' : '0.3';
-      prevBtn.style.pointerEvents = trustCurrent > 0 ? 'auto' : 'none';
-      nextBtn.style.opacity = trustCurrent < max ? '1' : '0.3';
-      nextBtn.style.pointerEvents = trustCurrent < max ? 'auto' : 'none';
-    }
-    nextBtn.addEventListener('click', () => {
-      const max = trustReviews.length - getTrustVisible();
-      if (trustCurrent < max) { trustCurrent++; moveTrust(); updateButtons(); }
-    });
-    prevBtn.addEventListener('click', () => {
-      if (trustCurrent > 0) { trustCurrent--; moveTrust(); updateButtons(); }
-    });
-    updateButtons();
-  </script>
-  <script>
-    document.getElementById('lead-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const prenom = document.querySelector('#lead-form input[name="name"]').value.trim();
-      const email = document.querySelector('#lead-form input[type="email"]').value.trim();
-      if (!email) return;
-      try {
-        await fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firstname: prenom, email })
-        });
-      } catch(e) {}
-      window.location.href = 'https://esprittrading.fr';
-    });
-  </script>
-</body>
 </html>  <div style="background:#f0f0f0;min-height:calc(100vh - 112px);display:flex;align-items:center;justify-content:center;padding:40px 20px;">
     <div style="background:#fff;border-radius:6px;max-width:600px;width:100%;padding:56px 52px;box-shadow:0 2px 20px rgba(0,0,0,0.08);">
-      <span style="display:inline-block;background:#ffd700;color:#000;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:20px;">C'EST BON !</span>
-      <h1 style="font-family:'Rubik',sans-serif;font-size:36px;font-weight:700;color:#111;line-height:1.2;margin-bottom:8px;">Ta vidéo est en route !</h1>
-      <p style="font-size:18px;font-weight:600;color:#555;margin-bottom:32px;">Salut !</p>
-      <div style="height:1px;background:#eee;margin-bottom:32px;"></div>
+      <span style="display:inline-block;background:#ffd700;color:#000;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;">C'EST BON !</span>
+      <h1 style="font-family:'Rubik',sans-serif;font-size:36px;font-weight:700;color:#111;line-height:1.2;margin-bottom:24px;">Ta vidéo est en route !</h1>
+      
       <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:16px;">Va vérifier tes emails, ta vidéo vient de t'être envoyée.</p>
       <div style="background:#fffbe6;border-left:3px solid #ffd700;padding:14px 18px;border-radius:4px;font-size:15px;color:#333;margin-bottom:24px;">
         Tu vas recevoir un email intitulé <strong>« Confirme ton inscription »</strong>.<br/>Clique simplement sur le lien à l'intérieur pour confirmer ton adresse email et accéder immédiatement à la vidéo.
@@ -231,7 +168,7 @@
       <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:16px;">Dans quelques minutes, tu vas découvrir ce qui te bloque aujourd'hui et les étapes à suivre pour te rapprocher de la rentabilité.</p>
       <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:16px;">Alors ne perdons pas de temps.</p>
       <p style="font-size:16px;font-weight:700;color:#111;margin-top:24px;">→ Va vérifier ta boîte mail et profite de la vidéo.</p>
-      <p style="font-size:13px;color:#aaa;margin-top:32px;">Tu n'as pas reçu l'email ? <a href="leadmagnet.html" style="color:#888;text-decoration:underline;">Renvoyer le lien</a></p>
+      
     </div>
   </div>
 
