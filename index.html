@@ -1293,6 +1293,14 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
           <li style="font-size:16px;color:#595959;line-height:1.6;">Adapter <strong>RR, timeframe et fréquence</strong></li>
           <li style="font-size:16px;color:#595959;line-height:1.6;">Atteindre <strong>la rentabilité</strong></li>
         </ul>
+        <div id="lm-confirmation" style="display:none;text-align:center;padding:20px 0;">
+          <span style="font-size:48px;display:block;margin-bottom:16px;">📩</span>
+          <h3 style="font-size:22px;font-weight:900;color:#111;margin-bottom:16px;">C'est bon, tu as accès à la vidéo !</h3>
+          <p style="font-size:15px;color:#444;line-height:1.7;margin-bottom:12px;">Vérifie ta boîte mail, je viens de t'envoyer le lien pour accéder à la vidéo.</p>
+          <p style="font-size:14px;color:#888;line-height:1.6;margin-bottom:28px;">Pense à vérifier tes spams ou l'onglet Promotions si tu ne la trouves pas.</p>
+          <button onclick="closeLmPopup()" style="background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:12px 32px;border:none;border-radius:6px;cursor:pointer;">Fermer</button>
+        </div>
+        <div id="lm-form-wrap">
         <form id="lm-form" style="display:flex;flex-direction:column;gap:16px;">
           <p style="font-size:13px;color:#888;margin-top:16px;margin-bottom:-13px;text-align:left;font-style:italic;">📩 + Reçois mes meilleurs conseils en trading directement par email</p>
           <input type="text" id="lm-prenom" placeholder="Prénom" required style="padding:13px 16px;border:1px solid #ddd;border-radius:6px;font-size:15px;font-family:'Rubik',sans-serif;outline:none;width:100%;"/>
@@ -1300,6 +1308,7 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
           <button type="submit" style="background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:14px;border:none;border-radius:6px;cursor:pointer;font-family:'Rubik',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;">▶ Regarder la vidéo gratuitement</button>
         </form>
         <p style="text-align:center;font-size:12px;color:#999;margin-top:18px;">Accès immédiat • 100 % gratuit</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1343,7 +1352,18 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
       const email = document.getElementById('lm-email').value.trim();
       // Redirection immédiate, appel Brevo en arrière-plan
       if(typeof gtag !== 'undefined') gtag('event', 'popup_soumis');
-      window.location.href = 'confirmation.html';
+      document.getElementById('lm-popup').innerHTML = `
+        <button onclick="closeLmPopup()" style="position:absolute;top:-14px;right:-14px;background:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;color:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:10001;line-height:1;">✕</button>
+        <div style="padding:48px 40px;text-align:center;">
+          <span style="font-size:48px;display:block;margin-bottom:16px;">📩</span>
+          <h3 style="font-size:22px;font-weight:900;color:#111;margin-bottom:16px;">C'est bon, tu as accès à la vidéo !</h3>
+          <p style="font-size:15px;color:#444;line-height:1.7;margin-bottom:12px;">Vérifie ta boîte mail, je viens de t'envoyer le lien pour accéder à la vidéo.</p>
+          <p style="font-size:14px;color:#888;line-height:1.6;margin-bottom:28px;">Pense à vérifier tes spams ou l'onglet Promotions si tu ne la trouves pas.</p>
+          <p style="font-size:14px;color:#888;margin-bottom:12px;">Tu n'as pas reçu l'email ?</p>
+          <a href="leadmagnet.html" style="display:inline-block;background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:14px 32px;border-radius:30px;text-decoration:none;">Renvoyer le lien</a>
+        </div>
+      `;
+      document.getElementById('lm-overlay').style.alignItems = 'center';
       fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
