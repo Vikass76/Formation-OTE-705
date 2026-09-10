@@ -1066,7 +1066,7 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
   (function () {
     const cta = document.getElementById("offerCta");
     cta.addEventListener("click", () => {
-      window.location.href = "checkout.html";
+      if (window.self !== window.top) { window.open("https://esprittrading.fr/checkout.html", "_blank"); } else { window.location.href = "checkout.html"; }
     });
   })();
 </script>
