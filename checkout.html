@@ -916,6 +916,8 @@
           document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">✕</span>';
           document.getElementById('promo-discount-amount').textContent = savedFmt;
           updatePromoDisplay();
+          // Recréer le PaymentIntent avec le bon montant
+          await initStripeElements(currentPlanForStripe);
         }
       } catch(e) {
         msgEl.style.color = '#d32f2f';
