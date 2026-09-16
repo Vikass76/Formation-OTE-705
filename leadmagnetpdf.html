@@ -356,9 +356,9 @@
       // Redirection après court délai pour laisser GA4 envoyer l'événement
       if(typeof gtag !== 'undefined') {
         gtag('event', 'leadmagnet_soumis');
-        setTimeout(function(){ window.location.href = 'confirmation.html'; }, 500);
+        setTimeout(function(){ window.location.href = 'confirmationpdf.html'; }, 500);
       } else {
-        window.location.href = 'confirmation.html';
+        window.location.href = 'confirmationpdf.html';
       }
       fetch('https://app.esprittrading.fr/api/auth/lead-magnet-pdf', {
         method: 'POST',
