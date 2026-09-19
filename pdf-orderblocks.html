@@ -64,7 +64,7 @@
     .trust-count a { color: #555; text-decoration: underline; }
     .trust-tp-logo { font-size: 13px; color: #00b67a; font-weight: 800; }
     .trust-sep { width: 1px; height: 100px; background: #ccc; flex-shrink: 0; margin-top: 4px; }
-    .trust-col { max-width: calc(4 * 220px + 3 * 32px + 0px); overflow: hidden; padding-right: 20px; flex-shrink: 1; flex: 1; }
+    .trust-col { max-width: calc(4 * 220px + 3 * 32px + 0px); overflow: hidden; flex-shrink: 1; flex: 1; }
     .trust-reviews { display: flex; gap: 32px; margin-bottom: 10px; }
     .trust-review { flex-shrink: 0; width: 220px; }
     .tr-stars { color: #00b67a; font-size: 14px; margin-bottom: 4px; }
@@ -215,14 +215,16 @@
   <!-- TRUST BAND -->
   <div class="trust-band">
     <div class="trust-left" style="display:flex;flex-direction:column;align-items:center;gap:4px;">
-      <div class="trust-excellent">Excellent</div>
-      <div class="trust-stars-wrap">
-        <img src="assets/stars-5.svg" alt="5 etoiles" style="height:26px;width:auto;">
-      </div>
-      <span class="trust-count" style="color:#555;text-decoration:underline;font-size:12px;">Basé sur des avis Trustpilot</span>
+      <a href="https://fr.trustpilot.com/review/esprittrading.fr" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div class="trust-excellent">Excellent</div>
+        <div class="trust-stars-wrap">
+          <img src="assets/stars-5.svg" alt="5 etoiles" style="height:26px;width:auto;">
+        </div>
+        <span class="trust-count" style="color:#555;text-decoration:underline;font-size:12px;">Basé sur des avis Trustpilot</span>
+      </a>
       <!-- TrustBox widget - Review Collector -->
-      <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a4b69c292be734e3e192fe5" data-style-height="52px" data-style-width="200px" data-token="751ea3cd-617a-4783-a674-6563e0a94e4e" style="pointer-events:none;">
-        <a href="#" target="_blank" rel="noopener">Trustpilot</a>
+      <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a4b69c292be734e3e192fe5" data-style-height="52px" data-style-width="200px" data-token="751ea3cd-617a-4783-a674-6563e0a94e4e">
+        <a href="https://fr.trustpilot.com/review/esprittrading.fr" target="_blank" rel="noopener">Trustpilot</a>
       </div>
       <!-- End TrustBox widget -->
     </div>
@@ -339,14 +341,14 @@
     const prevBtn = document.getElementById('trust-prev');
     const nextBtn = document.getElementById('trust-next');
     function updateButtons() {
-      const max = trustReviews.length - getTrustVisible();
+      const max = trustReviews.length - getTrustVisible() + 1;
       prevBtn.style.opacity = trustCurrent > 0 ? '1' : '0.3';
       prevBtn.style.pointerEvents = trustCurrent > 0 ? 'auto' : 'none';
       nextBtn.style.opacity = trustCurrent < max ? '1' : '0.3';
       nextBtn.style.pointerEvents = trustCurrent < max ? 'auto' : 'none';
     }
     nextBtn.addEventListener('click', () => {
-      const max = trustReviews.length - getTrustVisible();
+      const max = trustReviews.length - getTrustVisible() + 1;
       if (trustCurrent < max) { trustCurrent++; moveTrust(); updateButtons(); }
     });
     prevBtn.addEventListener('click', () => {
