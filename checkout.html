@@ -926,10 +926,10 @@
     function updatePromoDisplay() {
       if (!activePromoPercent) return;
       const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
-      const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
-      const saved = rawAmt - discounted;
+      const discounted = rawAmt - (currentPlanForStripe === 'split' ? 15000 : 30000);
+      const saved = 30000;
       const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
-      const savedFmt = '-' + ((currentPlanForStripe === 'split' ? saved * 2 : saved) / 100).toFixed(2).replace('.', ',') + ' €';
+      const savedFmt = '-300,00 €';
       document.getElementById('summaryPrice').textContent = currentPlanForStripe === 'split' ? '2 × 645 €' : '1 290 €';
       document.getElementById('dueNow').textContent = currentPlanForStripe === 'split' ? '2 × ' + fmt : fmt;
       const splitDetailPromo = document.getElementById('split-detail');
