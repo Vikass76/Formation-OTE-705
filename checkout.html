@@ -930,7 +930,7 @@
       const saved = rawAmt - discounted;
       const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
       const savedFmt = '-' + ((currentPlanForStripe === 'split' ? saved * 2 : saved) / 100).toFixed(2).replace('.', ',') + ' €';
-      document.getElementById('summaryPrice').textContent = currentPlanForStripe === 'split' ? '2 × 645 €' : fmt;
+      document.getElementById('summaryPrice').textContent = currentPlanForStripe === 'split' ? '2 × 645 €' : '1 290 €';
       document.getElementById('dueNow').textContent = currentPlanForStripe === 'split' ? '2 × ' + fmt : fmt;
       const splitDetailPromo = document.getElementById('split-detail');
       if (splitDetailPromo && currentPlanForStripe === 'split') {
