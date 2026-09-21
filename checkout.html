@@ -936,7 +936,7 @@
         splitDetailPromo.style.display = 'block';
         document.getElementById('split-detail-text').textContent = fmt + " aujourd'hui · " + fmt + ' dans 30 jours';
       }
-      document.getElementById('headerPrice').textContent = fmt;
+      document.getElementById('headerPrice').textContent = currentPlanForStripe === 'split' ? '2 × ' + fmt : fmt;
       document.getElementById('payBtn').textContent = currentPlanForStripe === 'split' ? 'Payer ' + fmt + " aujourd'hui" : 'Payer ' + fmt + ' EUR';
       const discountEl = document.getElementById('promo-discount-amount');
       if (discountEl) discountEl.textContent = savedFmt;
