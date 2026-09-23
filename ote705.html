@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTE 705 — Accompagnement Trading</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: #555;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1a1a;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .page-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0;
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .section {
+    padding: 60px 50px;
+  }
+
+  .section + .section {
+    border-top: none;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0 50px;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .serif { font-family: 'Libre Baskerville', Georgia, serif; }
+
+  h1.hero-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 41px;
+    text-align: center;
+    line-height: 55px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  h1.hero-title .italic-line {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.3rem;
+    text-transform: none;
+    display: block;
+    margin-top: 6px;
+  }
+
+  h1.hero-title .italic-line u {
+    text-decoration: underline;
+  }
+
+  .hero-sub {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+    margin-top: 28px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── PROOF GRID ── */
+  .proof-grid-wrap {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    flex: 1;
+  }
+
+  .proof-grid .img-placeholder {
+    aspect-ratio: 1 / 0.85;
+  }
+
+  .proof-caption {
+    width: 220px;
+    flex-shrink: 0;
+    padding-top: 10px;
+  }
+
+  .proof-caption .arrow-left {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .proof-caption p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .proof-caption p em {
+    font-weight: 400;
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* ── IMAGE PLACEHOLDER ── */
+  .img-placeholder {
+    background: #c8c8c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: 100%;
+    min-height: 120px;
+  }
+
+  .img-placeholder.tall { min-height: 200px; }
+  .img-placeholder.medium { min-height: 160px; }
+
+  /* ── BODY TEXT SECTIONS ── */
+  .body-text p {
+    margin-bottom: 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .body-text p:last-child { margin-bottom: 0; }
+
+  .body-text strong { font-weight: 700; }
+  .body-text em { font-style: italic; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    text-align: center;
+    line-height: 1.4;
+    margin: 28px 0;
+  }
+
+  .pull-quote u { text-decoration: underline; }
+
+  /* ── TWO-COL WITH IMAGE ── */
+  .two-col {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .two-col .col-text { flex: 1; }
+  .two-col .col-img { width: 200px; flex-shrink: 0; }
+  .two-col .col-img-small { width: 160px; flex-shrink: 0; }
+
+  .img-caption {
+    font-size: 0.82rem;
+    text-align: center;
+    margin-top: 6px;
+    color: #444;
+  }
+
+  /* ── BIG HEADING ── */
+  .big-heading {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+  }
+
+  .big-heading-sub {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* ── PROCESS FLOW ── */
+  .process-flow {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 32px 0;
+    text-align: center;
+    margin: 32px 0;
+  }
+
+  .process-flow p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  .process-flow .arrow-down {
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .process-flow .loop-arrow {
+    font-size: 1.4rem;
+  }
+
+  /* ── NOTIFICATION MOCKUP ── */
+  .notif-box {
+    background: #e8e8e8;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .notif-icon {
+    width: 44px;
+    height: 44px;
+    background: #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .notif-body { flex: 1; }
+  .notif-body .notif-app { font-weight: 700; font-size: 0.95rem; }
+  .notif-body .notif-text { font-size: 0.9rem; margin-top: 2px; }
+  .notif-time { font-size: 0.8rem; color: #666; }
+
+  /* ── BANK STATEMENT ── */
+  .bank-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 24px;
+    max-width: 340px;
+    margin: 20px 0;
+  }
+
+  .bank-box .bank-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #444;
+    margin-bottom: 16px;
+  }
+
+  .bank-box .bank-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .bank-box .bank-sub {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .bank-box .bank-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+  }
+
+  .bank-box .status-green {
+    color: #2a9d2a;
+    font-weight: 600;
+  }
+
+  /* ── STEP HEADING ── */
+  .step-heading {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; margin: 20px 0; }
+
+  .checklist li {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .checklist li .check-icon {
+    color: #2a9d2a;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .checklist li strong { font-weight: 700; }
+  .checklist li em { font-style: italic; }
+
+  /* ── SMALL CHECKLIST ── */
+  .check-simple { list-style: none; margin: 10px 0; }
+
+  .check-simple li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .check-simple li .check-icon {
+    color: #2a9d2a;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ── REVIEW CARD ── */
+  .review-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+
+  .review-card .reviewer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .reviewer-info { display: flex; gap: 12px; align-items: center; }
+
+  .reviewer-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #4a90e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .reviewer-name { font-weight: 700; font-size: 0.95rem; }
+  .reviewer-meta { font-size: 0.8rem; color: #666; }
+  .review-date { font-size: 0.8rem; color: #666; }
+
+  .stars { color: #00b67a; font-size: 1.1rem; letter-spacing: 2px; margin: 6px 0; }
+
+  .review-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+
+  .review-text { font-size: 0.88rem; color: #333; line-height: 1.55; }
+
+  .review-tags { margin-top: 10px; display: flex; gap: 8px; }
+
+  .review-tag {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    color: #555;
+  }
+
+  /* ── REVIEW-CAPTION COMBO ── */
+  .review-caption-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+
+  .review-caption-wrap .review-card { flex: 1; margin: 0; }
+
+  .review-caption-wrap .caption-right {
+    width: 160px;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 16px;
+  }
+
+  .caption-right .arrow-curved {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .caption-right p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  /* ── SKOOL POST MOCKUP ── */
+  .skool-post {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 18px 20px;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    font-size: 0.88rem;
+    margin: 20px 0;
+  }
+
+  .skool-post .skool-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .skool-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #555;
+    flex-shrink: 0;
+  }
+
+  .skool-name { font-weight: 700; font-size: 0.88rem; color: #fff; }
+  .skool-meta { font-size: 0.75rem; color: #999; }
+  .skool-title { font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 8px; }
+  .skool-body { line-height: 1.6; color: #ccc; }
+
+  .skool-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .skool-imgs .img-placeholder { min-height: 80px; background: #333; color: #777; }
+
+  .skool-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    display: flex;
+    gap: 14px;
+    font-size: 0.78rem;
+    color: #999;
+  }
+
+  .skool-reply {
+    background: #2a2a3e;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: #ccc;
+  }
+
+  .skool-reply-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .skool-reply-name { font-weight: 700; color: #fff; font-size: 0.82rem; }
+
+  .skool-reply-img { margin-top: 10px; }
+
+  /* ── COMMUNITY POST MOCKUP ── */
+  .community-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px 20px;
+    background: #fff;
+    margin: 20px 0;
+  }
+
+  .community-post .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .community-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #c8c8c8;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .community-name { font-weight: 700; font-size: 0.9rem; }
+  .community-meta { font-size: 0.75rem; color: #888; }
+  .community-title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+  .community-body { font-size: 0.85rem; line-height: 1.6; color: #333; }
+
+  .community-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .community-imgs .img-placeholder { min-height: 80px; }
+
+  .community-footer {
+    margin-top: 12px;
+    display: flex;
+    gap: 14px;
+    font-size: 0.78rem;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+
+  /* ── DARK COMMUNITY POST ── */
+  .dark-post {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 18px 20px;
+    background: #1e1e2e;
+    color: #ddd;
+    font-size: 0.88rem;
+    margin: 20px 0;
+  }
+
+  .dark-post .post-title { font-weight: 700; color: #fff; font-size: 1rem; margin-bottom: 8px; }
+  .dark-post .post-body { line-height: 1.6; color: #ccc; }
+
+  /* ── COURSE SCREENSHOT MOCKUP ── */
+  .course-mock {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  .course-mock-header {
+    background: #1a1a1a;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc;
+    font-size: 0.78rem;
+  }
+
+  .course-mock-header .logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .course-mock-header .logo-square {
+    width: 22px; height: 22px;
+    background: #444;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .course-mock-body {
+    display: flex;
+    min-height: 340px;
+  }
+
+  .course-sidebar {
+    width: 200px;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+  }
+
+  .sidebar-label {
+    background: #4a90e2;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .sidebar-progress {
+    padding: 8px 10px;
+    font-size: 0.7rem;
+    color: #666;
+    border-bottom: 1px solid #eee;
+  }
+
+  .progress-bar-wrap {
+    background: #eee;
+    border-radius: 4px;
+    height: 5px;
+    margin-top: 4px;
+  }
+
+  .progress-bar {
+    background: #4a90e2;
+    height: 100%;
+    border-radius: 4px;
+    width: 12%;
+  }
+
+  .sidebar-item {
+    padding: 9px 10px;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+  }
+
+  .sidebar-item.active {
+    background: #fff8e1;
+  }
+
+  .sidebar-item .item-arrow { color: #999; font-size: 0.7rem; }
+  .sidebar-item .item-check { color: #2a9d2a; }
+
+  .course-content { flex: 1; padding: 16px; }
+
+  .course-content h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; }
+
+  /* ── DEEP DIVES MOCKUP ── */
+  .deep-dives-mock {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  .deep-dives-mock-body {
+    display: flex;
+    min-height: 280px;
+  }
+
+  .deep-dives-sidebar {
+    width: 200px;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+    background: #fafafa;
+    padding: 10px 0;
+  }
+
+  .deep-dives-sidebar .dd-header {
+    padding: 6px 12px 10px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dd-progress-bar-wrap {
+    margin: 0 12px 10px;
+    background: #eee;
+    border-radius: 4px;
+    height: 5px;
+  }
+
+  .dd-progress-bar {
+    background: #2a9d2a;
+    height: 100%;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .dd-item {
+    padding: 8px 12px;
+    font-size: 0.72rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .dd-item.active {
+    background: #fff8e1;
+    font-weight: 600;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 8px 8px;
+  }
+
+  .dd-check { color: #2a9d2a; font-size: 0.8rem; }
+
+  .deep-dives-content { flex: 1; padding: 16px; }
+
+  .deep-dives-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ── CLASSROOM GRID ── */
+  .classroom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .classroom-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .classroom-card .card-img {
+    background: #f0f0f0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #999;
+  }
+
+  .classroom-card .card-info {
+    padding: 8px;
+    font-size: 0.68rem;
+  }
+
+  .classroom-card .card-title { font-weight: 700; margin-bottom: 2px; color: #333; }
+  .classroom-card .card-sub { color: #666; line-height: 1.3; }
+
+  .classroom-card .card-progress-wrap {
+    background: #eee;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+
+  .classroom-card .card-progress {
+    background: #2a9d2a;
+    height: 100%;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  /* ── BONUS COURSES ── */
+  .bonus-mock {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    margin: 16px 0;
+  }
+
+  .bonus-sidebar {
+    width: 180px;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+    background: #fafafa;
+    padding: 10px 0;
+    font-size: 0.72rem;
+  }
+
+  .bonus-sidebar .bonus-label {
+    padding: 6px 12px;
+    font-weight: 700;
+    color: #555;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+  }
+
+  .bonus-sidebar .bonus-progress {
+    padding: 4px 12px 8px;
+    color: #999;
+    font-size: 0.67rem;
+  }
+
+  .bonus-section-title {
+    padding: 6px 12px;
+    font-weight: 700;
+    color: #333;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    font-size: 0.72rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .bonus-item {
+    padding: 7px 12px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #555;
+    font-size: 0.71rem;
+  }
+
+  .bonus-content { flex: 1; padding: 16px; }
+  .bonus-content .img-placeholder { min-height: 140px; }
+  .bonus-content .img-caption-small {
+    font-size: 0.72rem;
+    color: #666;
+    margin-top: 4px;
+  }
+
+  /* ── REMINDER BOX ── */
+  .reminder-box { text-align: center; padding: 40px 50px; }
+
+  .reminder-box h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .reminder-box .reminder-sub {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .reminder-list {
+    list-style: none;
+    text-align: left;
+    max-width: 480px;
+    margin: 0 auto 20px;
+  }
+
+  .reminder-list li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .reminder-list li .check-icon { color: #2a9d2a; }
+
+  .reminder-bottom {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+
+  /* ── PRICE SECTION ── */
+  .price-big {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 20px 0 4px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .price-underline {
+    display: block;
+    height: 3px;
+    background: #e83a3a;
+    width: 100%;
+    border-radius: 2px;
+    margin-top: -4px;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-wrap { text-align: center; margin: 32px 0 10px; }
+
+  .cta-btn {
+    display: inline-block;
+    background: #2ecc40;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cta-sub {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  /* ── CTA + TESTIMONIAL SPLIT ── */
+  .cta-split {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+
+  .cta-split .discord-post {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: #fff;
+    font-size: 0.82rem;
+    color: #333;
+  }
+
+  .discord-post .disc-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .disc-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #ff3896;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .disc-name { font-weight: 700; }
+  .disc-meta { font-size: 0.73rem; color: #999; }
+
+  .disc-jump {
+    display: inline-block;
+    float: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.73rem;
+    color: #555;
+  }
+
+  .disc-body { line-height: 1.6; }
+  .disc-mention { color: #4a90e2; }
+
+  .cta-split .cta-list {
+    flex: 1;
+    list-style: none;
+  }
+
+  .cta-split .cta-list li {
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .cta-split .cta-list li .check-icon { color: #2a9d2a; }
+
+  /* ── FUNDING CERTS GRID ── */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .certs-grid .img-placeholder { min-height: 180px; }
+
+  /* ── PAYOUTS GRID ── */
+  .payouts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .payouts-grid .img-placeholder { min-height: 180px; }
+
+  /* ── 2-COL PAYOUTS ── */
+  .two-col-payouts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .two-col-payouts .img-placeholder { min-height: 180px; }
+
+  /* ── CAREER WINS ── */
+  .career-win-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .career-win-item.reverse { flex-direction: row-reverse; }
+
+  .career-win-item .win-caption {
+    flex: 1;
+    padding-top: 10px;
+  }
+
+  .career-win-item .win-caption h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .career-win-item .win-caption p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
+  .career-win-item .win-img { flex: 1; }
+
+  /* ── TESTIMONIAL CARDS GRID ── */
+  .testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .testi-card {
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 16px;
+    background: #1a1a1a;
+    color: #ccc;
+    font-size: 0.82rem;
+  }
+
+  .testi-card .testi-text { line-height: 1.6; }
+  .testi-card .testi-sig {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
+
+  .testi-card .testi-avatar {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #555;
+    flex-shrink: 0;
+  }
+
+  .testi-card .testi-name { font-weight: 700; color: #fff; font-size: 0.82rem; }
+
+  /* ── FAQ ── */
+  .faq-item { margin-bottom: 40px; }
+
+  .faq-item h3 {
+    font-weight: 800;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .faq-item p { margin-bottom: 14px; font-size: 1rem; }
+  .faq-item p:last-child { margin-bottom: 0; }
+
+  /* ── WARNING SECTION ── */
+  .warning-heading {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    margin-bottom: 20px;
+  }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    font-size: 0.83rem;
+    color: #555;
+    line-height: 1.7;
+    padding: 30px 50px 40px;
+  }
+
+  /* ── SECTION: "SO HERE'S HOW..." ── */
+  .how-heading {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    margin-bottom: 20px;
+  }
+
+  /* ── PROGRAM NAME ── */
+  .program-name {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-bottom: 6px;
+  }
+
+  .program-sub {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .program-sub em { font-style: italic; }
+
+  /* arrow helpers */
+  .arrow-left-curved::before { content: '↖'; font-size: 1.8rem; }
+  .arrow-right-curved { font-size: 1.5rem; display: inline-block; transform: scaleX(-1); }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 1 — HERO
+  ════════════════════════════════════════════════ -->
+  <div class="section" style="padding-top:70px; padding-bottom:50px; padding-left:30px; padding-right:30px; text-align:center;">
+    <h1 class="hero-title">
+      J'AIDE LES TRADERS À OBTENIR LEUR PREMIER PAYOUT…
+      <span class="italic-line">et leur <u>Dixième</u></span>
+    </h1>
+    <p class="hero-sub" style="margin-top:28px;">
+      C'est aussi simple que ça. La même méthode qui a permis à des dizaines de traders d'obtenir leur payout. Sans artifices. Juste du concret.<br>
+    </p>
+
+    <div class="proof-grid-wrap" style="margin-top:36px;">
+      <div class="proof-grid">
+        <div class="img-placeholder">IMAGE</div>
+        <div class="img-placeholder">IMAGE</div>
+        <div class="img-placeholder">IMAGE</div>
+        <div class="img-placeholder">IMAGE</div>
+        <div class="img-placeholder">IMAGE</div>
+        <div class="img-placeholder">IMAGE</div>
+      </div>
+      <div class="proof-caption">
+        <img src="assets/arrow-left.webp" style="width:100px; display:block; margin-bottom:10px;">
+        <p style="font-family:'Libre Baskerville',sans-serif; font-weight:900; font-size:20px; line-height:24px; color:rgb(9,9,9); margin-top:10px;">
+          Quelques-uns parmi de nombreux payouts d'élèves.
+        </p>
+        <p style="font-family:'Inter',sans-serif; font-weight:400; font-style:italic; font-size:17px; line-height:22px; color:rgb(9,9,9); text-align:center; margin-top:10px;">
+          (Vous verrez bien plus de preuves plus bas sur la page)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 2 — PROBLEM AGITATION
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 style="font-weight:800; font-size:1.35rem; margin-bottom:20px;">Alors, tu veux être payé pour trader, hein ?</h2>
+
+    <p>Tu as regardé des dizaines de vidéos (probablement certaines des miennes), peut-être suivi des formations. Tu as même peut-être réussi un challenge de funding une ou deux fois.</p>
+    <p>Mais d'une façon ou d'une autre, ça n'a jamais duré. Les profits — s'ils sont arrivés — n'ont pas continué.</p>
+    <p>
+      Tu <em>sais</em> que tu n'es pas stupide.<br>
+      Tu as mis les heures qu'il faut.<br>
+      Tu sais lire un graphique.
+    </p>
+    <p>Alors pourquoi tu n'arrives pas à y arriver ?</p>
+    <p>Et comment diable tu brises ce cycle de :</p>
+
+    <div class="pull-quote" style="margin:28px 0;">
+      "Apprendre apprendre apprendre → Gagner un peu → <u>Perdre Encore Plus</u>"
+    </div>
+
+    <div class="two-col" style="margin-top:24px;">
+      <div class="col-text">
+        <p>Je peux te dire, fort de mes 10 ans d'expérience et 5 ans à former d'autres traders…</p>
+        <p><strong>Le problème, ce n'est pas toi.</strong></p>
+        <p>Il n'y a pas de gène manquant. Pas de "certaines personnes ont juste le don" — j'ai formé suffisamment de traders pour te promettre que c'est un mythe.</p>
+        <p>Ce qui te maintient dans le cycle, ce n'est pas ce que tu sais.</p>
+        <p><u><em>C'est comment tu trades ce que tu sais.</em></u></p>
+      </div>
+      <div class="col-img">
+        <div class="img-placeholder tall">IMAGE</div>
+        <p class="img-caption">Je suis Jawad – ce gars que tu regardes sur YouTube ou que tu lis dans ta boîte mail !</p>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;"><strong style="font-style:italic; font-size:1.15rem;">Et je ne parle pas de mentalité.</strong></p>
+
+    <p>Je parle des choses mécaniques :</p>
+
+    <p>
+      • Combien tu risques quand tu es confiant vs quand tu as peur.<br>
+      • Si tu prends vraiment le setup à 14h que tu t'étais promis de prendre à 9h.<br>
+      • Ce que tu fais après deux pertes de suite — suivre le plan, ou "ajuster".
+    </p>
+
+    <p>C'est ça qui décide si tu es payé. Et voilà le problème —</p>
+    <p><strong>Tu ne peux pas l'apprendre avec des vidéos. Personne ne peut.</strong></p>
+    <p>Les vidéos peuvent t'apprendre quoi faire — je donne ça gratuitement toute la journée.<br>
+    Mais les vidéos <em>ne peuvent pas te regarder trader.</em></p>
+
+    <p>La seule façon de corriger comment tu trades, c'est :</p>
+    <p>Tu trades en réel. Puis <strong>quelqu'un qui a vu chaque version de ton erreur</strong> regarde <em>tes</em> trades, <em>tes</em> questions, <em>tes</em> points de blocage — et te dit directement ce qui ne va pas vraiment.</p>
+
+    <p>Pas des leçons génériques. Des réponses. Sur <strong>ton</strong> trading. Sur <strong>ta</strong> façon de trader.</p>
+    <p>C'est la partie que personne qui te vend des stratégies ne t'a jamais proposée. Pas parce que ça ne marche pas — parce que c'est difficile à délivrer. Tu ne peux pas le mettre dans un PDF.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 3 — HOW WE MAKE IT HAPPEN
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="how-heading">ALORS VOICI COMMENT ON Y ARRIVE…</h2>
+
+    <p>Je ne vais pas te mentir en te promettant que tu seras riche en une semaine. Le trading est difficile, et même avec le bon système et les bons conseils, tu vas devoir bosser.</p>
+    <p>Mais si tu comprends déjà ça et que tu es prêt à t'y mettre —</p>
+    <p>Jusqu'à maintenant, le seul vrai moyen d'avoir quelqu'un qui regarde tes trades était de payer un coach privé. Et les bons coaches facturent dans les 10 000 €.</p>
+    <p>La plupart des traders ne peuvent pas se le permettre.</p>
+    <p>Alors j'ai construit la meilleure alternative (sans le prix qui vide ton compte).</p>
+
+    <p><strong>Le résultat ? Les élèves reçoivent des notifications comme celle-ci :</strong></p>
+
+    <div class="notif-box">
+      <div class="notif-icon">R</div>
+      <div class="notif-body">
+        <div class="notif-app">Revolut <span class="notif-time">maintenant</span></div>
+        <div class="notif-text">Vous venez de recevoir 3 158,60 € de Ftmo Trading Global S.r.o. 💸</div>
+      </div>
+    </div>
+
+    <p style="margin-top:24px;"><strong>Et des relevés comme celui-là :</strong></p>
+
+    <div class="bank-box">
+      <div class="bank-filter">✓ Transaction entrante &nbsp;&nbsp; ✕</div>
+      <div style="width:40px;height:40px;border-radius:50%;background:#4ab8c4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem;margin:0 auto 10px;">FL</div>
+      <div class="bank-amount">+ $8 112,00</div>
+      <div class="bank-sub">USD reçu de FTP London Ltd</div>
+      <div class="bank-row">
+        <span>Statut</span>
+        <span class="status-green">✓ Reçu</span>
+      </div>
+    </div>
+
+    <p style="margin-top:24px; font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.15rem; font-weight:700;">
+      Rien de tout ça ne vient d'une stratégie magique.
+    </p>
+
+    <p>La façon dont ces traders sont arrivés aux payouts n'est pas passée par la maîtrise d'un modèle d'entrée "super secret" ou par des taux de réussite à 90%.</p>
+    <p>Ces gains <em>(et tous ceux que tu vas voir)</em> sont le résultat <strong>d'un processus spécifique :</strong></p>
+
+    <div class="process-flow">
+      <p>Apprendre un système cohérent</p>
+      <span class="arrow-down">↓</span>
+      <p>Le trader en temps réel</p>
+      <span class="arrow-down">↓</span>
+      <p>Atteindre un blocage (tu le feras)</p>
+      <span class="arrow-down">↓</span>
+      <p>Obtenir un regard sur tes trades — et des réponses, vite</p>
+      <span class="arrow-down">↓</span>
+      <p>Le corriger. Recommencer.</p>
+      <span class="arrow-down">↺</span>
+    </div>
+
+    <p>OUI tu as besoin d'une bonne stratégie (et j'ai ça aussi).</p>
+    <p>Mais <strong>le vrai progrès vient du feedback.</strong></p>
+    <p>Tu vas rencontrer des obstacles en chemin — je suis sûr que tu en as déjà rencontré beaucoup — et ce qui détermine si tu t'effondres, ou si tu sautes par-dessus et continues...</p>
+    <p>C'est si tu obtiens les réponses dont tu as besoin au moment où tu en as besoin.</p>
+    <p>Et c'est ce que j'ai construit :</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 4 — PROGRAM NAME
+  ════════════════════════════════════════════════ -->
+  <div class="section" style="text-align:center;">
+    <p class="program-name">ÇA S'APPELLE L'ACCOMPAGNEMENT OTE 705</p>
+    <p class="program-sub">et il a amené des gens à des résultats <em>encore et encore.</em></p>
+
+    <div class="two-col-payouts" style="margin-top:20px;">
+      <div class="img-placeholder medium">IMAGE</div>
+      <div class="img-placeholder medium">IMAGE</div>
+    </div>
+
+    <div class="body-text" style="text-align:left; margin-top:20px;">
+      <p>J'enseigne depuis 5 ans maintenant et j'ai formé des milliers de traders.</p>
+      <p>Grâce à ça, j'ai appris les meilleures — et les moins bonnes — façons d'amener les gens à des résultats.</p>
+      <p>OTE 705 est tout ce que j'ai appris sur la façon de faire payer les traders, condensé dans un seul système.</p>
+      <p>Voici comment ça marche, étape par étape.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 5 — STEP 1: THE COURSE
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="step-heading">ÉTAPE 1 - LA FORMATION</h2>
+
+    <p><em>"Attends... Tu n'as pas dit que les vidéos ne me rendraient pas rentable ?"</em></p>
+    <p>OUI — pour 99% des gens, regarder des vidéos ne suffit pas.</p>
+    <p>Mais tu as quand même besoin d'un système (et d'un bon). C'est à ça que sert la formation.</p>
+
+    <div class="course-mock">
+      <div class="course-mock-header">
+        <div class="logo">
+          <div class="logo-square">OT</div>
+          <span>OTE 705</span>
+        </div>
+        <span>Mon compte ↓ &nbsp;&nbsp; Déconnexion →</span>
+      </div>
+      <div class="course-mock-body">
+        <div class="course-sidebar">
+          <div class="sidebar-label">PROGRAMME PRINCIPAL</div>
+          <div class="sidebar-progress">
+            Progression du cours &nbsp;&nbsp; 2 / 17 leçons – 12%
+            <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
+          </div>
+          <div class="sidebar-item active">JOUR 1 <span class="item-arrow">∨</span></div>
+          <div class="sidebar-item" style="padding-left:18px; font-size:0.7rem; background:#fff8e1;">Jour 1 – Mentalité & Fondations <span class="item-check">✓</span></div>
+          <div class="sidebar-item">JOUR 2 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 3 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 4 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 5 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 6 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 7 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 8 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 9 <span class="item-arrow">›</span></div>
+          <div class="sidebar-item">JOUR 10 <span class="item-arrow">›</span></div>
+        </div>
+        <div class="course-content">
+          <h3>Jour 1 – Mentalité & Fondations</h3>
+          <div class="img-placeholder" style="min-height:160px; background:#1a1a2e; color:#888;">▶ VIDÉO</div>
+          <p style="font-size:0.75rem; color:#555; margin-top:10px; line-height:1.5;">
+            Avant de trader un système avec succès — tu as besoin de la bonne "identité" & d'une compréhension profonde de ce à quoi ressemble vraiment le succès. Dans cette classe, on déconstruit les fondations d'un trading réussi.
+          </p>
+          <p style="font-size:0.75rem; color:#333; margin-top:10px; font-weight:600;">Ressources</p>
+          <div style="border:1px solid #eee; border-radius:4px; padding:6px 10px; font-size:0.73rem; color:#555; margin-top:4px;">
+            📎 Blueprint du Trader Professionnel (PDF)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">La formation OTE 705 n'est PAS une bibliothèque de 200+ classes qui t'enseigne toutes sortes de choses dont tu n'as pas besoin. Ce n'est pas 40 heures de remplissage.</p>
+
+    <p>✓ <strong>C'est DIX classes.</strong><br>
+    ✓ <strong>Enseignant UN système cohérent.</strong></p>
+
+    <p>Que tu peux terminer rapidement et commencer à appliquer sur le marché avec un niveau de clarté que tu n'as jamais eu auparavant.</p>
+
+    <p>Dans la formation, tu vas apprendre :</p>
+
+    <ul class="checklist">
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Un système de trading dans lequel tu auras assez confiance pour exécuter sans douter chaque entrée.</strong> Parce qu'au lieu de trader aveuglément des patterns sans savoir pourquoi les marchés devraient y réagir, tu vas comprendre la bataille sous-jacente entre acheteurs & vendeurs — te donnant la confiance d'exécuter et de tenir tes trades.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Une méthode pour rendre ton trading simple et agréable à appliquer chaque jour.</strong> Plus de devinettes où chaque trade semble différent & chaque jour ressemble à une bataille. Tu peux t'installer, appliquer ton système, exécuter quand le marché te le dit et gérer tes trades jusqu'au résultat le plus rentable sans difficulté.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Des règles claires pour savoir quand <em>ne pas</em> trader (pour que tu arrêtes de donner tes profits).</strong> Parce qu'éviter les trades médiocres est souvent aussi important que trouver les excellents. Tu arrêteras de forcer des trades simplement parce que tu t'ennuies ou tu veux de l'action.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>La clarté pour tenir tes gagnants et accepter tes perdants parce que tu vas enfin comprendre ce que tes trades essaient d'accomplir.</strong> Le système n'est pas conçu pour gagner chaque trade (parce que c'est impossible de toute façon). Il est conçu pour prendre des trades qui paient si bien que tu n'as pas besoin de t'inquiéter des pertes du tout.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Un processus de travail suffisamment simple pour que tu puisses l'expliquer sur une feuille de papier.</strong> Parce que la complexité est l'ennemi & remplir tes journées de choses inutiles ne fait pas de toi un meilleur trader — juste un trader plus stressé & confus.</span>
+      </li>
+    </ul>
+
+    <p>Quand tu termines cette formation, je pense que tu vas avoir une seule pensée :</p>
+    <p><em>"Pourquoi personne n'a jamais expliqué le trading comme ça avant ?"</em></p>
+    <p>Et tu seras prêt à affronter les marchés avec le premier système qui t'ait jamais vraiment fait sens.</p>
+
+    <div class="review-caption-wrap" style="margin-top:28px;">
+      <div class="review-card">
+        <div class="reviewer-row">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">B</div>
+            <div>
+              <div class="reviewer-name">Bridie Beverton</div>
+              <div class="reviewer-meta">GB · 5 avis</div>
+            </div>
+          </div>
+          <div class="review-date">23 Juin 2026</div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="review-title">Clarté</div>
+        <div class="review-text">J'ai acheté la formation et je suis tellement reconnaissante, je ne suis pas encore arrivée au bout mais je me rapproche de plus en plus. J'ai gaspillé tellement d'argent sur 5 autres mentors et de nombreuses années sans arriver nulle part de proche à où je suis maintenant. J'étudie et backteste tous les jours mais maintenant je comprends ce que je teste &amp; pourquoi</div>
+        <div class="review-tags">
+          <span class="review-tag">23 juin 2026</span>
+          <span class="review-tag">Avis spontané</span>
+        </div>
+      </div>
+      <div class="caption-right">
+        <span style="font-size:1.5rem; display:block; margin-bottom:8px;">←</span>
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:0.95rem; line-height:1.4;">Mots d'un élève qui a récemment terminé la formation</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 6 — STEP 2: THE FEEDBACK
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="step-heading">ÉTAPE 2 - LE FEEDBACK</h2>
+
+    <p>C'est là que le vrai travail se passe.</p>
+    <p>Quand tu as terminé la formation (et seulement ensuite, pour garder la communauté de haute qualité & concentrée) tu seras invité à rejoindre notre réseau privé sur Skool.</p>
+    <p>Beaucoup de choses s'y passent — <em>je détaillerai le reste bientôt</em> — mais le plus important c'est ton accès à moi pour du feedback sur tes doutes & problèmes.</p>
+    <p><strong>Chaque question posée reçoit une réponse directement de moi.</strong></p>
+    <p>Sauf... Si elle a déjà été répondue SI bien par l'un des nombreux membres de haut niveau que ma contribution n'est pas nécessaire (dans ce cas j'interviens pour donner mon approbation).</p>
+
+    <p><strong>Voici comment ça se présente :</strong></p>
+
+    <div style="display:flex; gap:20px; align-items:flex-start; margin-top:20px;">
+      <div style="flex:1;">
+        <div class="skool-post">
+          <div class="skool-header">
+            <div class="skool-avatar"></div>
+            <div>
+              <div class="skool-name">Noah S.</div>
+              <div class="skool-meta">16j · Questions</div>
+            </div>
+          </div>
+          <div class="skool-title">Est-ce que j'ai bougé mon BE trop tôt ici ?</div>
+          <div class="skool-body">
+            <p>Bonjour tout le monde,</p>
+            <p style="margin-top:6px;">J'ai une question sur la gestion du trade.</p>
+            <p style="margin-top:6px;">La règle qu'on nous a enseignée est d'attendre 2 BoS avant de déplacer le SL au breakeven...</p>
+            <p style="margin-top:6px; color:#4a90e2; cursor:pointer;">Voir plus</p>
+          </div>
+          <div class="skool-imgs">
+            <div class="img-placeholder">IMG</div>
+            <div class="img-placeholder">IMG</div>
+            <div class="img-placeholder">IMG</div>
+          </div>
+          <div class="skool-footer">
+            <span>👍 1</span>
+            <span>💬 4 commentaires</span>
+          </div>
+          <div class="skool-reply">
+            <div class="skool-reply-header">
+              <div class="skool-avatar" style="width:26px;height:26px;background:#3a3a5e;"></div>
+              <div class="skool-reply-name">Jawad · 10j</div>
+            </div>
+            <p>Non tu as fait ça correctement. OUI le marché n'a pas encore cassé complètement à la hausse selon les exemples de mes vidéos...</p>
+            <p style="margin-top:6px;">MAIS la plage entière en dessous où le prix se situait dans la deuxième image est totalement efficiente, donc on s'attendrait à ce que le marché revienne sous le bas récent 15m...</p>
+            <p style="margin-top:6px;">Tu l'as géré correctement 👌</p>
+            <div class="skool-reply-img">
+              <div class="img-placeholder" style="min-height:60px; background:#2a2a4e; color:#777;">IMG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:150px; flex-shrink:0; padding-top:20px;">
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1.05rem; line-height:1.3;">Pose une question</p>
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:0.9rem; margin-top:6px; line-height:1.4;">quand tu as rencontré un obstacle qui te bloque</p>
+        <div style="margin-top:30px;">
+          <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1.05rem; line-height:1.3;">Obtiens ma réponse</p>
+          <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:0.9rem; margin-top:6px; line-height:1.4;">pour dissiper les doutes & continuer à avancer VITE</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:24px;"><strong>Je ne peux pas assez insister sur l'importance de la boucle de feedback.</strong></p>
+    <p>Le manque de (bon) feedback est littéralement le problème numéro un quand on apprend un nouveau style de trading.</p>
+    <p>Tu fais une erreur, personne ne te corrige, tu continues à faire cette erreur, le problème s'aggrave, et avant que tu t'en rendes compte tu es 6 mois plus loin dans un système de trading cassé avec une grande pile d'argent brûlé et aucune sortie.</p>
+    <p>C'est ce que cette simple boucle de feedback fait.</p>
+    <p>Tu poses. Je réponds. Souvent le jour même, et toujours dans la semaine.</p>
+    <p>C'est bien plus efficace que de rester assis pendant un appel live de 45 minutes juste pour poser une question en 30 secondes... et c'est infiniment plus abordable que de dépenser 1000€ par session de coaching privé.</p>
+    <p>J'ai passé 5 ans à faire tout ça — et <strong>c'est ce qui fonctionne LE MIEUX.</strong> Point final.</p>
+    <p>En fait... Pour te le montrer, regarde ça :</p>
+
+    <div class="dark-post" style="margin-top:20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <div style="width:34px;height:34px;border-radius:50%;background:#444;flex-shrink:0;"></div>
+        <div>
+          <div style="font-weight:700; color:#fff; font-size:0.88rem;">Anonyme</div>
+          <div style="font-size:0.75rem; color:#888;">19h · Victoires & Accomplissements</div>
+        </div>
+      </div>
+      <div class="post-title">2 PAYOUTS en 2 semaines</div>
+      <div class="post-body">
+        <p>Merci Jawad.</p>
+        <p style="margin-top:6px;">Ton enseignement sur l'Offre et la Demande m'a donné une clarté que je n'avais pas avant — une approche simple, sans bruit inutile. Deux payouts en deux semaines, c'est la preuve que ça marche quand ça vient de la bonne personne. Je travaille encore sur la gestion de mes émotions, mais je vois clairement les possibilités qui s'ouvrent devant moi.</p>
+        <p style="margin-top:6px;">Merci pour tout ce que tu m'as appris.<br>Cheers !</p>
+        <p style="margin-top:6px;">Vidal</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px;">
+        <div class="img-placeholder" style="min-height:120px; background:#333; color:#777;">IMAGE</div>
+        <div class="img-placeholder" style="min-height:120px; background:#333; color:#777;">IMAGE</div>
+      </div>
+      <div style="margin-top:10px; font-size:0.78rem; color:#777; display:flex; gap:12px;">
+        <span>👍 22</span>
+        <span>💬 17 commentaires</span>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;"><strong>C'est 4 000 $ en 2 semaines PAYÉS à ce trader.</strong></p>
+    <p>Parce que quand il trouve un problème, il ne s'y attarde pas et ne mélange pas tout. Il peut juste poser... Obtenir la réponse... et CONTINUER À AVANCER.</p>
+    <p>C'est ce qui fait progresser les gens vite.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 7 — STEP 3: THE DEEP DIVES
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="step-heading">ÉTAPE 3 - LES DEEP DIVES</h2>
+
+    <p>Que se passe-t-il quand tu as une question qui va plus loin qu'une simple réponse textuelle ?</p>
+    <p>Parce que ça arrive parfois. Tu as besoin de plus d'approfondissement sur un sujet comme la structure de marché, ou tu veux voir une décomposition plus claire de comment appliquer le système à certains scénarios.</p>
+    <p><strong>Pour ça, on a les Deep Dives.</strong></p>
+
+    <div class="deep-dives-mock">
+      <div class="deep-dives-mock-body">
+        <div class="deep-dives-sidebar">
+          <div class="dd-header">Deep Dives <span>···</span></div>
+          <div style="margin:0 12px 10px;">
+            <div style="background:#2a9d2a; color:#fff; font-size:0.65rem; font-weight:700; padding:2px 6px; border-radius:3px; display:inline-block;">100%</div>
+          </div>
+          <div class="dd-item"><span>Classe induction</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Validation CE</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Q&As Long Format – 5 Fév</span><span class="dd-check">✓</span></div>
+          <div class="dd-item active"><span>Mèches comme HH/LL</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Q&As Long Format – 22 Fév</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Bon vs Mauvais BoS</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Q&As Long Format – 12 Mars</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Day Trading avec OTE</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Réaccumulation & Redistribution</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Q&A Long Format – 28 Mai</span><span class="dd-check">✓</span></div>
+          <div class="dd-item"><span>Q&A Long Format – 28 Mai (2)</span><span class="dd-check">✓</span></div>
+        </div>
+        <div class="deep-dives-content">
+          <h3>Mèches comme HH/LL <span>✓ ✏</span></h3>
+          <div class="img-placeholder" style="min-height:180px; background:#f8f8f8; color:#aaa;">IMAGE</div>
+          <p style="font-size:0.72rem; color:#555; margin-top:8px; line-height:1.5;">C'est une vidéo expliquant pourquoi tu vois parfois des mèches marquées comme des hauts plus hauts/bas plus bas dans mon analyse même si je ne les considère pas comme des signaux de continuation en temps réel !</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">Je collecte les questions les plus importantes & brûlantes de la communauté — et je prends des demandes — sur des sujets qui ne peuvent pas être couverts par une réponse textuelle, puis toutes les deux semaines je transforme ces questions en :</p>
+
+    <ul class="checklist">
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Classes Basées sur des Demandes.</strong> Approfondissant des sujets spécifiques comme les modèles d'entrée, les concepts techniques, les meilleurs moments pour trader, et comment éviter de se faire piéger. Ces grandes questions sont transformées en sessions standalone que tu peux regarder à ton rythme autant de fois que tu veux.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Vidéos Q&A Long Format.</strong> 40 à 90 minutes de réponses & deep dives enchaînés. Ces classes finissent par être des mines d'or d'informations car elles couvrent les questions posées par toute la communauté — donc en plus d'obtenir tes propres questions répondues, tu trouveras presque toujours de la valeur dans des choses auxquelles tu n'avais pas pensé à demander mais que quelqu'un d'autre a demandé.</span>
+      </li>
+    </ul>
+
+    <p>La plupart des questions peuvent être répondues avec une simple réponse — mais certaines demandent beaucoup plus de profondeur, et les Deep Dives existent pour s'assurer que tu obtiens cette profondeur quand elle est nécessaire.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 8 — STEP 4: THE COMMUNITY
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="step-heading">ÉTAPE 4 - LA COMMUNAUTÉ</h2>
+
+    <p>Tu seras invité dans la communauté où tu auras accès à moi, et à beaucoup d'esprits brillants qui tradent le même système — beaucoup avec beaucoup plus d'expérience que toi (qui sont toujours heureux de dissiper tes doutes et t'aider)</p>
+
+    <div style="display:flex; gap:20px; align-items:flex-start; margin:24px 0;">
+      <div style="flex:1;">
+        <div class="community-post">
+          <div class="post-header">
+            <div class="community-avatar"><div class="img-placeholder" style="min-height:34px; height:34px;"></div></div>
+            <div>
+              <div class="community-name">Olufemi Osidein</div>
+              <div class="community-meta">20 Mai (modifié) · Discussions de Trades</div>
+            </div>
+          </div>
+          <div class="community-title">SETUP AUDUSD</div>
+          <div class="community-body">
+            <p>Je regarde une opportunité potentielle sur l'AUDUSD.</p>
+            <p style="margin-top:4px;">Le setup est bien aligné sur plusieurs timeframes.</p>
+            <p style="margin-top:4px;">La structure HTF est en accord avec les TF inférieurs. L'idée de trade suit le biais haussier HTF...</p>
+            <p style="margin-top:4px; font-style:italic; color:#777;">(Pense à faire ta propre analyse)</p>
+          </div>
+          <div class="community-imgs">
+            <div class="img-placeholder" style="min-height:80px;">IMG</div>
+            <div class="img-placeholder" style="min-height:80px;">IMG</div>
+            <div class="img-placeholder" style="min-height:80px;">IMG</div>
+          </div>
+          <div class="community-footer">
+            <span>👍 18</span>
+            <span>💬 29 commentaires</span>
+          </div>
+        </div>
+      </div>
+      <div style="width:160px; flex-shrink:0; text-align:center; padding-top:10px;">
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1.05rem; line-height:1.3;">Des centaines de membres tradent ensemble & partagent leurs idées</p>
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:0.85rem; margin-top:10px; line-height:1.4; color:#444;">Pour que tu puisses apprendre de la façon dont les autres voient les marchés & avoir toujours un flux d'opportunités avec lesquelles travailler</p>
+        <div style="margin-top:16px; font-size:1.5rem;">↙</div>
+      </div>
+    </div>
+
+    <p><strong>Il y a beaucoup d'avantages à être ici, je vais juste les lister :</strong></p>
+
+    <ul class="checklist">
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Apprends VITE avec des leçons & insights d'autres membres.</strong> Chaque jour des traders postent leurs idées & partagent ce qu'ils ont appris dans leurs parcours personnels. Tu peux apprendre de la façon dont les autres voient le marché, ainsi que de leurs retours sur tes propres idées de trades.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Évite les pièges coûteux & les erreurs chronophages.</strong> Le trading doit être appris par essais & erreurs — mais ça n'a pas à être <em>tes</em> essais ou <em>tes</em> erreurs. Au lieu de passer des années & 10 000€ en erreurs... Vole juste la sagesse & l'expérience des cerveaux de traders qui ont déjà traversé tout le côté difficile.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Reste motivé & responsable pendant que tu travailles.</strong> C'est beaucoup plus facile de décrocher quand il n'y a personne autour pour t'offrir du soutien — mais avec une communauté de traders autour de toi pour te garder responsable & concentré, tu as 1000 fois plus de chances de te présenter chaque jour & faire le travail qui doit être fait.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Forge des relations fortes avec des personnes qui partagent ta vision.</strong> C'est toujours bien d'avoir un bon cercle autour de toi quand tu essaies & accomplis quelque chose de difficile... Mais au-delà de ça, on a eu des membres qui ont lancé des business ensemble, et d'autres qui se sont associés hors du groupe pour des appels de responsabilité 1-1 approfondis.</span>
+      </li>
+    </ul>
+
+    <p>La communauté est aussi utile que tu veux qu'elle soit. Si tu aimes l'idée d'un réseau de traders autour de toi, tu peux t'y plonger complètement & y trouver une valeur dingue.</p>
+    <p>Mais si tu es plutôt du genre "loup solitaire", c'est bien aussi. Tu peux utiliser les espaces pertinents pour le feedback & suivre mes posts, et rester concentré tunnel-vision sur ton objectif.</p>
+    <p><strong>Je te recommande quand même d'essayer...</strong></p>
+    <p>Parce que c'est comme ça que les gens progressent le plus vite.</p>
+    <p>Comme Sagar, qui littéralement 4 mois après avoir rejoint avait décroché <strong>deux comptes financés et CINQ PAYOUTS</strong> (sans blague) :</p>
+
+    <div class="dark-post" style="margin-top:20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <div style="width:34px;height:34px;border-radius:50%;background:#555;flex-shrink:0;"></div>
+        <div>
+          <div style="font-weight:700; color:#fff; font-size:0.88rem;">Sagar Samal</div>
+          <div style="font-size:0.75rem; color:#888;">20 Fév · Victoires & Accomplissements</div>
+        </div>
+      </div>
+      <div class="post-title">Reconnaissant !!</div>
+      <div class="post-body">
+        <p>Je voulais juste remercier <span style="color:#4a90e2;">@Jawad</span> et tous ceux dans cette communauté qui ont aidé. La meilleure façon de trader c'est de comprendre la narrative du marché... C'est ce qu'on apprend ici.</p>
+        <p style="margin-top:6px;">Meilleure décision de ma carrière de trading que de rejoindre ce groupe de traders.</p>
+        <p style="margin-top:6px;">Ça m'a aidé à obtenir des financements et des payouts de façon consistante pendant les 3-4 derniers mois. Si ça peut se faire en seulement 3-4 mois... j'imagine le potentiel !!</p>
+        <p style="margin-top:6px;">J'espère qu'on atteindra tous un grand succès en 2026.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px;">
+        <div class="img-placeholder" style="min-height:100px; background:#333; color:#777;">IMAGE</div>
+        <div class="img-placeholder" style="min-height:100px; background:#333; color:#777;">IMAGE</div>
+        <div class="img-placeholder" style="min-height:100px; background:#333; color:#777;">IMAGE</div>
+      </div>
+      <div style="margin-top:10px; font-size:0.78rem; color:#777; display:flex; gap:12px;">
+        <span>👍 24</span>
+        <span>💬 10 commentaires</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 9 — STEP 5: NARRATIVES
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="step-heading">ÉTAPE 5 - MES NARRATIVES</h2>
+
+    <p>Soyons clairs : <strong>je ne fais pas de signaux !</strong></p>
+    <p>Ils te rendent dépendant de quelqu'un d'autre et tout le but de ce programme c'est de faire exactement l'opposé.</p>
+    <p>Mais ça ne veut pas dire que tu ne pourras pas suivre mes trades.</p>
+    <p><strong>C'est là qu'interviennent mes Narratives</strong> <em>(et elles sont bien meilleures que des signaux).</em></p>
+
+    <div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
+      <div style="flex:1;">
+        <div class="dark-post">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:#555;flex-shrink:0;"></div>
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:0.85rem;">Jawad</div>
+              <div style="font-size:0.72rem; color:#888;">1j · Discussion générale</div>
+            </div>
+          </div>
+          <div class="post-title">Narratives (Début de semaine)</div>
+          <div class="post-body">
+            <p>Narratives pour cette semaine !</p>
+            <p style="margin-top:4px;">L'EURUSD est définitivement le focus principal pour l'instant</p>
+            <p style="margin-top:4px;">D'autres paires couvertes aussi - et les raisons pourquoi :)</p>
+          </div>
+          <div class="img-placeholder" style="min-height:140px; background:#2a2a3e; color:#777; margin-top:12px;">▶ VIDÉO &nbsp; 10:43</div>
+          <div style="margin-top:10px; font-size:0.78rem; color:#777; display:flex; gap:12px;">
+            <span>👍 59</span>
+            <span>💬 14 commentaires</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1; padding-top:10px;">
+        <p>Une, deux ou trois fois par semaine (ça varie selon combien de mises à jour sont vraiment nécessaires) je publie une vidéo qui décompose tous les trades que je regarde et pourquoi.</p>
+        <p style="margin-top:14px;">Tu verras dans quel sens je pense que les marchés vont, où j'aimerais entrer dans un trade et où je regarderais cibler.</p>
+        <p style="margin-top:14px;">Tu sauras même quel type de confirmation je veux voir pour que les trades soient valides (et tous les autres petits détails importants dont tu aurais besoin pour pouvoir y prendre un bon trade)</p>
+      </div>
+    </div>
+
+    <p><strong>C'est fondamentalement ta façon de voir le marché à travers mes yeux.</strong></p>
+
+    <ul class="checklist">
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Te donnant un flux infini d'opportunités</strong> pour que tu puisses saisir de super trades toi-même, développer ton expérience et apprendre de comment je trouve, exécute et gère les trades en temps réel.</span>
+      </li>
+      <li>
+        <span class="check-icon">✔</span>
+        <span><strong>Tout en te rendant meilleur, pas dépendant</strong> parce qu'au lieu de devoir compter sur moi pour t'envoyer un signal tout mâché tu peux utiliser ce que tu apprends pour devenir réellement indépendant <em>(pour qu'un jour tu n'aies plus besoin de moi du tout).</em></span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 10 — EXTRAS
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 style="font-weight:800; font-size:1.5rem; margin-bottom:20px;">Et quelques extras sérieux</h2>
+
+    <p>Soyons clairs... ce ne sont pas des bonus inutiles pour le principe d'avoir des bonus. Je les ai ajoutés parce que les gens qui les ont utilisés m'ont dit à quel point ils sont précieux, donc je veux que tu les aies aussi. (Pourquoi pas !)</p>
+
+    <h3 style="font-weight:700; font-size:1.1rem; margin:28px 0 10px;">La Salle de Classe</h3>
+
+    <div style="display:flex; gap:24px; align-items:flex-start;">
+      <div style="flex:1;">
+        <p>Un espace dans la communauté pour des leçons supplémentaires sur des sujets variés.</p>
+        <ul class="check-simple" style="margin-top:12px;">
+          <li><span class="check-icon">✓</span> Récapitulatifs de trades</li>
+          <li><span class="check-icon">✓</span> Enregistrements d'appels</li>
+          <li><span class="check-icon">✓</span> Sessions de backtesting</li>
+        </ul>
+        <p style="margin-top:12px;">Plein de trucs utiles à parcourir à ton propre rythme.</p>
+      </div>
+      <div style="flex:1;">
+        <div class="classroom-grid">
+          <div class="classroom-card">
+            <div class="card-img">📊</div>
+            <div class="card-info">
+              <div class="card-title">OTE 705</div>
+              <div class="card-sub">Le programme complet en 10 parties</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+          <div class="classroom-card">
+            <div class="card-img">📈</div>
+            <div class="card-info">
+              <div class="card-title">Classes Extra</div>
+              <div class="card-sub">Classes techniques pour affiner tes compétences</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+          <div class="classroom-card">
+            <div class="card-img">?</div>
+            <div class="card-info">
+              <div class="card-title">Deep Dives</div>
+              <div class="card-sub">Classes Q&A sur des sujets individuels</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+          <div class="classroom-card">
+            <div class="card-img">🌲</div>
+            <div class="card-info">
+              <div class="card-title">Backtesting</div>
+              <div class="card-sub">Sessions de backtesting en temps réel</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+          <div class="classroom-card">
+            <div class="card-img">🧠</div>
+            <div class="card-info">
+              <div class="card-title">Sagesse</div>
+              <div class="card-sub">Leçons sur la mentalité, attitude & perception</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+          <div class="classroom-card">
+            <div class="card-img">📉</div>
+            <div class="card-info">
+              <div class="card-title">Études de Cas</div>
+              <div class="card-sub">Récapitulatifs de trades précédents</div>
+              <div class="card-progress-wrap"><div class="card-progress"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-weight:700; font-size:1.1rem; margin:32px 0 10px;">Formations Bonus</h3>
+
+    <div style="display:flex; gap:24px; align-items:flex-start;">
+      <div style="flex:1;">
+        <p>Trois formations bonus :</p>
+        <p style="margin-top:12px;"><strong>Iron Mind</strong> – formation de psychologie</p>
+        <p style="margin-top:8px;"><strong>Scaling Up</strong> – formation sur la gestion de ta "carrière" dans le trading</p>
+        <p style="margin-top:8px;"><strong>Bootcamp 2024</strong> – événement virtuel de 5 jours que j'ai organisé avec des élèves</p>
+      </div>
+      <div style="flex:1;">
+        <div class="bonus-mock">
+          <div class="bonus-sidebar">
+            <div class="bonus-label">APPRENTISSAGE SUPPLÉMENTAIRE</div>
+            <div class="bonus-progress">Progression du cours &nbsp; 0 / 23 leçons – 0%</div>
+            <div class="bonus-section-title">IRON MIND <span>›</span></div>
+            <div class="bonus-section-title">SCALING UP <span>›</span></div>
+            <div class="bonus-section-title">BOOTCAMP 2024 <span>∨</span></div>
+            <div class="bonus-item">Bootcamp 1</div>
+            <div class="bonus-item">Bootcamp 2</div>
+            <div class="bonus-item">Bootcamp 3</div>
+            <div class="bonus-item">Bootcamp 4</div>
+            <div class="bonus-item">Bootcamp 5</div>
+          </div>
+          <div class="bonus-content">
+            <div class="img-placeholder" style="min-height:140px; background:#1a1a2e; color:#777;">▶ VIDÉO</div>
+            <p class="img-caption-small">Bootcamp 2 – épisode 2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">Tu trouveras les extras dans tes espaces membres quand tu te connectes.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 11 — QUICK REMINDER
+  ════════════════════════════════════════════════ -->
+  <div class="reminder-box">
+    <h2>Un Petit Rappel</h2>
+    <p class="reminder-sub">Voici le récapitulatif complet de tout ce que tu vas obtenir en rejoignant OTE 705 :</p>
+
+    <ul class="reminder-list">
+      <li><span class="check-icon">✔</span><span><strong>Le programme en 10 parties</strong> pour que le trading "fasse sens" & te prépare avec un système</span></li>
+      <li><span class="check-icon">✔</span><span><strong>La boucle de feedback</strong> pour te guider à travers les doutes que tu rencontres en chemin</span></li>
+      <li><span class="check-icon">✔</span><span><strong>Les Deep Dives</strong> pour aller plus loin sur les grands sujets via des classes demandées & Q&As long format</span></li>
+      <li><span class="check-icon">✔</span><span><strong>La Communauté</strong> pour trader avec & apprendre de centaines de traders sur le même chemin</span></li>
+      <li><span class="check-icon">✔</span><span><strong>Les Narratives</strong> pour voir les marchés de ma perspective & obtenir de nouvelles opportunités</span></li>
+      <li><span class="check-icon">✔</span><span><strong>Et Les Extras</strong> – 30+ heures de classes bonus pour quand tu veux "aller plus loin"</span></li>
+    </ul>
+
+    <p class="reminder-bottom">Tout ce dont tu as besoin… Rien que tu n'aies pas. Simple.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 12 — PRICE
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="big-heading" style="text-align:left; font-size:1.8rem;">ALORS, C'EST COMBIEN ?</h2>
+    <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.1rem; margin-bottom:24px;">combien ça va te coûter ?</p>
+
+    <p>On y est maintenant... <strong>Le prix.</strong></p>
+    <p>C'est le travail de ma vie. DIX ans de trading et cinq ans d'enseignement, condensés pour que tu puisses éviter la douleur, les comptes explosés, et la quantité démesurée de temps que j'ai passé à tout découvrir seul.</p>
+    <p>Souviens-toi des maths d'avant —</p>
+    <p>Un bon coach facture <strong>10 000€</strong> pour regarder tes trades.<br>
+    Une session privée coûte environ <strong>1 000€+</strong>. Pour une heure.</p>
+    <p>OTE 705 — le système, une année complète de la boucle de feedback, les Deep Dives, la communauté, les Narratives, tout — c'est :</p>
+
+    <div style="margin:28px 0;">
+      <div class="price-big">1 500€</div>
+      <span class="price-underline" style="max-width:180px;"></span>
+    </div>
+
+    <p>C'est tout. Un seul paiement. Aucun upsell caché derrière la porte, aucune embuscade "niveau mastermind" trois semaines plus tard. Tout ce que tu as vu sur cette page est dans la box.</p>
+    <p>Imagine que toutes les classes, les formations et les matériaux soient gratuits...</p>
+    <p>Ça voudrait encore dire que <strong>tu m'as comme mentor pour 4,10€ par jour.</strong> Dingue vraiment.</p>
+    <p><strong>Après ta première année</strong>, c'est 995€/an si tu veux rester — bien que l'objectif honnête soit que tu n'en aies pas besoin. Tout le truc est construit pour qu'un jour tu n'aies plus besoin de moi du tout.</p>
+    <p>Et le renouvellement automatique n'est PAS activé, donc tu ne seras pas débité par surprise dans un an. Je te contacterai quand le moment viendra pour voir où tu en es.</p>
+    <p><strong>Si tu choisis de <em>ne pas</em> rester une deuxième année...</strong></p>
+    <p>Tu gardes toutes les formations, les matériaux enregistrés et les bonus.</p>
+    <p>C'est juste le feedback pour lequel je dois facturer le renouvellement parce que ça me coûte un engagement de temps continu.</p>
+
+    <div style="display:flex; gap:20px; align-items:flex-start; margin-top:24px;">
+      <div style="flex:1;">
+        <p>Et je veux dire... à 995€ par an...</p>
+        <p style="margin-top:10px;">C'est <strong>2,72€ par jour</strong> pour accéder à un mentor qui a aidé des gens à faire des trucs comme ça.</p>
+        <div style="margin-top:14px; font-size:1.5rem; text-align:right;">→</div>
+      </div>
+      <div style="flex:1;">
+        <div class="img-placeholder medium">IMAGE</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">Tout ça est relatif.</p>
+    <p>Mais tu peux faire ce choix dans un an.<br>
+    Les chances sont que tu n'auras plus besoin de me payer.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 13 — NO REFUNDS WARNING
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="warning-heading">UN AVERTISSEMENT : JE NE FAIS PAS DE REMBOURSEMENTS</h2>
+
+    <p>Pas parce que j'ai peur de te rendre ton argent.<br>
+    À cause de ce que j'ai appris quand j'en <em>proposais.</em></p>
+    <p>J'avais une fenêtre de remboursement. Tu sais qui l'utilisait ?</p>
+    <p>Pas les gens qui avaient suivi la formation et trouvé que ce n'était pas pour eux. Pas les gens qui avaient mis un mois et n'avaient pas réussi à la faire fonctionner.</p>
+    <p><strong>C'étaient les gens qui n'avaient même pas commencé.</strong> Connectés une fois — parfois même pas du tout — assis dessus quelques semaines, puis demandé leur remboursement. La fenêtre de remboursement était devenue une licence pour <em>ne pas se donner la peine.</em></p>
+    <p>Donc j'ai supprimé ça. Et voilà ce que ça signifie pour toi :</p>
+    <p>Quand tu rejoins OTE 705, tu t'engages. <strong>Les deux pieds.</strong></p>
+    <p>Et ce n'est pas moi qui suis dur — c'est moi qui suis honnête sur comment ça marche vraiment. Les traders qui obtiennent des payouts grâce à ça sont ceux qui sont arrivés <em>décidés.</em> La formation, le feedback, la communauté — rien de tout ça ne fait quoi que ce soit pour quelqu'un avec un pied dehors.</p>
+
+    <div style="display:flex; gap:20px; align-items:flex-start; margin:28px 0;">
+      <div style="flex:1;">
+        <div class="img-placeholder medium">IMAGE</div>
+      </div>
+      <div style="flex:1; padding-top:10px;">
+        <div class="img-placeholder" style="min-height:120px;">IMAGE</div>
+        <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1rem; line-height:1.4; margin-top:14px;">
+          Tu crois que Kabir a atteint un mois à 20 000$ en arrêtant après la première semaine ?
+        </p>
+      </div>
+    </div>
+
+    <p>Bien sûr que non ! Il s'est engagé à faire fonctionner ça. C'est ce dont j'ai besoin que tu fasses.</p>
+    <p>Tu vas devoir fournir les efforts. Je l'ai dit tout au long de cette page et je le pensais.</p>
+    <p>Donc si tu n'es pas encore sûr — vraiment — <strong>n'achète pas ça.</strong></p>
+    <p>Continue à regarder les vidéos gratuites. Elles ne vont nulle part, et je continuerai à en faire. Reviens quand tu t'es décidé.</p>
+    <p>Mais si tu en as fini de tourner en rond... tu sais déjà quoi faire.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 14 — ONE MORE THING (BONUS)
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="big-heading" style="text-align:center; font-size:1.5rem;">UNE DERNIÈRE CHOSE POUR TOI</h2>
+
+    <p style="margin-top:20px;">Je fais très rarement des réductions — mais pour un court moment je vais t'offrir un joli petit bonus quand tu rejoins.</p>
+    <p>En tant que traders, on doit tous payer des logiciels pour analyser & trader les marchés.</p>
+    <p>Donc <strong>je vais couvrir le coût d'une année complète de Tradingview pour toi.</strong></p>
+    <p>C'est <strong>155,40€</strong> de coût dont tu n'auras pas à te soucier quand tu deviens élève.</p>
+    <p>Ces économies seront directement déduites du coût quand tu cliques sur le bouton ci-dessous.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 15 — CTA (first)
+  ════════════════════════════════════════════════ -->
+  <div class="section" style="padding:50px;">
+    <h2 class="big-heading">PRÊT ? C'EST PARTI</h2>
+    <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.1rem; text-align:center; margin-bottom:32px;">clique sur ce bouton ci-dessous</p>
+
+    <div class="cta-split">
+      <div class="discord-post">
+        <div class="disc-header">
+          <div class="disc-avatar">C</div>
+          <div>
+            <div class="disc-name">Cole <span class="disc-jump">Aller</span></div>
+            <div class="disc-meta">Je suis passé de faire exploser CHAQUE challenge financé (et certains comptes financés), à maintenant obtenir des payouts de façon consistante</div>
+          </div>
+        </div>
+        <div class="disc-body">
+          <span class="disc-mention">@Jawad</span> toi et ta communauté êtes les meilleurs ! 🙏🙏
+        </div>
+      </div>
+      <ul class="cta-list">
+        <li><span class="check-icon">✔</span> Le programme en 10 parties</li>
+        <li><span class="check-icon">✔</span> La boucle de feedback</li>
+        <li><span class="check-icon">✔</span> Les Deep Dives</li>
+        <li><span class="check-icon">✔</span> La Communauté</li>
+        <li><span class="check-icon">✔</span> Les Narratives</li>
+        <li><span class="check-icon">✔</span> Et Les Extras</li>
+      </ul>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#" class="cta-btn">Rejoindre OTE 705 — 1 344,60€</a>
+    </div>
+    <p class="cta-sub">Un seul paiement. Une année complète. Pas de renouvellement automatique.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 16 — SKEPTICAL? PROOF WALL
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="big-heading">TU ES SCEPTIQUE ? PAS DE PROBLÈME</h2>
+    <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.1rem; text-align:center; margin-bottom:32px;">voici un mur de preuves indéniables que je peux t'aider</p>
+
+    <h3 style="font-weight:800; font-size:1.2rem; margin-bottom:14px;">D'abord… Les Financements</h3>
+    <p>Tu n'as pas beaucoup d'argent pour trader ? Pas de problème. Le programme a aidé des centaines de personnes à être financées avec entre 10k$ et 500k$ de capital de trading :</p>
+
+    <div class="certs-grid">
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+    </div>
+
+    <p>Tu peux scanner les QR codes sur n'importe lequel pour les vérifier.</p>
+    <p>Ce n'est qu'une fraction du total. Je ne les posterai pas tous ici parce que ça n'en finirait plus.</p>
+    <p><em>Je pense que tu vois l'idée.</em></p>
+
+    <h3 style="font-weight:800; font-size:1.2rem; margin:32px 0 14px;">Et Ensuite… Les Payouts</h3>
+    <p>Le financement c'est bien si tu n'es pas payé, non ?</p>
+    <p>Voici quelques-uns des payouts, profits de comptes personnels & retraits</p>
+
+    <div class="payouts-grid">
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+    </div>
+
+    <div class="two-col-payouts">
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+    </div>
+
+    <div class="two-col-payouts">
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+      <div class="img-placeholder" style="min-height:180px;">IMAGE</div>
+    </div>
+
+    <h3 style="font-weight:800; font-size:1.2rem; margin:32px 0 14px;">Et Bien Sûr… Quelques Victoires de Carrière</h3>
+    <p>L'objectif ultime de chaque trader est d'atteindre de grandes victoires de carrière dont tu peux être fier, comme monter dans les classements ou passer à plein temps.</p>
+
+    <div class="career-win-item" style="margin-top:24px;">
+      <div class="win-img">
+        <div class="img-placeholder medium">IMAGE</div>
+      </div>
+      <div style="flex-shrink:0; width:20px; display:flex; align-items:flex-start; padding-top:10px;">←</div>
+      <div class="win-caption">
+        <h3>J'ai aidé Rob à passer au trading à plein temps</h3>
+      </div>
+    </div>
+
+    <div class="career-win-item reverse" style="margin-top:8px;">
+      <div class="win-caption">
+        <h3>Aidé Ryoko à atteindre le classement FTMO des traders les plus payés</h3>
+        <p>(il s'y est retrouvé deux fois en fait)</p>
+        <div style="text-align:right; margin-top:8px; font-size:1.3rem;">→</div>
+      </div>
+      <div class="win-img">
+        <div class="img-placeholder medium">IMAGE</div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;">
+      <div class="img-placeholder" style="min-height:80px; max-width:400px;">IMAGE</div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:8px;">
+        <div style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1rem;">Et maintenant il est trader à plein temps aussi</div>
+      </div>
+    </div>
+
+    <p style="margin-top:24px;">Ce sont encore une fois quelques-uns parmi beaucoup, mais ils font passer l'idée.</p>
+    <p>Et note rapide : passer à plein temps est un grand choix et la plupart des gens ne devraient pas se précipiter — Rob et Ryoko ont tous les deux mis des années d'abord.</p>
+    <p>Mais quand les élèves se frayent leur chemin là-bas... ces messages sont la meilleure partie de mon travail.</p>
+
+    <h3 style="font-weight:800; font-size:1.2rem; margin:32px 0 14px;">Et quelques mots de mes membres</h3>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-text">Un immense merci à @Jawad pour son style d'enseignement humble et facile à comprendre. Mon trading a complètement changé après avoir appris ton concept des changements structurels et de comprendre quand les vrais renversements se produisent. J'apprécie vraiment tes conseils.<br><br>Merci encore.</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-text">
+          <div style="font-weight:700; color:#fff; margin-bottom:6px;">Merci</div>
+          Bonjour,<br>
+          <span style="color:#4a90e2;">@Jawad</span><br>
+          Merci pour ton éducation sincère et tes conseils. Je me sens vraiment béni d'avoir un mentor comme toi.
+        </div>
+      </div>
+      <div class="testi-card" style="grid-column:1;">
+        <div class="testi-text">Meilleur Mentor de Tous les Temps <span style="color:#4a90e2;">@Jawad</span><br>Que Dieu te bénisse toujours</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-text">
+          <div style="font-weight:700; color:#fff; margin-bottom:6px;">Premier reward</div>
+          Mon premier reward dans le premier mois avec mon compte financé — c'était un si long voyage. Ça aurait pu être plus ? Oui. Est-ce que j'ai beaucoup merdé ? Oui. Un immense merci au meilleur mentor <span style="color:#4a90e2;">@Jawad</span> et à l'incroyable communauté qui est toujours prête à aider
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       CTA (second)
+  ════════════════════════════════════════════════ -->
+  <div class="section" style="padding:50px;">
+    <div class="cta-split">
+      <div class="discord-post">
+        <div class="disc-header">
+          <div class="disc-avatar">C</div>
+          <div>
+            <div class="disc-name">Cole <span class="disc-jump">Aller</span></div>
+          </div>
+        </div>
+        <div class="disc-body">Je suis passé de faire exploser CHAQUE challenge financé (et certains comptes financés), à maintenant obtenir des payouts de façon consistante<br><br><span class="disc-mention">@Jawad</span> toi et ta communauté êtes les meilleurs ! 🙏🙏</div>
+      </div>
+      <ul class="cta-list">
+        <li><span class="check-icon">✔</span> Le programme en 10 parties</li>
+        <li><span class="check-icon">✔</span> La boucle de feedback</li>
+        <li><span class="check-icon">✔</span> Les Deep Dives</li>
+        <li><span class="check-icon">✔</span> La Communauté</li>
+        <li><span class="check-icon">✔</span> Les Narratives</li>
+        <li><span class="check-icon">✔</span> Et Les Extras</li>
+      </ul>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="cta-btn">Rejoindre OTE 705 — 1 344,60€</a>
+    </div>
+    <p class="cta-sub">Un seul paiement. Une année complète. Pas de renouvellement automatique.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 17 — FAQ
+  ════════════════════════════════════════════════ -->
+  <div class="section body-text">
+    <h2 class="big-heading">TU AS ENCORE DES QUESTIONS ?</h2>
+    <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.1rem; text-align:center; margin-bottom:40px;">Voici tout ce que tu as besoin de savoir d'autre</p>
+
+    <div class="faq-item">
+      <h3>J'ai déjà acheté des formations. Elles n'ont pas marché. Pourquoi celle-ci marcherait ?</h3>
+      <p>La plupart des formations de trading sont nulles. C'est pourquoi.</p>
+      <p>Quand tu achètes une formation chez presque n'importe qui d'autre, on te présente une liste de règles de "fais juste ça à ce moment-là", "suis juste ce pattern chaque jour" sans aucune explication du pourquoi.</p>
+      <p>Donc tu dois faire confiance à leurs règles sans aucun contexte sur pourquoi ça fait de bons trades. Ces trades sont alors impossibles à faire confiance parce que tu ne sais même pas pourquoi tu es dedans !</p>
+      <p>Et au-delà de la stratégie soyons réalistes... il n'y a pas grand-chose à elles. On te dit "gère juste ton risque" et "sois juste discipliné". Des trucs génériques que tu peux entendre sur YouTube gratuitement. Puis tu es censé prendre ces trucs de surface et d'une façon ou d'une autre les transformer en consistance sans aucun feedback ni guidance.</p>
+      <p>Est-ce que ça semble fonctionner ? Non.</p>
+      <p>C'est pourquoi les formations t'ont fait défaut. Et c'est pourquoi OTE 705 ne le fera pas.</p>
+      <p><strong>Ici les choses sont différentes :</strong></p>
+      <p>Au lieu de t'enseigner une stratégie copier-coller basique, je t'enseigne <em>pourquoi</em> le marché bouge et comment lire la bataille entre acheteurs & vendeurs à travers les chandeliers.</p>
+      <p>Donc quand tu regardes un graphique tu commences par lire <em>ce qui se passe vraiment.</em></p>
+      <p>Puis je te montre comment j'utilise cette compréhension profonde des marchés pour formuler des trades de haut en bas — d'une manière étape par étape et répétable.</p>
+      <p>Et puis bien sûr, comme je te l'ai montré, l'élément central de tout le programme c'est le feedback. C'est là que le vrai progrès se fait.</p>
+      <p>Tu l'as vu à travers les résultats sur cette page.</p>
+      <p>La majorité des gens dans le programme ont essayé d'autres mentors avant.</p>
+
+      <div style="display:flex; gap:20px; align-items:flex-start; margin:20px 0;">
+        <div style="flex:1;">
+          <p>Comme Bridie (je te l'ai montrée plus tôt mais le point est clair) qui a gaspillé de l'argent chez CINQ mentors différents avant de trouver ses marques avec moi dans OTE 705.</p>
+        </div>
+        <div style="flex:1;">
+          <div class="review-card">
+            <div class="reviewer-row">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">B</div>
+                <div>
+                  <div class="reviewer-name">Bridie Beverton</div>
+                  <div class="reviewer-meta">GB · 5 avis</div>
+                </div>
+              </div>
+              <div class="review-date">23 Juin 2026</div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-title">Clarté</div>
+            <div class="review-text">J'ai acheté la formation et je suis tellement reconnaissante... j'ai gaspillé tellement d'argent sur 5 autres mentors et de nombreuses années...</div>
+            <div style="text-align:right; margin-top:6px; font-size:0.72rem; color:#888; font-style:italic;">↑</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Combien de temps ça prend vraiment ?</h3>
+      <p>Environ 9 heures du début à la fin pour compléter le programme principal (je suggère une heure par jour sur 7 à 10 jours) pour bien parcourir le programme.</p>
+      <p>Et ensuite 30 à 60 minutes par jour pour tester, pratiquer, construire l'expérience & utiliser la boucle de feedback. C'est tout — et la plupart des membres font exactement ça, autour d'un travail à plein temps.</p>
+      <p>Tu veux en faire plus ? C'est bien. Mais si tu as juste quelques heures par semaine tu vas être choqué de la vitesse à laquelle tu peux progresser quand tu passes ce temps bien.</p>
+      <p>Voici ce que les gens ont tort sur le temps & le trading : ils pensent que plus de temps devant l'écran = plus de progrès rapide. C'est l'inverse. Fixer des graphiques pendant des heures sans système signifie juste s'entraîner dans la confusion.</p>
+      <p>Quand tu sais ce que tu cherches, le trading prend <em>moins</em> de temps, pas plus. Ton analyse a un processus. Tes trades ont des critères. Tu vois les conditions ou tu ne les vois pas — et si tu ne les vois pas, tu fermes l'ordinateur et tu vis ta journée.</p>
+      <p>Le système que tu construis dans OTE 705 est construit autour de TON emploi du temps dès le premier jour. Trade la session qui correspond à ta vie. Il n'y a pas de "tu dois regarder l'ouverture de Londres à 8h du matin" — c'est encore le système de quelqu'un d'autre, et on a vu pourquoi ça échoue.</p>
+      <p>Et la boucle de feedback est asynchrone — poste tes trades & analyses, obtiens le feedback quand tu te reconnectes. Pas d'appels live obligatoires à des moments où tu ne peux pas être présent.</p>
+      <p>Un avertissement honnête : si tu ne peux vraiment pas trouver quelques heures concentrées par semaine, ne rejoins pas encore. OTE 705 marche quand tu travailles, et je préfère que tu reviennes quand tu as l'espace plutôt que de payer pour quelque chose que tu ne peux pas utiliser.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Je ne peux pas juste apprendre ça depuis ta YouTube ?</h3>
+      <p>Les concepts ? Beaucoup d'entre eux, oui. Je ne cache pas les bonnes choses et ne les garde pas pour les membres payants — si tu as regardé la chaîne tu le sais.</p>
+      <p>Mais voilà ce que YouTube ne peut pas être, peu importe la qualité des vidéos :</p>
+      <p>Elle ne peut pas être dans l'ordre. L'algorithme te sert un concept de 2024, puis quelque chose que j'ai fait le mois dernier, puis une vidéo qui suppose que tu en as vu trois autres que tu n'as pas vues. Tu assembles un puzzle sans la photo sur la boîte. OTE 705, c'est la photo sur la boîte — tout dans le bon ordre, rien de manquant, rien de dupliqué.</p>
+      <p>Elle ne peut pas voir TON trading. C'est le gros point. Une vidéo explique le concept parfaitement et puis tu vas l'appliquer légèrement de travers pendant six mois sans que personne ne soit là pour l'attraper. La boucle de feedback est la raison entière pour laquelle mes élèves progressent en mois au lieu d'années — et le feedback sur tes trades réels est, par définition, impossible via un écran dans un sens.</p>
+      <p>Et elle ne peut pas répondre en retour. Quand tu es bloqué sur YouTube, tu es bloqué. Quand tu es bloqué dans OTE 705, tu postes et tu te débloque.</p>
+      <p>Donc la version honnête : la chaîne t'apprend <em>des choses sur</em> le trading. OTE 705 c'est là où tu deviens vraiment un trader — avec moi qui regarde.</p>
+      <p>Si les vidéos gratuites suffisaient, elles auraient déjà suffi. Le fait que tu sois sur cette page prouve un peu le point.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Je suis tout nouveau dans le trading. Est-ce trop avancé pour moi ?</h3>
+      <p>C'est avancé — c'est le but. Lire ce qui se passe vraiment dans un marché est une compétence professionnelle, et OTE 705 ne dilue pas ça.</p>
+      <p>Ce qu'il ne fait pas, c'est supposer que tu as déjà gaspillé des années ailleurs avant d'arriver ici.</p>
+      <p>Le programme construit les choses profondes depuis le début, dans l'ordre, donc tu n'as pas besoin d'expérience préalable pour commencer — tu as juste besoin de faire vraiment le travail. Les débutants s'en sortent bien. Honnêtement ils progressent souvent plus <em>vite</em>, parce qu'ils n'ont pas de mauvaises habitudes à désapprendre — pas de superstitions de graphiques d'un guru, pas d'un demi-modèle de risque d'un autre. Ils construisent proprement dès la première fois pendant que les autres passent des mois à supprimer de vieilles choses inutiles.</p>
+      <p>Et si tu trades depuis des années — non, ce ne sont pas des bases réchauffées. Les premières classes iront vite pour toi, mais la raison pour laquelle tu es là n'est pas de toute façon les fondamentaux. C'est la construction du système & le feedback sur TON trading, et personne avec de l'expérience ne m'a jamais dit que le problème c'était que OTE 705 avait commencé trop simplement.</p>
+      <p>Même montagne pour tout le monde. Les débutants commencent juste l'ascension sans un sac à dos plein de cailloux.</p>
+
+      <div style="display:flex; gap:20px; align-items:flex-start; margin-top:20px;">
+        <div style="flex:1;">
+          <div class="img-placeholder medium">IMAGE</div>
+        </div>
+        <div style="flex:1; padding-top:10px;">
+          <p>Ce gars a accompli l'une des réalisations les plus incroyables que j'aie vues dans le trading. Il est passé de débutant complet à trader à plein temps en 12 mois.</p>
+          <p style="margin-top:10px;">10 de ces mois ont été passés dans le programme. Je ne dis pas que tu le feras aussi vite, c'est exceptionnel. Mais le point c'est…</p>
+          <p style="margin-top:10px;">Être débutant ne te retiendra pas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Est-ce que tu garantis que je vais gagner de l'argent ?</h3>
+      <p>Non. Et je veux être vraiment clair là-dessus, parce que ça compte.</p>
+      <p>Le trading implique de vrais risques. Tu peux faire les choses correctement et quand même avoir des trades perdants, des semaines perdantes, des mois perdants — c'est la nature des marchés, et quiconque te dit le contraire te ment. OTE 705 c'est de l'éducation & du mentoring, pas des conseils financiers, et aucune éducation ne peut enlever le risque du trading. Rien sur cette page n'est une promesse de revenus.</p>
+      <p>Les résultats que tu as vus sont réels, mais ils n'arrivent pas juste parce que tu rejoins — ce sont ce qui est arrivé aux gens qui ont fait le travail, pris le feedback au sérieux, et ont tenu bon à travers la partie difficile. Que tu y arrives dépend d'eux, pas d'une promesse de ma part. Je préfère te dire ça ici que de te le faire découvrir après avoir payé.</p>
+      <p>Voici ce que je <em>peux</em> garantir : l'éducation est réelle, le feedback est réel, je suis présent, et tout ce que j'ai promis sur cette page — le programme, la boucle, la communauté, moi — sera là. Ce que tu en construis t'appartient à toi de déterminer.</p>
+      <p>Si tu espérais des "profits garantis en 30 jours" — il y a plein de gens qui voleront ton argent sous cette promesse. Et c'est la raison pour laquelle la plupart de mes élèves ont atterri ici après s'être fait brûler. Je ne rejoins pas cette file.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Est-ce vraiment TOI qui donnes le feedback ?</h3>
+      <p>Oui. Moi. Personnellement.</p>
+      <p>Je sais exactement pourquoi tu poses cette question — ce créneau est rempli de "mentoring" qui s'avère être un Discord gardé par des modérateurs pendant que le vrai mentor apparaît deux fois par an pour poster une capture d'écran P&L. Tu as probablement payé pour ça avant.</p>
+      <p>Pas ici. Je lis ce que tu postes et j'y réponds. Ça me prend beaucoup de temps, et je le fais quand même, parce que la boucle de feedback est la raison entière pour laquelle OTE 705 marche — je l'ai dit tout au long de cette page, donc je ne vais pas l'outsourcer.</p>
+      <p>Le seul moment où je ne réponds pas directement, c'est quand un autre membre a déjà si bien répondu que tout ce que j'ajouterais ne serait que du bruit. Quand ça arrive, j'épingle leur réponse — donc tu sais qu'elle a été vérifiée par moi et qu'elle est correcte, pas juste laissée en suspens. Ce n'est pas moi qui recule, c'est la communauté qui devient assez bonne pour attraper les choses avant moi. Ce qui, honnêtement, est l'objectif.</p>
+      <p>Donc oui — poste tes trades, poste ton analyse, poste tes questions. La personne qui les lit est la même qui écrit cette page.</p>
+      <p>Je suis une seule personne, donc je ne peux pas toujours répondre le même jour.</p>
+      <p>Mais <em>tout</em> reçoit une réponse de <strong>MOI.</strong></p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Y a-t-il des sessions live ? Du trading live ? Des signaux ?</h3>
+      <p>Non, non, et définitivement non. Laisse-moi tuer chacun correctement, parce que si tu attends l'un de ces trucs, je préfère perdre la vente plutôt que de te voir rejoindre pour la mauvaise raison.</p>
+      <p><strong>Pas de signaux — jamais.</strong> Copier mes trades c'est juste louer mon système, et tu as vu comment cette histoire se termine parce que tu l'as vécu. Le jour où les signaux s'arrêtent, tu es de retour à zéro. OTE 705 existe pour faire de toi la personne qui <em>génère</em> les trades. Si tu veux qu'on te dise quoi acheter et quand, c'est vraiment le mauvais endroit — et c'est pareil partout ailleurs, ils sont juste moins honnêtes à ce sujet.</p>
+      <p>Tu reçois les vidéos de narrative (j'en ai parlé plus haut) et elles te donnent tous les insights dont tu auras besoin pour trader les marchés tout en devenant vraiment meilleur.</p>
+      <p><strong>Pas de sessions live & pas d'appels.</strong> On n'atterrit tout simplement jamais sur des appels. Tout fonctionne de façon asynchrone — les classes, les narratives, la boucle de feedback, tout ça est construit dans mon temps pour que tu puisses l'utiliser dans le tien.</p>
+      <p>Et c'est un choix délibéré, pas une fonctionnalité manquante. J'ai fait ces appels avant & ils finissent par gaspiller énormément de temps à tout le monde.</p>
+      <p>L'appel hebdomadaire finit par être rempli de remplissage — 4 heures de bavardage Zoom par semaine, programmées à des moments aléatoires où tu dois te présenter, où 20 minutes de substance finissent par être étirées pour remplir le créneau <em>parce que</em> le créneau existe.</p>
+      <p>Ici, tout ce que je crée existe <strong>parce que ça avait besoin d'exister</strong>, et tout ce que tu fais fait avancer ton trading. 30 à 60 minutes concentrées par jour bat rester assis à des appels — tu es ici pour construire pas pour regarder.</p>
+      <p>Si les salles de trading live et les pings de signaux c'est ce que tu cherches, pas de rancœur — mais ne rejoins pas OTE 705 en les attendant, parce qu'ils ne viennent jamais.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Que se passe-t-il après que mon année se termine ?</h3>
+      <p>Tu as le choix de renouveler à 995€ pour l'année suivante — 2,72€ par jour — ce qui te garde dans la boucle complète : le feedback, la communauté, la proximité, tout ce qui est live dans OTE 705.</p>
+      <p>Renouvelle et tu es dedans pour une autre année. Ne le fais pas — et vraiment — pas de rancœur.</p>
+      <p>Le renouvellement automatique est désactivé, souviens-toi.<br>
+      Donc pas de mauvaise surprise "-995€" parce que tu as oublié d'annuler.</p>
+      <p>Rien ne t'est retiré à la sortie non plus : chaque morceau de contenu enregistré t'appartient pour toujours. Et si OTE 705 fermait ses portes un jour, tout te serait envoyé en téléchargements. Tu n'es jamais pris en otage par un abonnement pour garder ce pour quoi tu as déjà payé.</p>
+      <p>Voici la partie qui semble probablement étrange venant de la personne qui te vend le renouvellement : mon objectif est que tu n'en aies pas besoin.</p>
+      <p>Un an c'est long dans ce programme. Le système se construit, le feedback fait son travail, et quand ton année se termine, tu devrais être capable de lire les marchés par toi-même — c'est tout le point de t'apprendre à pêcher au lieu de te donner des signaux. Si j'ai fait mon travail, me payer encore devrait sembler optionnel, pas nécessaire.</p>
+      <p>Les membres qui restent d'année en année ne restent pas pour la plupart parce qu'ils sont bloqués — ils restent parce qu'ils adorent être dans la salle. La communauté devient la raison, pas la béquille.</p>
+      <p>Donc le résumé honnête : la première année, c'est là que la transformation se passe. La deuxième année est là si tu la veux. Et de toute façon, ce que tu as construit — et tout ce que tu as appris — t'appartient.</p>
+      <p style="font-style:italic; text-align:center; margin-top:20px;">C'est tout ce que tu avais besoin de savoir</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 18 — FINAL CTA
+  ════════════════════════════════════════════════ -->
+  <div class="section" style="padding:50px;">
+    <h2 class="big-heading">PRÊT ? C'EST PARTI</h2>
+    <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.1rem; text-align:center; margin-bottom:32px;">clique sur ce bouton ci-dessous</p>
+
+    <div class="cta-split">
+      <div class="discord-post">
+        <div class="disc-header">
+          <div class="disc-avatar">C</div>
+          <div>
+            <div class="disc-name">Cole <span class="disc-jump">Aller</span></div>
+          </div>
+        </div>
+        <div class="disc-body">Je suis passé de faire exploser CHAQUE challenge financé (et certains comptes financés), à maintenant obtenir des payouts de façon consistante<br><br><span class="disc-mention">@Jawad</span> toi et ta communauté êtes les meilleurs ! 🙏🙏</div>
+      </div>
+      <ul class="cta-list">
+        <li><span class="check-icon">✔</span> Le programme en 10 parties</li>
+        <li><span class="check-icon">✔</span> La boucle de feedback</li>
+        <li><span class="check-icon">✔</span> Les Deep Dives</li>
+        <li><span class="check-icon">✔</span> La Communauté</li>
+        <li><span class="check-icon">✔</span> Les Narratives</li>
+        <li><span class="check-icon">✔</span> Et Les Extras</li>
+      </ul>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#" class="cta-btn">Rejoindre OTE 705 — 1 344,60€</a>
+    </div>
+    <p class="cta-sub">Un seul paiement. Une année complète. Pas de renouvellement automatique.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════
+       DISCLAIMER
+  ════════════════════════════════════════════════ -->
+  <div class="disclaimer">
+    <strong>Avertissement :</strong> Tout le contenu fourni est uniquement à des fins éducatives et ne constitue pas un conseil financier. Le trading comporte des risques, et les performances passées ne sont pas indicatives des résultats futurs. Les témoignages ou exemples partagés représentent des expériences individuelles — ils ne garantissent pas les performances futures. Fais toujours tes propres recherches et ne trade jamais avec de l'argent que tu ne peux pas te permettre de perdre.
+  </div>
+
+</div><!-- end .page-wrap -->
+</body>
+</html>
