@@ -17,7 +17,7 @@
   }
 
   .page-wrap {
-    max-width: 720px;
+    max-width: 750px;
     margin: 0 auto;
     background: #fff;
     padding: 0;
@@ -25,7 +25,7 @@
 
   /* ── CONTENT SECTIONS ── */
   .section {
-    padding: 60px 50px;
+    padding: 60px 30px;
   }
 
   .section + .section {
@@ -157,11 +157,13 @@
 
   /* ── PULL QUOTE ── */
   .pull-quote {
-    font-family: 'Libre Baskerville', Georgia, serif;
+    font-family: "Libre Baskerville", sans-serif;
     font-style: italic;
-    font-size: 1.45rem;
+    font-weight: 900;
+    font-size: 31px;
+    line-height: 40px;
+    color: rgb(9,9,9);
     text-align: center;
-    line-height: 1.4;
     margin: 28px 0;
   }
 
@@ -213,10 +215,11 @@
   }
 
   .process-flow p {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 1.1rem;
+    font-family: "Libre Baskerville", sans-serif;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 2;
+    line-height: 30px;
+    color: rgb(9,9,9);
   }
 
   .process-flow .arrow-down {
@@ -306,12 +309,14 @@
 
   /* ── STEP HEADING ── */
   .step-heading {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 35px;
+    line-height: 55px;
+    color: rgb(0,0,0);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: -0.3px;
+    letter-spacing: 0;
     margin-bottom: 24px;
   }
 
@@ -332,7 +337,7 @@
     margin-top: 2px;
   }
 
-  .checklist li strong { font-weight: 700; }
+  .checklist li strong { font-family: Inter, sans-serif; font-weight: 700; font-size: 17px; line-height: 26px; color: rgb(9,9,9); }
   .checklist li em { font-style: italic; }
 
   /* ── SMALL CHECKLIST ── */
@@ -1123,19 +1128,23 @@
 
   /* ── SECTION: "SO HERE'S HOW..." ── */
   .how-heading {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 28px;
+    line-height: 55px;
+    color: rgb(0,0,0);
     text-transform: uppercase;
-    letter-spacing: -0.3px;
+    letter-spacing: 0;
     margin-bottom: 20px;
   }
 
   /* ── PROGRAM NAME ── */
   .program-name {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 28px;
+    line-height: 55px;
+    color: rgb(0,0,0);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0;
@@ -1163,7 +1172,7 @@
   <!-- ═══════════════════════════════════════════════
        SECTION 1 — HERO
   ════════════════════════════════════════════════ -->
-  <div class="section" style="padding-top:70px; padding-bottom:50px; padding-left:30px; padding-right:30px; text-align:center;">
+  <div class="section" style="padding-top:40px; padding-bottom:20px; padding-left:30px; padding-right:30px; text-align:center;">
     <h1 class="hero-title">
       J'AIDE LES TRADERS À OBTENIR LEUR PREMIER PAYOUT…
       <span class="italic-line">et leur <u>Dixième</u></span>
@@ -1174,12 +1183,12 @@
 
     <div class="proof-grid-wrap" style="margin-top:36px;">
       <div class="proof-grid">
-        <div class="img-placeholder">IMAGE</div>
-        <div class="img-placeholder">IMAGE</div>
-        <div class="img-placeholder">IMAGE</div>
-        <div class="img-placeholder">IMAGE</div>
-        <div class="img-placeholder">IMAGE</div>
-        <div class="img-placeholder">IMAGE</div>
+        <img src="assets2/db9d25d5-e445-4000-8eb4-38b2a238b4e8.webp" style="width:100%;height:100%;object-fit:cover;">
+        <img src="assets2/7626eb3c-9493-449b-aaef-4141fcadb496.webp" style="width:100%;height:100%;object-fit:cover;">
+        <img src="assets2/86aaa763-ab06-45b4-85b2-da603a121641.webp" style="width:100%;height:100%;object-fit:cover;">
+        <img src="assets2/aa57d93a-d79a-44f3-b1f1-de501e314668.webp" style="width:100%;height:100%;object-fit:cover;">
+        <img src="assets2/7ff6fe22-3614-45bd-8c21-dff53fe5e501.webp" style="width:100%;height:100%;object-fit:cover;">
+        <img src="assets2/IMG_2474.webp" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="proof-caption">
         <img src="assets/arrow-left.webp" style="width:100px; display:block; margin-bottom:10px;">
@@ -1193,7 +1202,6 @@
     </div>
   </div>
 
-  <hr class="divider">
 
   <!-- ═══════════════════════════════════════════════
        SECTION 2 — PROBLEM AGITATION
@@ -1211,7 +1219,7 @@
     <p>Alors pourquoi tu n'arrives pas à y arriver ?</p>
     <p>Et comment diable tu brises ce cycle de :</p>
 
-    <div class="pull-quote" style="margin:28px 0;">
+    <div class="pull-quote" style="margin:28px 0 48px;">
       "Apprendre apprendre apprendre → Gagner un peu → <u>Perdre Encore Plus</u>"
     </div>
 
@@ -1221,15 +1229,15 @@
         <p><strong>Le problème, ce n'est pas toi.</strong></p>
         <p>Il n'y a pas de gène manquant. Pas de "certaines personnes ont juste le don" — j'ai formé suffisamment de traders pour te promettre que c'est un mythe.</p>
         <p>Ce qui te maintient dans le cycle, ce n'est pas ce que tu sais.</p>
-        <p><u><em>C'est comment tu trades ce que tu sais.</em></u></p>
+        <p style="margin-bottom:40px;"><u><em>C'est comment tu trades ce que tu sais.</em></u></p>
       </div>
       <div class="col-img">
-        <div class="img-placeholder tall">IMAGE</div>
-        <p class="img-caption">Je suis Jawad – ce gars que tu regardes sur YouTube ou que tu lis dans ta boîte mail !</p>
+        <img src="assets2/Nathan.png" style="width:100%; border-radius:4px; margin-top:40px;">
+        <p style="font-family:Libre Baskerville,sans-serif; font-weight:400; font-size:11px; line-height:17px; color:rgb(9,9,9); text-align:center; margin-top:6px;">Moi c'est Nathan, ce gars que tu regardes sur YouTube ou que tu lis dans ta boite mail !</p>
       </div>
     </div>
 
-    <p style="margin-top:20px;"><strong style="font-style:italic; font-size:1.15rem;">Et je ne parle pas de mentalité.</strong></p>
+    <p style="font-family:Inter,sans-serif; font-weight:700; font-style:italic; font-size:22px; line-height:8px; color:rgb(9,9,9); margin-top:20px; margin-bottom:30px;">Et je ne parle pas de mentalité.</p>
 
     <p>Je parle des choses mécaniques :</p>
 
@@ -1251,13 +1259,12 @@
     <p>C'est la partie que personne qui te vend des stratégies ne t'a jamais proposée. Pas parce que ça ne marche pas — parce que c'est difficile à délivrer. Tu ne peux pas le mettre dans un PDF.</p>
   </div>
 
-  <hr class="divider">
 
   <!-- ═══════════════════════════════════════════════
        SECTION 3 — HOW WE MAKE IT HAPPEN
   ════════════════════════════════════════════════ -->
-  <div class="section body-text">
-    <h2 class="how-heading">ALORS VOICI COMMENT ON Y ARRIVE…</h2>
+  <div class="section body-text" style="padding-top:15px; padding-bottom:30px;">
+    <h2 class="how-heading" style="margin-top:-20px;">ALORS VOICI COMMENT ON Y ARRIVE…</h2>
 
     <p>Je ne vais pas te mentir en te promettant que tu seras riche en une semaine. Le trading est difficile, et même avec le bon système et les bons conseils, tu vas devoir bosser.</p>
     <p>Mais si tu comprends déjà ça et que tu es prêt à t'y mettre —</p>
@@ -1265,7 +1272,7 @@
     <p>La plupart des traders ne peuvent pas se le permettre.</p>
     <p>Alors j'ai construit la meilleure alternative (sans le prix qui vide ton compte).</p>
 
-    <p><strong>Le résultat ? Les élèves reçoivent des notifications comme celle-ci :</strong></p>
+    <p style="font-family:Inter,sans-serif; font-weight:700; font-size:17px; line-height:26px; color:rgb(9,9,9);">Le résultat ? Les élèves reçoivent des notifications comme celle-ci :</p>
 
     <div class="notif-box">
       <div class="notif-icon">R</div>
@@ -1275,25 +1282,16 @@
       </div>
     </div>
 
-    <p style="margin-top:24px;"><strong>Et des relevés comme celui-là :</strong></p>
+    <p style="font-family:Inter,sans-serif; font-weight:700; font-size:17px; line-height:26px; color:rgb(9,9,9); margin-top:24px;">Et des relevés comme celui-là :</p>
 
-    <div class="bank-box">
-      <div class="bank-filter">✓ Transaction entrante &nbsp;&nbsp; ✕</div>
-      <div style="width:40px;height:40px;border-radius:50%;background:#4ab8c4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem;margin:0 auto 10px;">FL</div>
-      <div class="bank-amount">+ $8 112,00</div>
-      <div class="bank-sub">USD reçu de FTP London Ltd</div>
-      <div class="bank-row">
-        <span>Statut</span>
-        <span class="status-green">✓ Reçu</span>
-      </div>
-    </div>
+    <img src="assets2/Mail.jpg" style="width:100%; max-width:340px; display:block; border-radius:8px;">
 
-    <p style="margin-top:24px; font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:1.15rem; font-weight:700;">
+    <p style="margin-top:24px; font-family:Inter,sans-serif; font-style:italic; font-size:22px; line-height:8px; font-weight:700; color:rgb(9,9,9); margin-bottom:30px;">
       Rien de tout ça ne vient d'une stratégie magique.
     </p>
 
-    <p>La façon dont ces traders sont arrivés aux payouts n'est pas passée par la maîtrise d'un modèle d'entrée "super secret" ou par des taux de réussite à 90%.</p>
-    <p>Ces gains <em>(et tous ceux que tu vas voir)</em> sont le résultat <strong>d'un processus spécifique :</strong></p>
+    <p style="font-family:Inter,sans-serif; font-weight:400; font-size:17px; line-height:26px; color:rgb(9,9,9);">La façon dont ces traders sont arrivés aux payouts n'est pas passée par la maîtrise d'un modèle d'entrée "super secret" ou par des taux de réussite à 90%.</p>
+    <p style="font-family:Inter,sans-serif; font-weight:400; font-size:17px; line-height:26px; color:rgb(9,9,9);">Ces gains <em>(et tous ceux que tu vas voir)</em> sont le résultat <strong>d'un processus spécifique :</strong></p>
 
     <div class="process-flow">
       <p>Apprendre un système cohérent</p>
@@ -1315,18 +1313,17 @@
     <p>Et c'est ce que j'ai construit :</p>
   </div>
 
-  <hr class="divider">
 
   <!-- ═══════════════════════════════════════════════
        SECTION 4 — PROGRAM NAME
   ════════════════════════════════════════════════ -->
-  <div class="section" style="text-align:center;">
+  <div class="section" style="text-align:center; padding-top:5px;">
     <p class="program-name">ÇA S'APPELLE L'ACCOMPAGNEMENT OTE 705</p>
-    <p class="program-sub">et il a amené des gens à des résultats <em>encore et encore.</em></p>
+    <p style="font-family:Inter,sans-serif; font-weight:700; font-style:italic; font-size:20px; line-height:9px; color:rgb(9,9,9); text-align:center; margin-bottom:60px;">et il a amené des gens à des résultats <em>encore et encore.</em></p>
 
-    <div class="two-col-payouts" style="margin-top:20px;">
-      <div class="img-placeholder medium">IMAGE</div>
-      <div class="img-placeholder medium">IMAGE</div>
+    <div class="two-col-payouts" style="margin-top:20px; max-width:500px; margin-left:auto; margin-right:auto; margin-bottom:40px;">
+      <img src="assets2/Nabil.png" style="width:100%; border-radius:4px;">
+      <img src="assets2/Mickael.webp" style="width:100%; border-radius:4px;">
     </div>
 
     <div class="body-text" style="text-align:left; margin-top:20px;">
@@ -1349,46 +1346,7 @@
     <p>OUI — pour 99% des gens, regarder des vidéos ne suffit pas.</p>
     <p>Mais tu as quand même besoin d'un système (et d'un bon). C'est à ça que sert la formation.</p>
 
-    <div class="course-mock">
-      <div class="course-mock-header">
-        <div class="logo">
-          <div class="logo-square">OT</div>
-          <span>OTE 705</span>
-        </div>
-        <span>Mon compte ↓ &nbsp;&nbsp; Déconnexion →</span>
-      </div>
-      <div class="course-mock-body">
-        <div class="course-sidebar">
-          <div class="sidebar-label">PROGRAMME PRINCIPAL</div>
-          <div class="sidebar-progress">
-            Progression du cours &nbsp;&nbsp; 2 / 17 leçons – 12%
-            <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
-          </div>
-          <div class="sidebar-item active">JOUR 1 <span class="item-arrow">∨</span></div>
-          <div class="sidebar-item" style="padding-left:18px; font-size:0.7rem; background:#fff8e1;">Jour 1 – Mentalité & Fondations <span class="item-check">✓</span></div>
-          <div class="sidebar-item">JOUR 2 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 3 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 4 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 5 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 6 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 7 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 8 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 9 <span class="item-arrow">›</span></div>
-          <div class="sidebar-item">JOUR 10 <span class="item-arrow">›</span></div>
-        </div>
-        <div class="course-content">
-          <h3>Jour 1 – Mentalité & Fondations</h3>
-          <div class="img-placeholder" style="min-height:160px; background:#1a1a2e; color:#888;">▶ VIDÉO</div>
-          <p style="font-size:0.75rem; color:#555; margin-top:10px; line-height:1.5;">
-            Avant de trader un système avec succès — tu as besoin de la bonne "identité" & d'une compréhension profonde de ce à quoi ressemble vraiment le succès. Dans cette classe, on déconstruit les fondations d'un trading réussi.
-          </p>
-          <p style="font-size:0.75rem; color:#333; margin-top:10px; font-weight:600;">Ressources</p>
-          <div style="border:1px solid #eee; border-radius:4px; padding:6px 10px; font-size:0.73rem; color:#555; margin-top:4px;">
-            📎 Blueprint du Trader Professionnel (PDF)
-          </div>
-        </div>
-      </div>
-    </div>
+    <img src="assets2/Formation.png" style="width:100%; border-radius:6px; margin:20px 0;">
 
     <p style="margin-top:20px;">La formation OTE 705 n'est PAS une bibliothèque de 200+ classes qui t'enseigne toutes sortes de choses dont tu n'as pas besoin. Ce n'est pas 40 heures de remplissage.</p>
 
@@ -1397,7 +1355,7 @@
 
     <p>Que tu peux terminer rapidement et commencer à appliquer sur le marché avec un niveau de clarté que tu n'as jamais eu auparavant.</p>
 
-    <p>Dans la formation, tu vas apprendre :</p>
+    <p style="margin-bottom:50px;">Dans la formation, tu vas apprendre :</p>
 
     <ul class="checklist">
       <li>
@@ -1422,33 +1380,17 @@
       </li>
     </ul>
 
-    <p>Quand tu termines cette formation, je pense que tu vas avoir une seule pensée :</p>
-    <p><em>"Pourquoi personne n'a jamais expliqué le trading comme ça avant ?"</em></p>
+    <p style="font-family:Inter,sans-serif; font-weight:700; font-size:17px; line-height:26px; color:rgb(9,9,9);">Quand tu termines cette formation, je pense que tu vas avoir une seule pensée :</p>
+    <p style="font-family:Inter,sans-serif; font-weight:400; font-style:italic; font-size:17px; line-height:26px; color:rgb(9,9,9);"><em>"Pourquoi personne n'a jamais expliqué le trading comme ça avant ?"</em></p>
     <p>Et tu seras prêt à affronter les marchés avec le premier système qui t'ait jamais vraiment fait sens.</p>
 
-    <div class="review-caption-wrap" style="margin-top:28px;">
-      <div class="review-card">
-        <div class="reviewer-row">
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">B</div>
-            <div>
-              <div class="reviewer-name">Bridie Beverton</div>
-              <div class="reviewer-meta">GB · 5 avis</div>
-            </div>
-          </div>
-          <div class="review-date">23 Juin 2026</div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <div class="review-title">Clarté</div>
-        <div class="review-text">J'ai acheté la formation et je suis tellement reconnaissante, je ne suis pas encore arrivée au bout mais je me rapproche de plus en plus. J'ai gaspillé tellement d'argent sur 5 autres mentors et de nombreuses années sans arriver nulle part de proche à où je suis maintenant. J'étudie et backteste tous les jours mais maintenant je comprends ce que je teste &amp; pourquoi</div>
-        <div class="review-tags">
-          <span class="review-tag">23 juin 2026</span>
-          <span class="review-tag">Avis spontané</span>
-        </div>
+    <div style="display:flex; gap:20px; align-items:flex-start; margin-top:28px;">
+      <div style="flex:1;">
+        <img src="assets2/Avismartin.jpg" style="width:100%; border-radius:6px;">
       </div>
-      <div class="caption-right">
-        <span style="font-size:1.5rem; display:block; margin-bottom:8px;">←</span>
-        <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:0.95rem; line-height:1.4;">Mots d'un élève qui a récemment terminé la formation</p>
+      <div style="width:160px; flex-shrink:0; text-align:center; padding-top:60px;">
+        <img src="assets/arrow-left.webp" style="width:90px; display:block; margin:0 auto 12px;">
+        <p style="font-family:Libre Baskerville,sans-serif; font-weight:900; font-size:17px; line-height:20px; color:rgb(9,9,9);">Mots d'un élève qui a récemment terminé la formation</p>
       </div>
     </div>
   </div>
@@ -1467,7 +1409,7 @@
     <p><strong>Chaque question posée reçoit une réponse directement de moi.</strong></p>
     <p>Sauf... Si elle a déjà été répondue SI bien par l'un des nombreux membres de haut niveau que ma contribution n'est pas nécessaire (dans ce cas j'interviens pour donner mon approbation).</p>
 
-    <p><strong>Voici comment ça se présente :</strong></p>
+    <p style="margin-top:60px; font-family:Inter,sans-serif; font-weight:700; font-size:22px; line-height:8px; color:rgb(9,9,9);">Voici comment ça se présente :</p>
 
     <div style="display:flex; gap:20px; align-items:flex-start; margin-top:20px;">
       <div style="flex:1;">
@@ -1651,7 +1593,7 @@
           </div>
         </div>
       </div>
-      <div style="width:160px; flex-shrink:0; text-align:center; padding-top:10px;">
+      <div style="width:160px; flex-shrink:0; text-align:center; padding-top:60px;">
         <p style="font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1.05rem; line-height:1.3;">Des centaines de membres tradent ensemble & partagent leurs idées</p>
         <p style="font-family:'Libre Baskerville',Georgia,serif; font-style:italic; font-size:0.85rem; margin-top:10px; line-height:1.4; color:#444;">Pour que tu puisses apprendre de la façon dont les autres voient les marchés & avoir toujours un flux d'opportunités avec lesquelles travailler</p>
         <div style="margin-top:16px; font-size:1.5rem;">↙</div>
