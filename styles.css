@@ -562,7 +562,7 @@ h4 {
 /* ---------- now vs could be ---------- */
 .compare {
   background: #000;
-  padding: 70px 0;
+  padding: 70px 0 0 0;
 }
 .compare-quote {
   text-align: center;
@@ -617,10 +617,10 @@ h4 {
   margin-bottom: 56px;
 }
 .curriculum-eyebrow {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #555;
+  color: #F5C516;
   margin-bottom: 10px;
 }
 .curriculum-head h2 {
@@ -638,28 +638,47 @@ h4 {
   border-radius: 14px;
   padding: 32px 36px;
   margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 24px;
+  align-items: center;
 }
 .phase-tag {
-  color: #888;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
+  color: #F5C516;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  grid-column: 1;
+  grid-row: 1;
 }
 .phase-card h3 {
-  font-size: 24px;
+  font-size: 22px;
   color: #111;
-  margin-bottom: 14px;
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1;
 }
 .phase-card p {
   color: #444;
   margin-bottom: 14px;
+  grid-column: 2;
+  grid-row: 2;
 }
 .phase-tags {
   font-size: 13px;
   font-weight: 700;
   color: #555;
   letter-spacing: 0.02em;
+}
+@media (max-width: 480px) {
+  .phase-card p {
+    grid-column: 1 / -1;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .phase-card h3 {
+    font-size: 21px;
+  }
 }
 
 /* ---------- responsive ---------- */
@@ -978,7 +997,7 @@ h4 {
 
 .offer {
   background: #000;
-  padding: 90px 0;
+  padding: 0 0 90px 0;
 }
 .offer-head {
   text-align: center;
