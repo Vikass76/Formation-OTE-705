@@ -635,8 +635,9 @@ h4 {
 
 .phase-card {
   border-radius: 14px;
-  padding: 0;
+  padding: 16px;
   margin-bottom: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0 24px;
@@ -664,6 +665,13 @@ h4 {
   margin-bottom: 14px;
   grid-column: 2;
   grid-row: 2;
+}
+@media (min-width: 769px) {
+  .phase-card:hover {
+    background: #fff;
+    transform: translateX(6px);
+    box-shadow: -6px 4px 24px rgba(0,0,0,0.08);
+  }
 }
 .phase-tags {
   font-size: 13px;
