@@ -562,7 +562,7 @@ h4 {
 /* ---------- now vs could be ---------- */
 .compare {
   background: #000;
-  padding: 70px 0 0 0;
+  padding: 70px 0 50px 0;
 }
 .compare-quote {
   text-align: center;
@@ -814,7 +814,7 @@ h4 {
   font-size: 16px;
 }
 .modules .wrap {
-  padding: 90px 5%;
+  padding: 40px 5% 90px;
 }
 .module-row {
   display: grid;
@@ -828,6 +828,9 @@ h4 {
 }
 .module-row-reverse .module-img {
   order: 2;
+}
+.module-formation {
+  grid-template-columns: 1fr 1.2fr;
 }
 .module-img img {
   width: 100%;
@@ -873,7 +876,7 @@ h4 {
   }
   .module-row-reverse .module-img {
     order: 0;
-    margin: 40px 0;
+    margin: 0;
   }
 }
 
@@ -1002,6 +1005,7 @@ h4 {
 .offer-head {
   text-align: center;
   margin-bottom: 56px;
+  padding-top: 60px;
 }
 .offer-head h2 {
   font-size: clamp(26px, 3.4vw, 38px);
@@ -1911,7 +1915,7 @@ h4 {
 @media (max-width: 800px) {
   .module-row {
     margin-bottom: 40px;
-    gap: 50px;
+    gap: 20px;
   }
 }
 
