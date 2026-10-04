@@ -1096,7 +1096,7 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
   (function () {
     const cta = document.getElementById("offerCta");
     cta.addEventListener("click", () => {
-      gtag("event", "click_calendly", { event_category: "CTA", event_label: "Offre principale" }); window.open("https://calendly.com/esprittrading-contact/30min", "_blank");
+      gtag("event", "click_calendly", { event_category: "CTA", event_label: "Offre principale" }); document.getElementById("calendly").scrollIntoView({behavior:"smooth"});
     });
   })();
 </script>
