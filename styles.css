@@ -668,7 +668,7 @@ h4 {
 }
 @media (max-width: 768px) {
   #calendly {
-    max-width: 700px !important;
+    max-width: 800px !important;
   }
   .phase-card {
     background: #fff;
