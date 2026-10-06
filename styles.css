@@ -328,6 +328,7 @@ h4 {
 .avis-grid-desktop div[style*="overflow:hidden"]:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  outline: 2px solid #00b67a;
 }
 .trust-review .stars {
   display: flex;
