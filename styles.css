@@ -322,10 +322,11 @@ h4 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   border-color: #00b67a;
 }
-.avis-img-wrap {
+.avis-img-outer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
 }
-.avis-img-wrap:hover {
+.avis-img-outer:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.1);
   outline: 2px solid #00b67a;
