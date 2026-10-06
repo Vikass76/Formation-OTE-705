@@ -141,6 +141,15 @@
     .footer-links a { font-size: 12px; color: #aaa; }
     .footer-links a:hover { color: #fff; }
     .footer-copy { font-size: 12px; color: #aaa; }
+  @media(max-width:710px){
+      .tg-block { flex-direction: column !important; }
+      .tg-block img { display: none !important; }
+      .tg-text { padding-bottom: 16px !important; padding-top: 0 !important; }
+      .confirm-card { padding: 32px 24px !important; }
+      .confirm-card h1 { font-size: 28px !important; }
+      .tg-block h2 { white-space: normal !important; font-size: 20px !important; }
+      .tg-block { padding: 16px 20px 0 !important; }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -157,7 +166,7 @@
 
   <!-- CONFIRMATION -->
 </html>  <div style="background:#f0f0f0;min-height:calc(100vh - 112px);display:flex;align-items:center;justify-content:center;padding:40px 20px;">
-    <div style="background:#fff;border-radius:6px;max-width:600px;width:100%;padding:56px 52px;box-shadow:0 2px 20px rgba(0,0,0,0.08);">
+    <div class="confirm-card" style="background:#fff;border-radius:6px;max-width:740px;width:100%;padding:56px 52px;box-shadow:0 2px 20px rgba(0,0,0,0.08);">
       <span style="display:inline-block;background:#ffd700;color:#000;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;">C'EST BON !</span>
       <h1 style="font-family:'Rubik',sans-serif;font-size:36px;font-weight:700;color:#111;line-height:1.2;margin-bottom:24px;">Ton PDF est en route !</h1>
       
@@ -168,10 +177,15 @@
       <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:16px;"><strong>Mais j'ai décidé de t'offrir plus que prévu.</strong><br/><br/>Avec ton PDF, tu vas également recevoir l'accès gratuit à une Masterclass privée de 30 minutes que je considère comme l'une des vidéos les plus importantes que j'ai créées sur la rentabilité en trading.</p>
       <p style="font-size:16px;color:#444;line-height:1.7;margin-bottom:16px;">Alors ne perdons pas de temps.</p>
       <p style="font-size:16px;font-weight:700;color:#111;margin-top:24px;">→ Va vérifier ta boîte mail et profite de la masterclass.</p>
-      <hr style="border:none;border-top:1px solid #eee;margin:32px 0;">
-      <p style="font-size:15px;color:#444;line-height:1.7;margin-bottom:16px;text-align:center;">Rejoins-moi sur Telegram pour recevoir les analyses que je ne publie nulle part ailleurs.</p>
-      <div style="text-align:center;">
-        <a href="https://t.me/+10ULfm4RJQtkZjU0" target="_blank" style="display:inline-block;background:#229ED9;color:#fff;font-size:15px;font-weight:700;padding:14px 32px;border-radius:30px;text-decoration:none;">Rejoindre Telegram</a>
+      <div class="tg-block" style="margin-top:16px;background:linear-gradient(to right,#d6eeff 0%,#eaf5ff 60%,transparent 100%);border-radius:12px;padding:16px 36px 0;display:flex;align-items:flex-end;gap:28px;">
+        <div class="tg-text" style="flex:1;min-width:220px;padding-bottom:32px;padding-top:14px;">
+          <h2 style="font-family:'Rubik',sans-serif;font-size:22px;font-weight:900;color:#111;line-height:1.2;margin-bottom:10px;white-space:nowrap;">Rejoins-moi sur <span style="color:#229ED9;">Telegram</span></h2>
+          <p style="font-size:15px;color:#444;line-height:1.6;margin-bottom:22px;">pour recevoir les analyses que je ne publie nulle part ailleurs.</p>
+          <a href="https://t.me/+10ULfm4RJQtkZjU0" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#229ED9;color:#fff;font-family:'Rubik',sans-serif;font-size:15px;font-weight:700;padding:13px 26px;border-radius:30px;text-decoration:none;white-space:nowrap;"><img src="assets/Logo_old.png" style="width:22px;height:22px;display:block;" />Rejoindre Telegram</a>
+        </div>
+        <div style="flex-shrink:0;">
+          <img src="assets/telegram-screen.png" alt="Telegram Esprit Trading" style="width:360px;display:block;" />
+        </div>
       </div>
     </div>
   </div>
