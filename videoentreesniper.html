@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KFZL42PL');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Leçon #1 — Structure du Marché — Esprit Trading</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        background: #fff;
+        color: #111;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* NAV */
+      .nav {
+        background: #000;
+        height: 112px;
+      }
+      .nav-inner {
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 0 5.5%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo-img {
+        height: 90px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffd700;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 18px;
+        border-radius: 10px;
+        border: 2px solid #ffd700;
+        transition: transform 0.15s ease;
+      }
+      .nav-cta:hover {
+        background: #ffd633;
+        transform: translateY(-2px);
+      }
+
+      /* HERO DARK */
+      .hero-dark {
+        background: #252525;
+        padding: 60px 40px 48px;
+        text-align: center;
+      }
+      .hero-lesson {
+        display: inline-block;
+        background: #0019fd;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 3.9px;
+        text-transform: uppercase;
+        padding: 8px 28px;
+        margin-bottom: 28px;
+        border-radius: 2px;
+      }
+      .hero-dark h1 {
+        font-size: clamp(32px, 5vw, 64px);
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 1.05;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* VIDEO SECTION */
+      .video-section {
+        background: #252525;
+        padding: 60px 40px 60px;
+      }
+      .video-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .video-embed {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 6px;
+      }
+      .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* CTA BOUTON */
+      .cta-section {
+        background: #fff;
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 48px 40px;
+        text-align: center;
+      }
+      .cta-btn {
+        display: block;
+        width: 100%;
+        background: #ffd700;
+        color: #000;
+        font-size: 17px;
+        font-weight: 700;
+        padding: 12px 40px;
+        border-radius: 4px;
+        text-align: center;
+        transition: background 0.15s;
+      }
+      .cta-btn:hover {
+        background: #e6c200;
+      }
+
+      /* CONTENU */
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 40px 60px;
+      }
+      .content-intro p {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.75;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      /* BANNIÈRE PROMO */
+      .promo-banner {
+        border-radius: 12px;
+        padding: 40px 48px;
+        margin: 56px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        background: #12131a;
+      }
+      .promo-text .promo-discount {
+        font-size: 36px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+      .promo-text .promo-discount span {
+        color: #ffd700;
+      }
+      .promo-text .promo-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      .promo-text .promo-code-wrap {
+        display: inline-block;
+        background: #0019fd;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        padding: 10px 28px;
+        border-radius: 30px;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+      }
+      .promo-text .promo-note {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 8px;
+      }
+      .promo-cta {
+        background: #ffd700;
+        color: #000;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 14px 32px;
+        border-radius: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .promo-cta:hover {
+        opacity: 0.9;
+      }
+
+      /* SECTIONS LEÇON */
+      .lesson-section {
+        margin-bottom: 64px;
+      }
+      .lesson-section-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #595959;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        text-decoration: underline;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .lesson-text {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+      .lesson-text strong {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-text .hl {
+        color: #0019fd;
+        font-weight: 700;
+      }
+      .lesson-bullets {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .lesson-bullets li {
+        font-size: 15px;
+        color: #595959;
+        line-height: 1.6;
+      }
+      .lesson-bullets li strong {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-bullets li .arr {
+        color: #595959;
+        font-weight: 700;
+      }
+      .lesson-link {
+        font-size: 14px;
+        color: #0019fd;
+        word-break: break-all;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .lesson-chart {
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 24px 0;
+      }
+      .lesson-chart img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .lesson-chart-placeholder {
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        background: #f9f9f9;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bbb;
+        font-size: 13px;
+        margin: 24px 0;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #111;
+        padding: 22px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 60px;
+      }
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: #aaa;
+      }
+      .footer-links a:hover {
+        color: #fff;
+      }
+      .footer-copy {
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        .hero-dark {
+          padding: 48px 20px 36px;
+        }
+        .video-section {
+          padding: 0 20px 40px;
+        }
+        .content {
+          padding: 20px;
+        }
+        .cta-section {
+          padding: 24px 20px;
+        }
+        .nav {
+          height: 64px;
+        }
+        .nav-inner {
+          height: 64px;
+        }
+        .nav-logo-img {
+          height: 40px;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yd4e5gby4l");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTFVRVJYFL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TTFVRVJYFL');
+  </script>
+  <script>
+    // Nettoyer les UTM de l'URL après que GA4 les a captés
+    window.addEventListener('load', function() {
+      if (window.location.search.includes('utm_')) {
+        var cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        history.replaceState(null, '', cleanUrl);
+      }
+    });
+  </script>
+</head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFZL42PL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="https://esprittrading.fr"
+          ><img src="assets/Logo.png" alt="Esprit Trading" class="nav-logo-img"
+        /></a>
+        <a href="https://esprittrading.fr" class="nav-cta"
+          >Rejoindre OTE 705</a
+        >
+      </div>
+    </nav>
+
+    <!-- VIDÉO -->
+    <div class="video-section">
+      <div class="video-inner">
+        <div class="video-embed">
+          <div id="vidalytics_embed_MtrgXCAL1AeeDzOF" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+          <script type="text/javascript">
+          (function (v, i, d, a, l, y, t, c, s) {
+              y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+              if (!vsl){vsl=function(u,cb){
+                  if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                  if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                  i.getElementsByTagName("head")[0].appendChild(s);
+              };}
+              vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+          })(window, document, 'Vidalytics', 'vidalytics_embed_MtrgXCAL1AeeDzOF', 'https://fast.vidalytics.com/embeds/jPDRRloW/MtrgXCAL1AeeDzOF/');
+          </script>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CONTENU -->
+    <div class="content">
+      <div class="content-intro">
+        <p>Salut ! C'est Nathan.</p>
+        <p>Si tu ne dois regarder qu'une seule vidéo sur le trading cette année, c'est celle-ci.</p>
+        <p>C'est la vidéo la plus importante que j'ai publiée jusqu'à aujourd'hui, parce qu'elle va en profondeur sur ce qui compte vraiment pour réussir en trading.</p>
+        <p>Regarde-la jusqu'au bout. Et si ensuite tu souhaites aller plus loin et travailler avec moi, clique simplement sur le bouton ci-dessous :</p>
+      </div>
+
+      <!-- BANNIÈRE PROMO -->
+      <div class="cta-section" style="margin-top:32px;">
+        <a href="https://esprittrading.fr" class="cta-btn" onclick="if(typeof gtag!=='undefined') gtag('event','leadmagnet_cta_clique');">Rejoins mes traders rentables</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="https://esprittrading.fr"
+        ><img
+          src="assets/Logo.png"
+          alt="Esprit Trading"
+          style="
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            mix-blend-mode: lighten;
+          "
+      /></a>
+      <ul class="footer-links">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Disclaimer</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Esprit Trading</span>
+    </footer>
+  </body>
+</html>
