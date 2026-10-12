@@ -1460,6 +1460,17 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
   </script>
   <!-- ========== FIN POPUP LEAD MAGNET ========== -->
   <script>
+  <script>
+    window.addEventListener('message', function(e) {
+      if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+        if (e.data.event === 'calendly.event_scheduled') {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'calendly_reservation', { event_category: 'Calendly', event_label: 'Appel réservé' });
+          }
+        }
+      }
+    });
+  </script>
     (function() {
       const params = new URLSearchParams(window.location.search);
       const utm_source = params.get('utm_source') || '';
