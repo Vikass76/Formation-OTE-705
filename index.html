@@ -1459,5 +1459,23 @@ Tu hésites. Tu réfléchis trop. Tu perds confiance.
     });
   </script>
   <!-- ========== FIN POPUP LEAD MAGNET ========== -->
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const utm_source = params.get('utm_source') || '';
+      const utm_medium = params.get('utm_medium') || '';
+      const utm_campaign = params.get('utm_campaign') || '';
+      const utm_content = params.get('utm_content') || '';
+      const el = document.getElementById('calendly');
+      if (el) {
+        let url = el.getAttribute('data-url');
+        if (utm_source) url += '&utm_source=' + encodeURIComponent(utm_source);
+        if (utm_medium) url += '&utm_medium=' + encodeURIComponent(utm_medium);
+        if (utm_campaign) url += '&utm_campaign=' + encodeURIComponent(utm_campaign);
+        if (utm_content) url += '&utm_content=' + encodeURIComponent(utm_content);
+        el.setAttribute('data-url', url);
+      }
+    })();
+  </script>
   </body>
 </html>
