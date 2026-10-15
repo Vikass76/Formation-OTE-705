@@ -182,15 +182,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <span class="hero-label"><span style="display:flex;align-items:center;justify-content:center;gap:12px;"><span style="width:40px;height:1px;background:#aaa;display:inline-block;"></span><strong style="color:#C8900A;">MA MEILLEURE MASTERCLASS GRATUITE</strong><span style="width:40px;height:1px;background:#aaa;display:inline-block;"></span></span></span>
-    <h1>Le plan pour devenir enfin<br>rentable en trading</h1>
+    <span class="hero-label"><span style="display:flex;align-items:center;justify-content:center;gap:12px;"><span style="width:40px;height:1px;background:#aaa;display:inline-block;"></span><strong style="color:#C8900A;">SUITE DE LA VIDÉO • 100 % GRATUITE</strong><span style="width:40px;height:1px;background:#aaa;display:inline-block;"></span></span></span>
+    <h1>Entrées Sniper :<br>Exemples Concrets & Gestion du Stop Loss</h1>
     <p><span style="font-size:18px;color:#595959;font-weight:400;line-height:1.6;">Et les étapes à suivre pour enfin passer au niveau supérieur.</span></p>
   </section>
 
   <!-- SPLIT -->
-  <div class="split-wrap" id="lead-form">
+  <div class="split-wrap" id="split-wrap-top">
     <div class="thumb" style="position:relative;cursor:pointer;" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
-      <img src="assets/miniature.jpg" alt="Miniature" />
+      <img src="assets/Lead magnet Minia 1 .png" alt="Miniature Entrée Sniper" />
       <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
         <div style="width:60px;height:60px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);opacity:0.75;">
           <span style="font-size:22px;margin-left:4px;color:#000;line-height:1;">▶&#xFE0E;</span>
@@ -199,20 +199,12 @@
     </div>
     <div class="form-card">
       <h3 style="font-size:24px;font-weight:700;line-height:1.2;margin-top:0;margin-bottom:2.5rem;">Accède à la vidéo complète</h3>
-      <p class="what" style="font-size:clamp(14px,4vw,18px);font-weight:400;line-height:1.6;margin-bottom:1rem;">Dans cette vidéo, tu vas découvrir :</p>
-      <ul>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Pourquoi <strong>ta stratégie ne suffit pas</strong></li>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Savoir si <strong>ta stratégie est rentable</strong></li>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Passer du <strong>backtest au réel</strong></li>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Éliminer <strong>FOMO et overtrading</strong></li>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Adapter <strong>RR, timeframe et fréquence</strong></li>
-        <li style="font-size:16px;font-weight:400;line-height:1.6;margin-bottom:10px;">Atteindre <strong>la rentabilité</strong></li>
       </ul>
       <form id="lead-form" action="#" method="POST">
         <p style="font-size:13px;color:#888;margin-top:16px;margin-bottom:8px;text-align:left;font-style:italic;">📩 + Reçois mes meilleurs conseils en trading directement par email</p>
         <input type="text" name="name" placeholder="Prénom" />
         <input type="email" name="email" placeholder="Email" />
-        <button type="submit">▶&#xFE0E; Regarder la masterclass gratuitement</button>
+        <button type="submit">▶&#xFE0E; Voir la suite gratuitement</button>
       </form>
       <p class="form-sub">Accès immédiat • 100 % gratuit</p>
     </div>
@@ -309,7 +301,7 @@
   <!-- CTA MILIEU -->
   <section class="cta-mid">
     <h2 style="font-size:36px;font-weight:700;line-height:1.2;margin-top:0;margin-bottom:0.5rem;color:#161E2A;">Clique ci-dessous pour<br/>commencer :</h2>
-    <a href="#lead-form" class="cta-mid-btn" onclick="event.preventDefault();document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">▶&#xFE0E; Regarder la masterclass gratuitement</a>
+    <a href="#lead-form" class="cta-mid-btn" onclick="event.preventDefault();document.getElementById('split-wrap-top').scrollIntoView({behavior:'smooth'});">▶&#xFE0E; Voir la suite gratuitement</a>
     <div class="cta-community">
       <img src="assets/lead.jpg" alt="Communauté Esprit Trading" style="max-width:100%;border-radius:8px;margin-top:16px;"/>
     </div>
@@ -383,9 +375,9 @@
       // Redirection après court délai pour laisser GA4 envoyer l'événement
       if(typeof gtag !== 'undefined') {
         gtag('event', 'leadmagnet_soumis');
-        setTimeout(function(){ window.location.href = 'confirmation.html'; }, 500);
+        setTimeout(function(){ window.location.href = 'confirmationentreesniper.html'; }, 500);
       } else {
-        window.location.href = 'confirmation.html';
+        window.location.href = 'confirmationentreesniper.html';
       }
       fetch('https://app.esprittrading.fr/api/auth/lead-magnet-entree-sniper', {
         method: 'POST',
