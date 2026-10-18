@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KFZL42PL');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esprit Trading — Méthode OTE 705</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTFVRVJYFL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TTFVRVJYFL');
+  </script>
+  <link rel="preload" href="https://fast.vidalytics.com/embeds/jPDRRloW/CXpoZkRXFk_bnl2N/loader.min.js" as="script">
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yd4e5gby4l");
+  </script>
+  <script>
+    // Nettoyer les UTM de l'URL après que GA4 les a captés
+    window.addEventListener('load', function() {
+      if (window.location.search.includes('utm_')) {
+        var cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        history.replaceState(null, '', cleanUrl);
+      }
+    });
+  </script>
+  <!-- TrustBox script -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <!-- End TrustBox script -->
+<style id="ote-promo-premium">
+#promo-bar{position:sticky!important;top:0;width:100%;z-index:9999;background:linear-gradient(105deg,#c49a06 0%,#f0c520 48%,#c49a06 100%);color:#14120a;padding:11px 24px;border-bottom:1px solid rgba(0,0,0,.1);font-family:inherit;box-sizing:border-box;}
+#promo-bar *{box-sizing:border-box;}
+.ote-promo-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;}
+.ote-promo-left{display:flex;align-items:center;gap:14px;}
+.ote-promo-icon{width:44px;height:44px;flex:0 0 44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,.15);border-radius:10px;background:rgba(255,255,255,.2);}
+#promo-title{font-size:17px;font-weight:800;line-height:1.2;letter-spacing:-.02em;color:#14120a;}
+.ote-promo-subtitle{margin-top:3px;font-size:12px;font-weight:500;color:rgba(0,0,0,.62);}
+#promo-countdown{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.ote-time-unit{min-width:54px;padding:6px 8px;border-radius:8px;border:1px solid rgba(0,0,0,.12);background:rgba(255,255,255,.18);display:flex;flex-direction:column;align-items:center;gap:3px;}
+.ote-time-unit strong{font-size:21px;font-weight:900;line-height:1;color:#14120a;font-variant-numeric:tabular-nums;}
+.ote-time-unit span{font-size:8.5px;font-weight:700;letter-spacing:.06em;color:rgba(0,0,0,.55);text-transform:uppercase;}
+.ote-time-sep{font-size:19px;font-weight:800;color:rgba(0,0,0,.45);transform:translateY(-5px);}
+.ote-promo-cta{display:inline-flex;align-items:center;background:rgba(0,0,0,.14);border:1px solid rgba(0,0,0,.18);border-radius:6px;padding:7px 14px;font-size:12px;font-weight:700;color:#14120a;text-decoration:none;white-space:nowrap;transition:background .15s;}
+.ote-promo-cta:hover{background:rgba(0,0,0,.24);}
+@media(max-width:850px){.ote-promo-cta{display:none;}#promo-title{font-size:14px;}.ote-time-unit{min-width:46px;}.ote-time-unit strong{font-size:18px;}}
+@media(max-width:600px){#promo-bar{padding:8px 12px 10px;}.ote-promo-inner{flex-direction:column;gap:8px;}.ote-promo-left{width:100%;justify-content:center;}.ote-promo-icon{display:none;}#promo-title{font-size:13px;}.ote-promo-subtitle{font-size:10px;}#promo-countdown{gap:5px;}.ote-time-unit{min-width:48px;padding:5px 6px;}.ote-time-unit strong{font-size:16px;}.ote-time-sep{font-size:15px;transform:translateY(-4px);}}
+</style>
+</head>
+  <body>
+  <div id="promo-bar" role="region">
+  <div class="ote-promo-inner">
+    <div class="ote-promo-left">
+      <div class="ote-promo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>
+      </div>
+      <div>
+        <div id="promo-title">Le prix augmente bientôt</div>
+        <div class="ote-promo-subtitle">Profite du tarif actuel avant l'augmentation.</div>
+      </div>
+    </div>
+    <div id="promo-countdown">
+      <div class="ote-time-unit"><strong id="cd-days">00</strong><span>JOURS</span></div>
+      <div class="ote-time-sep">:</div>
+      <div class="ote-time-unit"><strong id="cd-hours">00</strong><span>HEURES</span></div>
+      <div class="ote-time-sep">:</div>
+      <div class="ote-time-unit"><strong id="cd-minutes">00</strong><span>MIN</span></div>
+      <div class="ote-time-sep">:</div>
+      <div class="ote-time-unit"><strong id="cd-seconds">00</strong><span>SEC</span></div>
+    </div>
+  </div>
+</div>
+  <style>
+    @media (max-width: 768px) {
+      #promo-bar > div { padding: 8px 16px; gap: 10px; }
+      #promo-bar > div > div:first-child { display: none; }
+      #promo-bar > div > a { display: none; }
+      #promo-countdown { gap: 5px; }
+      #promo-countdown > div[style*="flex-direction:column"] { min-width: 36px; padding: 5px 7px; }
+      #promo-countdown > div[style*="flex-direction:column"] > div:first-child { font-size: 16px; }
+    }
+  </style>
+  <script>
+    (function() {
+      const deadline = new Date('2026-11-01T00:00:00+01:00').getTime();
+      function update() {
+        const now = new Date().getTime();
+        const diff = deadline - now;
+        const titleEl = document.getElementById('promo-title');
+        const countdownEl = document.getElementById('promo-countdown');
+        if (diff <= 0) {
+          titleEl.textContent = 'Le nouveau tarif est maintenant en vigueur';
+          countdownEl.style.display = 'none';
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        if (diff < 24 * 60 * 60 * 1000) {
+          titleEl.textContent = 'Le prix augmente dans moins de 24h';
+        } else {
+          titleEl.textContent = 'Le prix augmente dans ' + days + ' jour' + (days > 1 ? 's' : '');
+        }
+        document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+        document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+        document.getElementById('cd-minutes').textContent = String(minutes).padStart(2,'0');
+        document.getElementById('cd-seconds').textContent = String(seconds).padStart(2,'0');
+        setTimeout(update, 1000);
+      }
+      update();
+    })();
+  </script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFZL42PL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <nav class="nav">
+      <div class="wrap">
+        <img src="assets/Logo.png" alt="Esprit Trading" class="logo-img">
+        <div class="nav-links">
+        </div>
+        <div class="nav-right">
+          
+          <a href="#calendly" class="btn btn-yellow">Réserver un appel</a>
+
+        </div>
+      </div>
+
+    </nav>
+
+    <section class="hero">
+      <div class="wrap">
+        <h1>
+          J'aide les traders à obtenir leur premier payout…<br>
+          <em>et leur <span style="color:#f4c70f;text-decoration:underline;">dixième.</span></em>
+        </h1>
+        <p class="hero-sub">
+          C'est aussi simple que ça. La même méthode qui a permis à des dizaines de traders d'obtenir leur payout. Sans artifices. Juste du concret.
+        </p>
+
+        <div class="hero-grid">
+          <div class="hero-video">
+            <div class="vid-wrap" id="vidWrap">
+              <div id="vidalytics_embed_CXpoZkRXFk_bnl2N" style="width:100%;position:relative;padding-top:56.25%;"></div>
+              <script type="text/javascript">
+              (function (v, i, d, a, l, y, t, c, s) {
+                y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+                if (!vsl){vsl=function(u,cb){
+                  if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                  if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                  i.getElementsByTagName("head")[0].appendChild(s);
+                };}
+                vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+              })(window, document, 'Vidalytics', 'vidalytics_embed_CXpoZkRXFk_bnl2N', 'https://fast.vidalytics.com/embeds/jPDRRloW/CXpoZkRXFk_bnl2N/');
+              </script>
+            </div>
+          </div>
+
+          <div class="membership-card">
+            <h3>Ton accompagnement OTE 705 :</h3>
+
+            <div class="membership-group">
+              <h4>Méthode</h4>
+              <ul>
+                <li>Maîtrise la structure du marché</li>
+                <li>Process d'entrée, gestion, sortie clair</li>
+                <li>Plateforme Esprit Trading</li>
+              </ul>
+            </div>
+
+            <div class="membership-group">
+              <h4>Accompagnement</h4>
+              <ul>
+                <li>Coaching personnel avec moi</li>
+                <li>Trades analysés en temps réel</li>
+                <li>Support privé 24/7</li>
+              </ul>
+            </div>
+
+            <div class="membership-group">
+              <h4>Résultats</h4>
+              <ul>
+                <li>Rentable ou remboursé</li>
+                <li>Génère tes premiers payouts</li>
+                <li>Fais évoluer ton capital</li>
+              </ul>
+            </div>
+
+            <div style="background:rgba(244,199,15,0.1);border:1px solid rgba(244,199,15,0.4);border-radius:10px;padding:12px 16px;margin-bottom:14px;text-align:center;line-height:1.6;"><span style="font-size:20px;">⚠️</span><span style="color:#f4c70f;font-weight:700;font-size:16px;"> J'accepte seulement 5 traders par mois.</span><br><span style="color:rgba(255,255,255,0.85);font-size:13px;">Si cette page est en ligne, il reste peut-être des places, mais pas pour longtemps.</span></div>
+            <a href="#calendly" class="btn btn-yellow">Réserver mon appel gratuit <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+            <!-- <p style="font-size:12px; color:rgba(255,255,255,1); margin-top:8px; text-align:center;">30 min · Gratuit · Uniquement les personnes sérieuses</p> -->
+            <p style="font-size:12px; color:rgba(255,255,255,1); margin-top:8px; text-align:center;">30 min · Gratuit · Je prends uniquement les personnes sérieuses</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories">
+      <div class="wrap">
+        <div class="stories-head">
+          <h2>Ils étaient à votre place</h2>
+          <p>Avant de rejoindre OTE 705, ils doutaient. Aujourd'hui, ils ont des résultats concrets.</p>
+        </div>
+
+        <div class="stories-grid">
+
+          <div class="story-card story-card-wide">
+            <div class="story-img">
+              <img src="assets/Jawad2.png" alt="Jawad - validation du challenge">
+            </div>
+            <div class="story-content">
+            <div class="story-name">Jawad</div>
+            <div class="story-title">Validation d'un challenge 100K</div>
+            <p class="story-text">Après des mois à tourner en rond, Jawad a appliqué la méthode OTE 705 à la lettre et a validé son challenge 100K sans repasser par la case échec. Aujourd'hui il trade avec un vrai capital financé.</p>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-img">
+              <img src="assets/Rayan.jpg" alt="Rayan">
+            </div>
+            <div class="story-content">
+            <div class="story-name">Rayan</div>
+            <div class="story-title">Payout de +3 200$</div>
+            <p class="story-text">Rayan doutait de chacun de ses trades. Grâce à un processus clair et un accompagnement régulier, il a gagné en confiance et encaisse aujourd'hui ses premiers payouts.</p>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-img">
+              <img src="assets/Kevin.jpg" alt="Kevin">
+            </div>
+            <div class="story-content">
+            <div class="story-name">Kevin</div>
+            <div class="story-title">Payout de +1 800$</div>
+            <p class="story-text">Après plus de 2 ans sans toucher le moindre payout, Kevin a rejoint la formation. En appliquant la méthode OTE 705, il a rapidement obtenu un compte financé et encaissé plus de 1 800 $ de payouts.</p>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-img">
+              <img src="assets/Vincent.jpg" alt="Vincent">
+            </div>
+            <div class="story-content">
+            <div class="story-name">Nabil</div>
+            <div class="story-title">Payout de +2 000$</div>
+            <p class="story-text">Nabil était un trader expérimenté, mais il manquait de confiance pour être réellement rentable. En quelques mois avec la méthode OTE 705, il a obtenu un compte financé et encaisse aujourd'hui des payouts de façon régulière.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="wrap">
+        <div class="trust-header">
+          <div class="excellent">Ce sont eux qui en parlent le mieux</div>
+        </div>
+        <!-- GRILLE AVIS COMMENTÉE
+        <div class="trust-grid">
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/69ea63eb9fedbc387183be44"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Selou Moefana</span>
+              <span class="date">24 avr. 2026</span>
+            </div>
+            <div class="body">
+              Pour ma part je trouve que <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">cette entreprise est très investi</span>
+              envers les personnes qui ce lance est ne recul devant rien, hésite
+              pas à revenir vers nous pour des appels pour de l'aide merci à lui
+              un <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">très bon coach</span>.
+            </div>
+          </a>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/69eb649dab4c8feb1941f684"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Bastien Deluze</span>
+              <span class="date">24 avril 2026</span>
+            </div>
+            <div class="body">
+              Le point fort c'est vraiment l'accompagnement. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Nathan répond
+              toujours à nos demandes et nos questions.</span> Il n'hésite pas à faire
+              un appel au besoin. Merci à toi !
+            </div>
+          </a>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/6a0b04e91e4c59531b754031"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Anthony Bougeard</span>
+              <span class="date">18 mai 2026</span>
+            </div>
+            <div class="body">
+              Je tenais absolument à partager mon expérience avec Esprit
+              Trading, car elle mérite d'être soulignée. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Le support est tout
+              simplement remarquable</span> : réactif, humain, et disponible quand on
+              en a besoin....
+            </div>
+          </a>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/6a2ab6875e98e83de0c6ee15"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Jean Wilquis Nozandieu</span>
+              <span class="date">11 juin 2026</span>
+            </div>
+            <div class="body">
+              <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Ma meilleure expérience en trading</span> je l'ai faite avec Esprit
+              Trading. Tout se fait de manière responsable et professionnelle.
+              <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">L'accompagnement est extraordinaire</span>, Nathan répond toujours comme
+              un père qui se soucie de ses enfants. Je le recommande à 100%.
+            </div>
+          </a>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/6a4ce1e91f6e2354cd00fb91"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Theo Bourey</span>
+              <span class="date">7 juil. 2026</span>
+            </div>
+            <div class="body">
+              On voit qu'il y a un vrai suivi. Toutes les questions trouvent une réponse et les appels permettent de débloquer les points sur lesquels on bloque. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">On ne se sent jamais laissé de côté.</span> Franchement, <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">j'aurais aimé découvrir cette formation beaucoup plus tôt.</span> Si vous hésitez, foncez. C'est un investissement que vous ne regretterez pas.
+            </div>
+          </a>
+          
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/6a6a102c2061a0785103147a"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Matteo Perrine</span>
+              <span class="date">29 juil. 2026</span>
+            </div>
+            <div class="body">
+              Si j'ai un conseil pour ceux qui hésitent : <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">FONCEZ.</span> Le plus intéressant, c'est toute la méthode pour arriver à la rentabilité, et les appels avec Nathan m'ont beaucoup aidé à me débloquer. Il prend le temps de vous expliquer ce qui ne va pas pour avancer plus vite. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Merci encore Nathan, grâce à toi je vois enfin le bout.</span>
+            </div>
+          </a>
+          
+          </a>
+          <a class="trust-review" href="https://fr.trustpilot.com/reviews/6a936e42b108e6848b3a0592" target="_blank" rel="noopener">
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Nicolas Wittmer</span>
+              <span class="date">30 août 2026</span>
+            </div>
+            <div class="body">
+              <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Très bon accompagnement.</span> Ayant commencé débutant en trading, Nathan m'a bien accompagné tout au long du programme. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">5 mois plus tard je fais mon 1er payout de 1100$.</span> Aucun regret d'avoir rejoint cette formation. Merci pour tout.
+            </div>
+          </a>
+          <a class="trust-review" href="https://fr.trustpilot.com/reviews/6a9b011ea93e0b2147b56ac5" target="_blank" rel="noopener">
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Tom Paris</span>
+              <span class="date">5 sept. 2026</span>
+            </div>
+            <div class="body">
+              Un accompagnement de qualité, Nathan ne nous laisse jamais seuls et est toujours là pour nous aider dans nos blocages. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">J'ai enfin pu valider mon premier challenge,</span> chose que je n'avais jamais faite en 1 an de trading. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Je sens enfin que j'avance !</span>
+            </div>
+          </a>
+          <a
+            class="trust-review"
+            href="https://fr.trustpilot.com/reviews/6ab2566954d54bed4895f598"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Martin Prieto</span>
+              <span class="date">22 sept. 2026</span>
+            </div>
+            <div class="body">
+              C'était ma 4ème formation et la dernière. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Je viens de faire mon premier payout de 3400$</span> après 3 ans de trading acharné, et ça c'est grâce à Nathan et à la stratégie OTE705. J'ai forcément eu quelques blocages mais Nathan vient toujours à la rescousse, <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">il répond à nos questions et n'hésite pas à faire des appels pour faire le point.</span> Merci Nathan, j'avais perdu espoir mais <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">je suis enfin tombé sur la bonne personne !</span>
+            </div>
+          </a>
+          <a class="trust-review" href="https://fr.trustpilot.com/reviews/6ab3a833c9b2f04e9c7770dd" target="_blank" rel="noopener">
+            <div class="stars">
+              <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" style="display:block;"><polygon points="10,1 12.4,7.6 19.5,7.6 13.9,12 16.2,18.5 10,14.2 3.8,18.5 6.1,12 0.5,7.6 7.6,7.6" fill="#00B67A"/><polygon points="30,1 32.4,7.6 39.5,7.6 33.9,12 36.2,18.5 30,14.2 23.8,18.5 26.1,12 20.5,7.6 27.6,7.6" fill="#00B67A"/><polygon points="50,1 52.4,7.6 59.5,7.6 53.9,12 56.2,18.5 50,14.2 43.8,18.5 46.1,12 40.5,7.6 47.6,7.6" fill="#00B67A"/><polygon points="70,1 72.4,7.6 79.5,7.6 73.9,12 76.2,18.5 70,14.2 63.8,18.5 66.1,12 60.5,7.6 67.6,7.6" fill="#00B67A"/><polygon points="90,1 92.4,7.6 99.5,7.6 93.9,12 96.2,18.5 90,14.2 83.8,18.5 86.1,12 80.5,7.6 87.6,7.6" fill="#00B67A"/></svg>
+            </div>
+            <div class="name-row">
+              <span class="name">Zakariya</span>
+              <span class="date">23 sept. 2026</span>
+            </div>
+            <div class="body">
+              Rien à voir avec une formation qu'on achète et qu'on regarde seul dans son coin. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">Ici il y a un vrai suivi derrière.</span> Quand quelque chose n'est pas compris, on peut poser nos questions et même faire des appels pour revoir nos erreurs et avancer étape par étape. <span style="text-decoration:underline;text-decoration-color:#e53e3e;text-decoration-thickness:2px;text-underline-offset:4px;">C'est exactement ce que je recherchais.</span>
+            </div>
+          </a>
+        </div>
+        FIN GRILLE AVIS COMMENTÉE -->
+        <div style="max-width:960px;margin:0 auto;padding:0;">
+          <!-- Desktop : 2 colonnes masonry -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;" class="avis-grid-desktop">
+            <!-- Colonne gauche -->
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Nicolas.png" alt="Avis Nicolas Wittmer" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Anthony.png" alt="Avis Anthony Bougeard" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Bastien.png" alt="Avis Bastien Deluze" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Jean.png" alt="Avis Jean Wilquis" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Selou.png" alt="Avis Selou Moefana" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+            </div>
+            <!-- Colonne droite -->
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Martin.png" alt="Avis Martin Prieto" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Tom.png" alt="Avis Tom Paris" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Matteo.png" alt="Avis Matteo Perrine" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Theo.png" alt="Avis Theo Bourey" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+              <div class="avis-img-outer"><div class="avis-img-wrap" style="overflow:hidden;border-radius:10px;-webkit-mask-image:-webkit-radial-gradient(white,black);clip-path:inset(3px 3px 0px 3px round 10px);"><img src="assets/Zakaria.png" alt="Avis Zakariya" style="width:100%;height:auto;display:block;margin-bottom:-3px;" loading="lazy" /></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:36px;margin-bottom:60px;">
+          <a href="https://fr.trustpilot.com/review/esprittrading.fr" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;border-radius:8px;padding:8px 14px;text-align:center;border:1px solid #111;transition:transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,182,122,0.15)';this.style.borderColor='#00b67a';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#111';">
+            <div style="font-size:22px;color:#00b67a;margin-bottom:6px;">★ ★ ★ ★ ★</div>
+            <div style="font-size:16px;font-weight:700;color:#111;margin-bottom:4px;">"Excellent" · 5/5 sur Trustpilot</div>
+            <div style="font-size:14px;color:#555;">Lire les avis →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap">
+        <div class="problem-head">
+          <h2>Le trading à l'instinct est ton problème.</h2>
+          <p>
+            Tu n'as pas besoin de plus de discipline. Tu as besoin d'une méthode qui retire l'émotion de ton exécution.
+          </p>
+        </div>
+
+        <div class="stuck-grid">
+          <div>
+            <h3>Pourquoi tu es toujours bloqué</h3>
+            <p>
+              Tu as passé des centaines d'heures à étudier les graphiques. Tu repères les setups. Tu connais les concepts. Tu as peut-être même déjà validé un challenge de prop firm.
+            </p>
+            <p>Alors pourquoi es-tu toujours bloqué ?</p>
+            <p>
+              Parce que la plupart des stratégies t'apprennent des setups... mais pas la structure.
+Elles te donnent des configurations, mais pas un processus.
+Des règles, mais pas les raisons derrière ces règles.
+Au final, tu te retrouves à devoir prendre des décisions en temps réel, sans une méthode qui te dit exactement quoi faire et à quel moment.
+            </p>
+            <p>
+              Et quand la pression monte...
+Quand le marché part sans toi...
+Tu hésites. Tu réfléchis trop. Tu perds confiance.
+            </p>
+            <p>
+              Parce que tu t'appuies encore sur ton ressenti, au lieu de suivre un
+              <strong>système reproductible</strong>.
+            </p>
+            <p>
+              C'est pour cette raison que tes résultats sont irréguliers et que tu continues à perdre tes comptes financés.
+            </p>
+          </div>
+
+          <div class="chart-card">
+            <img
+              class="diagram-img"
+              src="assets/Succès.png"
+              alt="Graphique rentable ou ruine"
+            />
+          </div>
+        </div>
+
+        <p class="deathloop-quote">
+          Chaque jour, tu retombes dans le même cercle émotionnel, malgré tout ce que tu as appris
+        </p>
+
+        <div class="deathloop-grid">
+          <div class="loop-card">
+            <img
+              class="diagram-img"
+              src="assets/Spirale infernal (2).png"
+              alt="Spirale infernale du trading discretionnaire"
+            />
+          </div>
+
+          <div>
+            <h3>Le cercle vicieux du trader émotionnel</h3>
+            <p>
+              Tu enchaînes quelques pertes → tu hésites → tu ne prends plus les bons trades → tu regardes les gagnants te passer sous le nez → tu accumules de nouvelles pertes… et tu répètes ce cycle jusqu'à perdre ton compte.
+            </p>
+            <p>Ton avantage disparaît. Tu perds confiance. Tu commences à douter de tout.</p>
+            <p>
+              <strong>Peu importe la qualité de ta stratégie, si ton exécution dépend de tes émotions, tu continueras à revivre ce même scénario.</strong>
+            </p>
+            <p>Et tant que tu ne corriges pas ça...</p>
+            <p>
+              Peu importe le temps que tu passes à étudier, le nombre d'outils que tu utilises ou ta motivation.
+            </p>
+            <p>
+              <strong>Tu continueras à perdre face aux traders qui suivent une méthode structurée.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="bias-grid">
+          <div>
+            <h3>Le vrai problème : les biais cognitifs</h3>
+            <p>
+              Les traders amateurs abordent chaque trade comme un événement unique, en espérant que celui-ci sera le bon.
+            </p>
+            <p>
+              Les traders professionnels, eux, exécutent une <strong>méthode</strong> où le résultat d'un trade individuel n'a que peu d'importance.
+            </p>
+            <p>La différence ?</p>
+            <ul>
+              <li>Amateur : « Ce setup a l'air bon. »</li>
+              <li>Professionnel : « Ma méthode me dit de prendre ce trade. »</li>
+            </ul>
+            <p>Tu n'échoues pas parce que tu n'as pas assez étudié.</p>
+            <p>
+              Tu échoues parce qu'il te manque un cadre d'exécution qui te dit exactement quoi faire, à chaque trade.
+            </p>
+          </div>
+
+          <div class="bias-card">
+            <img
+              class="diagram-img"
+              src="assets/ANALA.png"
+              alt="Diagramme analyse vers execution"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare">
+      <div class="wrap">
+        <p class="compare-quote">
+          Tu n'as pas un problème <em>d'état d'esprit.</em> Tu as un problème de
+          <span class="hl">méthode</span>.
+        </p>
+
+        <div class="compare-grid">
+          <div>
+            <h3>Où tu es maintenant</h3>
+            <ul>
+              <li>Tu as tenté un challenge prop firm (peut-être même validé), sans jamais réussir à le garder.</li>
+              <li>Tu remets tes trades en question et tu hésites quand ça compte vraiment</li>
+              <li>Tu modifies ta stratégie après chaque perte.</li>
+              <li>Tu ne sais pas si ton avantage est réel, faute de données.</li>
+              <li>Tu te sens proche... mais tu tournes en rond</li>
+            </ul>
+            <p class="final">Chaque semaine, tu as l'impression de repartir de zéro.</p>
+          </div>
+
+          <div>
+            <h3>Où tu pourrais être</h3>
+            <ul>
+              <li>Tu suis une méthode basée sur des règles, avec une confiance totale.</li>
+              <li>Tu accumules des données qui prouvent que ton avantage est réel.</li>
+              <li>Tu exécutes tes trades automatiquement, sans émotion ni hésitation.</li>
+              <li>Tu valides tes comptes financés et développes progressivement ton capital.</li>
+              <li>Tu gères ton trading comme une entreprise, pas comme un jeu de hasard.</li>
+            </ul>
+            <p class="final">
+              Tu ne te contentes pas d'obtenir un compte financé. Tu le conserves et tu fais grandir ton capital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION COMMENTÉE : De zéro à Rentable
+    <section class="plan">
+      <div class="wrap">
+        <h2>De zéro à Rentable : le plan d'exécution en 4 étapes</h2>
+        <p class="plan-sub">
+          Le chemin pour passer d'un trader irrégulier à un trader rentable
+        </p>
+
+        <div class="plan-grid">
+          <div class="plan-card">
+            <div class="plan-icon">
+              <img src="assets/Installer.png" alt="Installer" />
+            </div>
+            <h4>1) Maîtriser</h4>
+            <p class="lead">Maîtrise la méthode OTE 705</p>
+            <ul>
+              <li>Ne laisse plus de place à l'improvisation.</li>
+              <li>Sais exactement quoi faire dans chaque situation.</li>
+              <li>Construis grâce aux données, pas aux émotions.</li>
+            </ul>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-icon">
+              <img src="assets/Prouver.png" alt="Prouver" />
+            </div>
+            <h4>2) Valider</h4>
+            <p class="lead">
+              Backtest et valide ton avantage grâce aux données
+            </p>
+            <ul>
+              <li>Backtest avec une méthode claire.</li>
+              <li>Prouve que ton avantage fonctionne.</li>
+              <li>Trade avec confiance.</li>
+            </ul>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-icon">
+              <img src="assets/Financé.png" alt="Etre finance" />
+            </div>
+            <h4>3) Funded</h4>
+            <p class="lead">
+              Décroche ton compte financé
+            </p>
+            <ul>
+              <li>Exécute avec discipline.</li>
+              <li>Suis ta méthode, ignore le bruit.</li>
+              <li>Obtiens un compte financé.</li>
+            </ul>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-icon">
+              <img src="assets/Scaler.png" alt="Scaler" />
+            </div>
+            <h4>4) Développer</h4>
+            <p class="lead">Développe ton capital et tes payouts</p>
+            <ul>
+              <li>Valide davantage de comptes financés.</li>
+              <li>Réinvestis tes gains.</li>
+              <li>Bâtis un trading rentable.</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#calendly" class="btn btn-yellow">Réserver un appel</a>
+      </div>
+    </section>
+    FIN SECTION COMMENTÉE -->
+
+    <section class="curriculum">
+      <div class="wrap">
+        <div class="curriculum-head">
+          <div class="curriculum-eyebrow">LES 4 ÉTAPES DE L'ACCOMPAGNEMENT</div>
+          <h2>LE PARCOURS, DANS L'ORDRE.</h2>
+        </div>
+
+
+        <div class="phase-card">
+          <div class="phase-tag">01</div>
+          <h3>De lire un graphique à comprendre le marché</h3>
+          <p>
+            Tu apprends à lire la structure du marché avec clarté : comprendre comment le prix se construit, identifier les mouvements importants et savoir ce que le marché est réellement en train de faire.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-tag">02</div>
+          <h3>De la compréhension à un système précis</h3>
+          <p>
+            Tu transformes cette compréhension en un système avec des règles précises. Tu sais ce que tu attends avant d'entrer, où intervenir, comment gérer ton trade et quand sortir.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-tag">03</div>
+          <h3>De « je pense que ça marche »<br>à « je connais mes chiffres »</h3>
+          <p>
+            Tu confrontes ton système à des centaines de situations de marché. Tu connais ton winrate, tes setups, tes erreurs et les conditions dans lesquelles ta stratégie performe.<br/>Tu ne trades plus sur une conviction. Tu trades sur des données.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-tag">04</div>
+          <h3>De trader émotionnel à trader discipliné</h3>
+          <p>
+            Une fois ton système validé, tu apprends à l'exécuter sans laisser une perte, le FOMO ou le doute changer tes décisions.<br/>L'objectif : faire la même chose encore et encore, même quand tes émotions te disent l'inverse.
+          </p>
+        </div>
+
+        <a href="#calendly" class="btn btn-yellow">Réserver un appel</a>
+      </div>
+    </section>
+
+    <!-- SECTION COMMENTÉE : À la fin de l'accompagnement
+    <section class="outcomes">
+      <div class="wrap">
+        <h2>À la fin de l'accompagnement, vous serez capable de</h2>
+        <ul class="outcomes-list">
+          <li>Comprendre la <strong>logique du marché</strong>.</li>
+          <li>
+            Identifier les meilleurs <strong>setups OTE 705</strong>.
+          </li>
+          <li>
+            Prendre des décisions <strong>sans hésitation</strong>.
+          </li>
+          <li>
+            Exécuter chaque trade selon un <strong>processus clair</strong>.
+          </li>
+          <li>
+            Développer un trading
+            <strong>régulier et discipliné</strong>.
+          </li>
+          <li>
+            Devenir <strong>autonome et rentable</strong> sur le long terme.
+          </li>
+        </ul>
+        </ul>
+
+        <div class="outcomes-grid">
+          <div class="outcome-card">
+            <img src="assets/design1.png" alt="Tendance haussiere" width="64" height="40" />
+            <div class="outcome-label">Confiance et Clarté</div>
+          </div>
+          <div class="outcome-card">
+            <img src="assets/design1.png" alt="Tendance haussiere" width="64" height="40" />
+            <div class="outcome-label">Autonomie et Constance</div>
+          </div>
+          <div class="outcome-card">
+            <img src="assets/design2.png" alt="Tendance baissiere" width="64" height="40" />
+            <div class="outcome-label">Stress et Impatience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    FIN SECTION COMMENTÉE -->
+
+    <section class="modules">
+      <div class="modules-head">
+        <h2>
+          Et je suis présent chaque jour pour accompagner mes élèves dans leur
+          progression
+        </h2>
+        <p>Un mentor réellement disponible à vos côtés !</p>
+      </div>
+      <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;color:#111;text-align:center;margin:40px 20px 32px;line-height:1.2;">Tout ce que tu obtiens avec OTE 705</h2>
+      <div class="wrap">
+        <div class="module-row module-row-reverse module-formation">
+          <div class="module-img">
+            <img src="assets/Formation.png" alt="Formation OTE 705" />
+          </div>
+          <div class="module-text">
+            <div class="module-eyebrow">INCLUS</div>
+            <h3>La méthode OTE 705, à vie</h3>
+            <p>
+              Retrouve l'intégralité de la méthode pour avancer à ton rythme et revenir sur chaque concept autant de fois que nécessaire.
+            </p>
+            <ul>
+              <li>Des modules organisés dans l'ordre</li>
+              <li>Des explications concrètes sur graphique</li>
+              <li>Des backtests pour voir la stratégie en conditions réelles</li>
+              <li>Les futurs modules et mises à jour inclus</li>
+            </ul>
+          </div>
+        </div>
+        <div class="module-row">
+          <div class="module-img">
+            <div class="rdv-stack">
+              <img class="rdv-back" src="assets/RDV2.png" alt="Session reservee" />
+              <img class="rdv-front" src="assets/RDV1.png" alt="Calendly session" />
+            </div>
+          </div>
+          <div class="module-text">
+            <div class="module-eyebrow">INCLUS</div>
+            <h3>Accompagnement Personnel</h3>
+            <p>
+              Un suivi direct avec moi, pas une équipe, pas un assistant.
+              Je suis personnellement présent pour t'aider à débloquer tes
+              points faibles et t'accompagner dans ta progression.
+            </p>
+            <ul>
+              <li>Des sessions de coaching d'1h avec moi pour faire le point</li>
+              <li>Identification et résolution de tes blocages précis</li>
+              <li>Accès direct pour me poser tes questions 24h/24</li>
+              <li>Un suivi humain et personnalisé, pas une simple formation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="module-row module-row-reverse">
+          <div class="module-img">
+            <img
+              src="assets/Support.png"
+              alt="Support et communaute Esprit Trading"
+            />
+          </div>
+          <div class="module-text">
+            <div class="module-eyebrow">INCLUS</div>
+            <h3>Support &amp; Communauté Privée</h3>
+            <p>
+              Tu n'es jamais seul face au marché. Rejoins une communauté de
+              traders qui suivent la même méthode que toi, avec un accès direct
+              pour poser tes questions.
+            </p>
+            <ul>
+              <li>Salon privé réservé aux membres OTE 705</li>
+              <li>Réponses à tes questions sous 24h</li>
+              <li>Entraide entre traders de la communauté</li>
+              <li>Partage d'offres exclusives</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-row">
+          <div class="module-img">
+            <div class="stack-imgs">
+              <img class="stack-back-left" src="assets/Dashboard.png" alt="Dashboard trading" />
+              <img class="stack-back-right" src="assets/Journal2.png" alt="Journal de trading" />
+              <img class="stack-front" src="assets/Plateforme1.jpg" alt="Plateforme de journal de trading Esprit Trading" />
+            </div>
+          </div>
+          <div class="module-text">
+            <div class="module-eyebrow">INCLUS</div>
+            <h3>Plateforme de Journal de Trading</h3>
+            <p>
+              Accès à vie à ta propre plateforme pour journaliser chaque trade,
+              suivre ta progression, et identifier précisément ce qui marche
+              dans ton exécution.
+            </p>
+            <ul>
+              <li>Suivi automatique de tes statistiques de performance</li>
+              <li>Historique complet de tous tes trades</li>
+              <li>Graphiques d'évolution de ton capital</li>
+              <li>Répère tes erreurs récurrentes pour progresser plus vite</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-row module-row-reverse">
+          <div class="module-img">
+            <img
+              src="assets/Signaux.png"
+              alt="Signaux de trading Esprit Trading"
+            />
+          </div>
+          <div class="module-text">
+            <div class="module-eyebrow">INCLUS</div>
+            <h3>Analyses de trades</h3>
+            <p>
+              Reçois mes analyses en direct, pour confronter ta
+              propre lecture du marché à la mienne et accélérer ta courbe
+              d'apprentissage.
+            </p>
+            <ul>
+              <li>Analyse complète de chacun de mes trades</li>
+              <li>Setups en temps réel partagés avec la communauté</li>
+              <li>Explication du raisonnement derrière chaque trade</li>
+              <li>Contexte et lecture du marché</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="offer" id="offres">
+  <div class="wrap">
+    <div class="offer-head">
+      <h2>Tu peux continuer seul.<br>Ou te faire accompagner<wbr> à chaque étape.</h2>
+      <p>Tu as le contenu, le suivi et la communauté. Il ne manque plus que ta décision.</p>
+    </div>
+    <div class="offer-single">
+      <div class="offer-card-pro">
+
+        <div class="offer-pro-badge">⏳ Sélection requise — places limitées</div>
+
+        <h2 class="offer-pro-title">Accompagnement OTE 705</h2>
+        <p class="offer-pro-tagline">Une méthode, un cadre, un accompagnement.</p>
+
+        <div class="offer-pro-priceblock">
+          <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <span style="font-size:17px;color:rgba(255,255,255,0.6);text-decoration:line-through;font-weight:600;letter-spacing:0.01em;">1 690 €</span>
+
+          </div>
+          <div class="offer-pro-price-row">
+            <span class="offer-pro-price-new" id="offerPrice" style="font-size:3.2rem;font-weight:800;font-family:'Inter',sans-serif;color:#f4c70f;text-shadow:0 0 30px rgba(244,199,15,0.15);letter-spacing:-0.02em;">1 290 €</span>
+          </div>
+          <div style="margin-top:12px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:8px 16px;">
+            <span style="font-size:12px;color:rgba(255,255,255,0.5);">ou</span>
+            <span id="offerPriceSub" style="font-size:15px;font-weight:700;color:rgba(255,255,255,0.9);">2&nbsp;&times;&nbsp;645 € seulement</span>
+          </div>
+        </div>
+
+        <hr class="offer-pro-divider" />
+
+        <div class="offer-pro-highlights" style="margin-bottom:20px;">
+          <div class="offer-highlight-row offer-highlight-featured">
+            <span class="offer-highlight-icon">⭐</span>
+            <div style="display:flex; flex-direction:column; gap:2px;"><span style="font-size:1.1em; font-weight:700; color:#f5c518;">Compte 10K — Whales Capital</span><span style="font-size:0.85em; color:rgba(255,255,255,0.85);">Compte financé offert</span></div>
+          </div>
+
+        </div>
+
+
+        <ul class="offer-pro-list">
+          <li>Méthode OTE 705 complète : 4 phases, de zéro à un système rentable</li>
+          <li>Des sessions de live 1v1 avec Nathan</li>
+          <li>Support privé avec réponse garantie sous 24h</li>
+          <li>Communauté de trading privée</li>
+          <li>Plateforme de journal de trading pour suivre ta progression</li>
+          <li>Accès à vie — mises à jour et nouveaux modules compris</li>
+        </ul>
+
+        <div class="offer-pro-proof">
+          <strong>Satisfait ou remboursé en 6 mois :</strong> Si tu appliques sérieusement toutes les étapes de la méthode et que tu n'obtiens pas les résultats promis, <strong>je m'engage personnellement à te rembourser</strong>
+        </div>
+
+        <button type="button" class="offer-pro-cta" id="offerCta">
+          Réserver mon appel gratuit
+          <span class="offer-pro-cta-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+
+        </button>
+        <p class="offer-pro-secure">🔒 Paiement après validation avec Nathan</p>
+      </div>
+    </div>
+    <div style="margin-top:24px;display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,0.08);border-left:3px solid #f4c70f;border-radius:8px;padding:14px 18px;max-width:620px;margin-left:auto;margin-right:auto;"><span style="font-size:22px;flex-shrink:0;">⏳</span><p style="margin:0;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;"><strong style="color:#f4c70f;">Ce tarif est provisoire.</strong> Plus la communauté grandit, plus l'accompagnement demande du temps, et le prix suivra. Ne laisse pas passer cette opportunité.</p></div>
+    <div id="calendly" style="text-align:center;padding:110px 24px 0;max-width:600px;margin:0 auto;">
+      <h2 style="font-size:clamp(24px,3vw,36px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;">Ton accès à OTE 705 commence ici</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:32px;">Réponds à ces quelques questions pour accéder à la réservation de ton appel avec Nathan.</p>
+      <div style="border-radius:16px;overflow:hidden;">
+      <div id="calendly" class="calendly-inline-widget" data-url="https://calendly.com/d/dz7w-pfm-rxn?hide_gdpr_banner=1&primary_color=e6b800&text_color=111111&background_color=ffffff" style="min-width:320px;height:680px;"></div>
+      </div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer-single {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .offer-card-pro {
+    background: radial-gradient(circle at 20% 0%, rgba(245, 197, 24, 0.08), transparent 55%), #121212;
+    border: 1.5px solid #1e1e1e;
+    border-radius: 18px;
+    padding: 26px 24px 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .offer-pro-badge {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 28px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--yellow);
+    background: var(--yellow-soft);
+    border: 1px solid rgba(245, 197, 24, 0.35);
+    border-radius: 30px;
+    padding: 6px 14px;
+  }
+
+  .offer-pro-title {
+    text-align: center;
+    font-size: clamp(22px, 3.4vw, 26px);
+    margin-bottom: 4px;
+  }
+
+  .offer-pro-tagline {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .offer-pro-priceblock {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .offer-pro-price-old {
+    font-size: clamp(10px, 5vw, 20px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: line-through;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+    margin-bottom: 6px;
+  }
+
+  .offer-pro-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .offer-pro-price-new {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .offer-pro-or {
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  .offer-pro-price-split {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .offer-pro-sub {
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 6px;
+  }
+  .offer-pro-sub-light {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+
+  .offer-pro-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 16px 0;
+  }
+
+  .offer-pro-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .offer-highlight-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card-2);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .offer-highlight-featured {
+    border-color: rgba(245, 197, 24, 0.4);
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .offer-highlight-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  .offer-pro-list {
+    list-style: none;
+    margin-bottom: 18px;
+  }
+
+  .offer-pro-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 9px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .offer-pro-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--yellow);
+    font-weight: 700;
+  }
+
+  .offer-pro-proof {
+    background: var(--bg-card-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+
+  .offer-pro-proof strong {
+    color: var(--ink);
+  }
+
+  .offer-pro-cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 999px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 18px 28px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    margin-bottom: 14px;
+  }
+
+  .offer-pro-cta:hover {
+    background: #ffe14d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(245, 199, 0, 0.3);
+  }
+
+  .offer-pro-cta:active {
+    transform: scale(0.98);
+  }
+
+  .offer-pro-cta-arrow {
+    font-size: 18px;
+  }
+
+  .offer-pro-secure {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 700px) {
+    .offer-card-pro {
+      padding: 32px 22px 36px;
+    }
+    .offer-pro-price-new {
+      font-size: 40px;
+    }
+    .offer-pro-cta {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const cta = document.getElementById("offerCta");
+    cta.addEventListener("click", () => {
+      gtag("event", "click_calendly", { event_category: "CTA", event_label: "Offre principale" }); document.getElementById("calendly").scrollIntoView({behavior:"smooth"});
+    });
+  })();
+</script>
+
+
+    <section class="social-proof">
+  <div class="wrap">
+    <div class="social-proof-head">
+      <h2>Ce que disent mes membres</h2>
+      <p>Ne vous fiez pas à ce que je dis, écoutez ce que mes élèves disent de leur accompagnement au sein d'OTE 705.</p>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-col">
+        <img src="assets/social-proof/tg6.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/tg9.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/insta3.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/tg2.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/tg3.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/wa1.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+      </div>
+      <div class="sp-col">
+        <img src="assets/social-proof/tg5.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/insta1.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/tg1.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/tg7.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/tg10.png" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/wa3.jpg" alt="Témoignage" class="sp-img sp-img--lg" />
+      </div>
+      <div class="sp-col">
+        <img src="assets/social-proof/insta2.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/insta4.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+        <img src="assets/social-proof/tg11.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/tg8.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/tg4.png" alt="Témoignage" class="sp-img sp-img--lg" />
+        <img src="assets/social-proof/wa2.jpg" alt="Témoignage" class="sp-img sp-img--sm" />
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="faq">
+      <div class="wrap">
+        <div class="faq-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>Questions fréquentes</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>L'accompagnement est-elle adaptée aux débutants ?</summary>
+            <div class="faq-content"><p>Oui. L'accompagnement commence par les bases et te guide étape par étape jusqu'à la maîtrise complète de la méthode OTE 705. Aucune expérience n'est nécessaire.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de temps faut-il pour devenir rentable ?</summary>
+            <div class="faq-content"><p>Chaque trader progresse à son rythme. En appliquant sérieusement la méthode et le plan de travail, tu mets toutes les chances de ton côté pour construire un trading rentable sur le long terme.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>La formation est-elle mise à jour ?</summary>
+            <div class="faq-content"><p>Oui. Toutes les futures mises à jour et les nouveaux contenus sont inclus gratuitement.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment fonctionne le support ?</summary>
+            <div class="faq-content"><p>Tu bénéficies d'un support privé avec une réponse garantie sous 24 heures pour toutes tes questions concernant la méthode. Et des appels Google Meet si besoin.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment fonctionne la garantie satisfait ou remboursé ?</summary>
+            <div class="faq-content"><p>Si tu appliques sérieusement toutes les étapes de la méthode et que tu ne parviens pas à obtenir les résultats prévus, je m'engage personnellement à te rembourser.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Combien de temps ai-je accès à la formation ?</summary>
+            <div class="faq-content"><p>L'accès est à vie. Tu peux revoir les modules autant de fois que nécessaire.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Dois-je passer plusieurs heures par jour devant les graphiques ?</summary>
+            <div class="faq-content"><p>Non. La méthode est conçue pour te permettre d'identifier rapidement les meilleures opportunités, sans rester devant les marchés toute la journée.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Est-ce que cette méthode fonctionne sur tous les marchés ?</summary>
+            <div class="faq-content"><p>Oui. Les principes de la méthode OTE 705 s'appliquent sur le Forex, les indices, les matières premières, les cryptomonnaies et d'autres marchés liquides.</p></div>
+          </details>
+
+        </div>
+
+        <div class="faq-cta-card" style="flex-direction:column;align-items:center;text-align:center;">
+          <div class="faq-cta-icon" style="margin-bottom:6px;">📞</div>
+          <div class="faq-cta-text" style="text-align:center;">
+            <p class="faq-cta-label" style="font-size:20px;font-weight:700;color:#fff;text-align:center;margin-bottom:8px;">Tu hésites encore ?</p>
+            <p style="font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:24px;line-height:1.6;text-align:center;">Échangeons 30 minutes ensemble pour répondre à toutes tes questions et voir concrètement comment atteindre tes objectifs.</p>
+            <a href="#calendly" class="faq-link">Réserve un appel gratuit de 30 min avec Nathan →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<script>
+  (function () {
+    const wrap = document.getElementById("vidWrap");
+    if (!wrap) return;
+    const youtubeId = wrap.dataset.youtubeId;
+    const posterImg = document.getElementById("vidPosterImg");
+    const overlay = document.getElementById("vidPlayOverlay");
+    const iframeContainer = document.getElementById("vidIframeContainer");
+    posterImg.src = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+    posterImg.onerror = () => {
+      posterImg.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+    };
+    function loadVideo() {
+      wrap.classList.add("is-playing");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+      iframe.title = "Video";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframeContainer.appendChild(iframe);
+    }
+    overlay.addEventListener("click", loadVideo);
+  })();
+</script>
+
+<hr class="section-divider" />
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="assets/Logo.png" alt="Esprit Trading" class="footer-logo-img">
+        </div>
+
+        <p class="footer-desc">Accompagnement trading · Méthode OTE 705</p>
+
+        <a href="mailto:esprittrading.contact@gmail.com" class="footer-email">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="M2 6l10 7 10-7" />
+          </svg>
+          esprittrading.contact@gmail.com
+        </a>
+
+        <div class="footer-social">
+          <a href="https://www.tiktok.com/@esprittrading" target="_blank" rel="noopener" class="footer-social-icon" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.27 1.36V7.3s-1.88.09-3.21-1.48z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/esprittrading/" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@EspritTradingFx" target="_blank" rel="noopener" class="footer-social-icon" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M22 12s0-3.2-.4-4.6c-.3-.9-1-1.6-1.9-1.9C18.2 5 12 5 12 5s-6.2 0-7.7.5c-.9.3-1.6 1-1.9 1.9C2 8.8 2 12 2 12s0 3.2.4 4.6c.3.9 1 1.6 1.9 1.9C5.8 19 12 19 12 19s6.2 0 7.7-.5c.9-.3 1.6-1 1.9-1.9.4-1.4.4-4.6.4-4.6zM10 15.2V8.8L15.5 12 10 15.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-payments">
+        <p class="footer-payments-label">Paiements acceptés</p>
+        <div class="footer-payments-grid">
+          <div class="pay-badge pay-badge-light">
+            <svg viewBox="0 0 48 32" width="38" height="14">
+              <text x="0" y="24" font-family="Arial, sans-serif" font-style="italic" font-weight="800" font-size="22" fill="#1434CB">VISA</text>
+            </svg>
+          </div>
+          <div class="pay-badge pay-badge-light">
+            <svg viewBox="0 0 48 30" width="34" height="20">
+              <circle cx="18" cy="15" r="11" fill="#EB001B"/>
+              <circle cx="30" cy="15" r="11" fill="#F79E1B"/>
+              <path d="M24 6.5a11 11 0 0 1 0 17 11 11 0 0 1 0-17z" fill="#FF5F00"/>
+            </svg>
+          </div>
+          <div class="pay-badge pay-badge-light">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="#000"><path d="M16.5 7.7c-.7.9-1.8 1.5-2.9 1.4-.1-1.1.4-2.2 1-2.9.7-.8 1.9-1.5 2.9-1.5.1 1.2-.3 2.2-1 3zM17.6 9.4c-1.6-.1-3 .9-3.7.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.9 2.6 3.2 2.5 1.3-.1 1.8-.8 3.4-.8 1.6 0 2 .8 3.4.8 1.3 0 2.3-1.2 3.1-2.5.6-.9 1-1.7 1.3-2.6-3.3-1.3-3.8-6.2-.5-7.9-.6-1-1.6-1.9-3-2.3z"/></svg>
+          </div>
+          <div class="pay-badge pay-badge-light">
+            <svg viewBox="0 0 101 32" width="50" height="16">
+              <text x="0" y="24" font-family="Arial, sans-serif" font-weight="700" font-style="italic" font-size="20" fill="#003087">Pay</text>
+              <text x="34" y="24" font-family="Arial, sans-serif" font-weight="700" font-style="italic" font-size="20" fill="#009cde">Pal</text>
+            </svg>
+          </div>
+          <div class="pay-badge pay-badge-light">
+            <svg viewBox="0 0 60 24" width="42" height="16">
+              <text x="0" y="18" font-family="Arial, sans-serif" font-weight="800" font-size="18" fill="#00D66F">Link</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider" />
+
+    <p class="footer-copyright">© 2026 Esprit Trading. Tous droits réservés.</p>
+    <div class="footer-legal-links">
+      <a href="conditions.html" target="_blank">Conditions</a>
+      <a href="confidentialite.html" target="_blank">Confidentialité</a>
+      <a href="mentions-legales.html" target="_blank">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+
+})();
+</script>
+
+<script>
+(function(){
+  var burger = document.getElementById('navBurger');
+  var menu = document.getElementById('navMobileMenu');
+  if(burger && menu){
+    burger.addEventListener('click', function(){
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+})();
+</script>
+
+  <style>
+  @media(max-width:480px){ .lm-br::before { content:"\A"; white-space:pre; } }
+  </style>
+  <!-- ========== POPUP LEAD MAGNET ========== -->
+  <!-- Pour activer le popup lundi : changer POPUP_ENABLED = false en true -->
+  <div id="lm-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;">
+
+    <div id="lm-popup" style="background:#fff;border-radius:6px;max-width:620px;width:100%;position:relative;box-shadow:0 24px 80px rgba(0,0,0,0.5);overflow:visible;">
+      <button onclick="closeLmPopup()" style="position:absolute;top:-14px;right:-14px;background:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;color:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:10001;line-height:1;">✕</button>
+      <div style="padding:20px 20px 0;">
+        <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9;background:#000;cursor:pointer;" >
+          <img src="assets/miniature.jpg" alt="Formation gratuite" style="width:100%;height:100%;object-fit:cover;display:block;opacity:1;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <div style="width:60px;height:60px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);opacity:0.75;">
+              <span style="font-size:22px;margin-left:4px;color:#000;line-height:1;">▶&#xFE0E;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:28px 40px 40px;">
+        <p style="text-align:center;font-size:13px;margin-top:16px;margin-bottom:16px;font-style:italic;"><span style="display:flex;align-items:center;justify-content:center;gap:12px;"><span style="flex:1;height:1px;background:#aaa;max-width:40px;"></span><strong style="color:#C8900A;font-style:italic;text-transform:uppercase;letter-spacing:0.05em;font-size:16px;">MA MEILLEURE MASTERCLASS GRATUITE</strong><span style="flex:1;height:1px;background:#aaa;max-width:40px;"></span></span></p>
+        <h2 style="font-size:36px;font-weight:700;color:#161E2A;text-align:center;line-height:1.2;margin-top:0;margin-bottom:0.5rem;">Le plan pour devenir enfin<br/>rentable en trading</h2>
+        <p style="font-size:14px;color:#555;text-align:center;font-style:italic;margin-bottom:36px;">Et les étapes à suivre pour enfin passer au niveau supérieur.</p>
+        <p style="font-size:16px;color:#595959;margin-bottom:16px;line-height:1.6;">Dans cette vidéo, tu vas découvrir :</p>
+        <ul style="list-style:disc;padding-left:20px;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Pourquoi <strong>ta stratégie ne suffit pas</strong></li>
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Savoir si <strong>ta stratégie est rentable</strong></li>
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Passer du <strong>backtest au réel</strong></li>
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Éliminer <strong>FOMO et overtrading</strong></li>
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Adapter <strong>RR, timeframe et fréquence</strong></li>
+          <li style="font-size:16px;color:#595959;line-height:1.6;">Atteindre <strong>la rentabilité</strong></li>
+        </ul>
+        <div id="lm-confirmation" style="display:none;text-align:center;padding:20px 0;">
+          <span style="font-size:48px;display:block;margin-bottom:16px;">📩</span>
+          <h3 style="font-size:22px;font-weight:900;color:#111;margin-bottom:16px;">C'est bon, tu as accès à la vidéo !</h3>
+          <p style="font-size:15px;color:#444;line-height:1.7;margin-bottom:12px;">Vérifie ta boîte mail, je viens de t'envoyer le lien pour accéder à la vidéo.</p>
+          <p style="font-size:14px;color:#888;line-height:1.6;margin-bottom:28px;">Pense à vérifier tes spams ou l'onglet Promotions si tu ne la trouves pas.</p>
+          <button onclick="closeLmPopup()" style="background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:12px 32px;border:none;border-radius:6px;cursor:pointer;">Fermer</button>
+        </div>
+        <div id="lm-form-wrap">
+        <form id="lm-form" style="display:flex;flex-direction:column;gap:16px;">
+          <p style="font-size:13px;color:#888;margin-top:16px;margin-bottom:-13px;text-align:left;font-style:italic;">📩 + Reçois mes meilleurs conseils en trading directement par email</p>
+          <input type="text" id="lm-prenom" placeholder="Prénom" required style="padding:13px 16px;border:1px solid #ddd;border-radius:6px;font-size:15px;font-family:'Rubik',sans-serif;outline:none;width:100%;"/>
+          <input type="email" id="lm-email" placeholder="Email" required style="padding:13px 16px;border:1px solid #ddd;border-radius:6px;font-size:15px;font-family:'Rubik',sans-serif;outline:none;width:100%;"/>
+          <button type="submit" style="background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:14px;border:none;border-radius:6px;cursor:pointer;font-family:'Rubik',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;">▶&#xFE0E; Regarder la masterclass gratuitement</button>
+        </form>
+        <p style="text-align:center;font-size:12px;color:#999;margin-top:18px;">Accès immédiat • 100 % gratuit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const POPUP_ENABLED = false; // Changer en true lundi pour activer
+
+    let lmShown = false;
+    function showLmPopup() {
+      if (!POPUP_ENABLED) return;
+      if (lmShown) return;
+      lmShown = true;
+      const overlay = document.getElementById('lm-overlay');
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      if(typeof gtag !== 'undefined') gtag('event', 'popup_affiche');
+    }
+    function closeLmPopup() {
+      document.getElementById('lm-overlay').style.display = 'none';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+
+    if (POPUP_ENABLED) {
+      // Déclencheur 1 : scroll 40%
+      window.addEventListener('scroll', function onScroll() {
+        const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        if (scrolled >= 0.4) {
+          showLmPopup();
+          window.removeEventListener('scroll', onScroll);
+        }
+      });
+
+      // Déclencheur 2 : 30 secondes
+      setTimeout(showLmPopup, 30000);
+    }
+
+    document.getElementById('lm-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const prenom = document.getElementById('lm-prenom').value.trim();
+      const email = document.getElementById('lm-email').value.trim();
+      // Redirection immédiate, appel Brevo en arrière-plan
+      if(typeof gtag !== 'undefined') gtag('event', 'popup_soumis');
+      document.getElementById('lm-popup').innerHTML = `
+        <button onclick="closeLmPopup()" style="position:absolute;top:-14px;right:-14px;background:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;color:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:10001;line-height:1;">✕</button>
+        <div style="padding:48px 40px;text-align:center;">
+          <span style="font-size:48px;display:block;margin-bottom:16px;">📩</span>
+          <h3 style="font-size:22px;font-weight:900;color:#111;margin-bottom:16px;">C'est bon, tu as accès à la vidéo !</h3>
+          <p style="font-size:15px;color:#444;line-height:1.7;margin-bottom:12px;">Vérifie ta boîte mail, je viens de t'envoyer le lien pour accéder à la vidéo.</p>
+          <p style="font-size:14px;color:#888;line-height:1.6;margin-bottom:28px;">Pense à vérifier tes spams ou l'onglet Promotions si tu ne la trouves pas.</p>
+          <p style="font-size:14px;color:#888;margin-bottom:12px;">Tu n'as pas reçu l'email ?</p>
+          <a href="masterclass.html" style="display:inline-block;background:#ffd700;color:#000;font-size:15px;font-weight:700;padding:14px 32px;border-radius:30px;text-decoration:none;">Renvoyer le lien</a>
+        </div>
+      `;
+      document.getElementById('lm-overlay').style.alignItems = 'center';
+      fetch('https://app.esprittrading.fr/api/auth/lead-magnet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstname: prenom, email })
+      }).catch(()=>{});
+    });
+  </script>
+  <!-- ========== FIN POPUP LEAD MAGNET ========== -->
+  <script>
+  <script>
+    window.addEventListener('message', function(e) {
+      if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+        if (e.data.event === 'calendly.event_scheduled') {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'calendly_reservation', { event_category: 'Calendly', event_label: 'Appel réservé' });
+          }
+        }
+      }
+    });
+  </script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const utm_source = params.get('utm_source') || '';
+      const utm_medium = params.get('utm_medium') || '';
+      const utm_campaign = params.get('utm_campaign') || '';
+      const utm_content = params.get('utm_content') || '';
+      const el = document.getElementById('calendly');
+      if (el) {
+        let url = el.getAttribute('data-url');
+        if (utm_source) url += '&utm_source=' + encodeURIComponent(utm_source);
+        if (utm_medium) url += '&utm_medium=' + encodeURIComponent(utm_medium);
+        if (utm_campaign) url += '&utm_campaign=' + encodeURIComponent(utm_campaign);
+        if (utm_content) url += '&utm_content=' + encodeURIComponent(utm_content);
+        el.setAttribute('data-url', url);
+      }
+    })();
+  </script>
+  </body>
+</html>
