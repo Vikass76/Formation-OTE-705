@@ -28,7 +28,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TTFVRVJYFL');
-    gtag('event', 'begin_checkout', {currency: 'EUR', value: 1290});
+    gtag('event', 'begin_checkout', {currency: 'EUR', value: 1490});
   </script>
   <script>
     // Nettoyer les UTM de l'URL après que GA4 les a captés
@@ -180,7 +180,7 @@
               <h3 class="summary-product-title">OTE 705 — Accompagnement</h3>
               <div class="price-tag">
                 <span class="price-old-red" style="color:rgba(100,100,100,0.8);font-weight:600;">1 690 €</span>
-                <span class="price-value" id="headerPrice" style="font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.02em;">1 290 €</span>
+                <span class="price-value" id="headerPrice" style="font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.02em;">1 490 €</span>
               </div>
             </div>
           </div>
@@ -251,21 +251,21 @@
                 <div class="plan-radio"></div>
                 <div class="plan-info">
                   <div class="plan-name">Paiement comptant</div>
-                  <div class="plan-sub">1 290€ aujourd'hui</div>
+                  <div class="plan-sub">1 490€ aujourd'hui</div>
                 </div>
-                <div class="plan-price">1 290 €</div>
+                <div class="plan-price">1 490 €</div>
               </label>
 
               <label class="plan-option" data-plan="split">
                 <input type="radio" name="plan" value="split" />
                 <div class="plan-radio"></div>
                 <div class="plan-info">
-                  <div class="plan-name">Paiement en 2 fois</div>
+                  <div class="plan-name">Paiement en 3 fois</div>
                   <div class="plan-sub">
-                    645€ aujourd'hui, 645€ dans 30 jours
+                    550€ aujourd'hui, 550€ dans 30 jours, 550€ dans 60 jours
                   </div>
                 </div>
-                <div class="plan-price">2 &times; 645 €</div>
+                <div class="plan-price">3 &times; 550 €</div>
               </label>
             </div>
           </div>
@@ -336,7 +336,7 @@
             </div>
             <div class="summary-line-item">
               <span class="summary-item-name">OTE 705 — Accompagnement</span>
-              <span class="summary-item-price" id="summaryPrice">1 290 €</span>
+              <span class="summary-item-price" id="summaryPrice">1 490 €</span>
             </div>
             <div style="margin-bottom:12px;margin-top:10px;">
               <div style="display:flex;gap:8px;">
@@ -357,16 +357,16 @@
               <span class="due-label">Total</span>
               <div style="display:flex;flex-direction:column;align-items:flex-end;">
                 <div class="due-price">
-                  <span id="dueNow">1 290 €</span>
+                  <span id="dueNow">1 490 €</span>
                 </div>
                 <div id="split-detail" style="display:none;font-size:11px;color:#888;margin-top:3px;font-family:'Inter',sans-serif;white-space:nowrap;">
-                  <span id="split-detail-text">645 € aujourd'hui · 645 € dans 30 jours</span>
+                  <span id="split-detail-text">550 € aujourd'hui · 550 € dans 30 jours · 550 € dans 60 jours</span>
                 </div>
               </div>
             </div>
 
             <button type="button" class="pay-btn" id="payBtn">
-              Payer 1 290 € EUR
+              Payer 1 490 € EUR
             </button>
             <div
               id="payment-message"
@@ -529,7 +529,7 @@
             const { error } = await stripe.confirmPayment({
               elements,
               confirmParams: {
-                return_url: window.location.origin + "/merci.html?amount=" + (activePromoPercent ? Math.round(129000 * (1 - activePromoPercent/100)) / 100 : 1290),
+                return_url: window.location.origin + "/merci.html?amount=" + ((currentPlanForStripe === "split" ? 550 : 1490) * (1 - activePromoPercent / 100)),
               },
             });
             if (error) {
@@ -651,7 +651,7 @@
         const { error } = await stripe.confirmPayment({
           elements,
           confirmParams: {
-            return_url: window.location.origin + "/merci.html?amount=" + (activePromoPercent ? Math.round(129000 * (1 - activePromoPercent/100)) / 100 : 1290),
+            return_url: window.location.origin + "/merci.html?amount=" + ((currentPlanForStripe === "split" ? 550 : 1490) * (1 - activePromoPercent / 100)),
           },
         });
 
@@ -677,11 +677,11 @@
         initStripeElements("full");
       }
       const plans = {
-        full: { label: "1 290 €", due: "1 290 €", btn: "Payer 1 290 € EUR" },
+        full: { label: "1 490 €", due: "1 490 €", btn: "Payer 1 490 € EUR" },
         split: {
-          label: "2 × 645 €",
-          due: "645 €",
-          btn: "Payer 645 € aujourd'hui",
+          label: "3 × 550 €",
+          due: "550 €",
+          btn: "Payer 550 € aujourd'hui",
         },
       };
 
@@ -697,13 +697,13 @@
         });
         const p = plans[value];
         document.getElementById("headerPrice").textContent =
-          value === "split" ? "2 × 645 €" : p.label;
-        document.getElementById("summaryPrice").textContent = value === "split" ? "2 × 645 €" : p.label;
-        document.getElementById("dueNow").textContent = value === "split" ? "2 × 645 €" : p.due;
+          value === "split" ? "3 × 550 €" : p.label;
+        document.getElementById("summaryPrice").textContent = value === "split" ? "3 × 550 €" : p.label;
+        document.getElementById("dueNow").textContent = p.due;
         const splitDetail = document.getElementById("split-detail");
         if (splitDetail) {
           splitDetail.style.display = value === "split" ? "block" : "none";
-          document.getElementById("split-detail-text").textContent = "645 € aujourd'hui · 645 € dans 30 jours";
+          document.getElementById("split-detail-text").textContent = "550 € aujourd'hui · 550 € dans 30 jours · 550 € dans 60 jours";
         }
         document.getElementById("payBtn").textContent = p.btn;
         if (typeof initStripeElements === "function") {
@@ -845,7 +845,7 @@
     </script>
     <script>
 
-    function removePromo() {
+    async function removePromo() {
       activePromoCode = null;
       activePromoPercent = 0;
       document.getElementById('promo-input').style.display = '';
@@ -857,12 +857,22 @@
       document.getElementById('promo-btn').style.cursor = 'not-allowed';
       document.getElementById('promo-tag').style.display = 'none';
       document.getElementById('promo-message').textContent = '';
-      // Remettre les prix originaux
-      const p = currentPlanForStripe === 'full' ? '1 290,00 €' : '645,00 €';
-      document.getElementById('summaryPrice').textContent = p;
-      document.getElementById('dueNow').textContent = p;
-      document.getElementById('headerPrice').textContent = p;
-      document.getElementById('payBtn').textContent = 'Payer ' + p + ' EUR';
+
+      const split = currentPlanForStripe === 'split';
+      const price = split ? '550 €' : '1 490 €';
+      document.getElementById('summaryPrice').textContent = split ? '3 × 550 €' : price;
+      document.getElementById('dueNow').textContent = price;
+      document.getElementById('headerPrice').textContent = split ? '3 × 550 €' : price;
+      document.getElementById('payBtn').textContent = split
+        ? "Payer 550 € aujourd'hui"
+        : 'Payer 1 490 € EUR';
+
+      const detail = document.getElementById('split-detail-text');
+      if (detail && split) {
+        detail.textContent = "550 € aujourd'hui · 550 € dans 30 jours · 550 € dans 60 jours";
+      }
+
+      await initStripeElements(currentPlanForStripe);
     }
 
     function togglePromoBtn() {
@@ -906,7 +916,7 @@
           document.getElementById('promo-btn').style.display = 'none';
           const tag = document.getElementById('promo-tag');
           tag.style.display = 'flex';
-          const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
+          const rawAmt = currentPlanForStripe === 'full' ? 149000 : 55000;
           const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
           const saved = rawAmt - discounted;
           const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
@@ -924,23 +934,33 @@
 
     function updatePromoDisplay() {
       if (!activePromoPercent) return;
-      const rawAmt = currentPlanForStripe === 'full' ? 129000 : 64500;
-      const discounted = rawAmt - (currentPlanForStripe === 'split' ? 15000 : 30000);
-      const saved = 30000;
-      const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
-      const savedFmt = '-300,00 €';
-      document.getElementById('summaryPrice').textContent = currentPlanForStripe === 'split' ? '2 × 645 €' : '1 290 €';
-      document.getElementById('dueNow').textContent = currentPlanForStripe === 'split' ? '2 × ' + fmt : fmt;
-      const splitDetailPromo = document.getElementById('split-detail');
-      if (splitDetailPromo && currentPlanForStripe === 'split') {
-        splitDetailPromo.style.display = 'block';
-        document.getElementById('split-detail-text').textContent = fmt + " aujourd'hui · " + fmt + ' dans 30 jours';
+
+      const split = currentPlanForStripe === 'split';
+      const rawAmt = split ? 55000 : 149000;
+      const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
+      const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
+      const saved = rawAmt - discounted;
+      const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
+
+      document.getElementById('summaryPrice').textContent =
+        split ? '3 × 550 €' : '1 490 €';
+      document.getElementById('dueNow').textContent = fmt;
+      document.getElementById('headerPrice').textContent =
+        split ? '3 × ' + fmt : fmt;
+
+      if (split) {
+        document.getElementById('split-detail').style.display = 'block';
+        document.getElementById('split-detail-text').textContent =
+          fmt + " aujourd'hui · " + fmt + " dans 30 jours · " + fmt + " dans 60 jours";
       }
-      document.getElementById('headerPrice').textContent = currentPlanForStripe === 'split' ? '2 × ' + fmt : fmt;
-      document.getElementById('payBtn').textContent = currentPlanForStripe === 'split' ? 'Payer ' + fmt + " aujourd'hui" : 'Payer ' + fmt + ' EUR';
+
+      document.getElementById('payBtn').textContent =
+        split ? 'Payer ' + fmt + " aujourd'hui" : 'Payer ' + fmt + ' EUR';
+
       const discountEl = document.getElementById('promo-discount-amount');
       if (discountEl) discountEl.textContent = savedFmt;
     }
+
     </script>
   </body>
 </html>
