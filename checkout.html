@@ -919,7 +919,7 @@
           const rawAmt = currentPlanForStripe === 'full' ? 149000 : 55000;
           const discounted = Math.round(rawAmt * (1 - data.discount_percent / 100));
           const saved = rawAmt - discounted;
-          const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
+          const savedFmt = '-' + ((saved * (currentPlanForStripe === 'split' ? 3 : 1)) / 100).toFixed(2).replace('.', ',') + ' €';
           document.getElementById('promo-tag-code').innerHTML = data.code + ' <span onclick="removePromo()" style="cursor:pointer;font-size:11px;color:#888;">✕</span>';
           document.getElementById('promo-discount-amount').textContent = savedFmt;
           updatePromoDisplay();
@@ -940,7 +940,7 @@
       const discounted = Math.round(rawAmt * (1 - activePromoPercent / 100));
       const fmt = (discounted / 100).toFixed(2).replace('.', ',') + ' €';
       const saved = rawAmt - discounted;
-      const savedFmt = '-' + (saved / 100).toFixed(2).replace('.', ',') + ' €';
+      const savedFmt = '-' + ((saved * (currentPlanForStripe === 'split' ? 3 : 1)) / 100).toFixed(2).replace('.', ',') + ' €';
 
       document.getElementById('summaryPrice').textContent =
         split ? '3 × 550 €' : '1 490 €';
